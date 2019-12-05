@@ -1,0 +1,12 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"1 configuracion.c
+[p x FOSC = INTOSC_HS ]
+"2
+[p x WDT = OFF ]
+"3
+[p x PBADEN = OFF ]
+"4
+[p x LVP = OFF ]
+"5
+[; ;configuracion.c: 5: 
+[p x MCLRE = OFF ]
