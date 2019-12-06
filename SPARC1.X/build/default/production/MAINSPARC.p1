@@ -66,7 +66,38 @@ Version 4.0 HI-TECH Software Intermediate Code
 "11 ./Interruptions.h
 [; ;./Interruptions.h: 11: void interruptionsInit();
 [v _interruptionsInit `(v ~T0 @X0 0 e? ]
-"2711 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
+"4947 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 4947:     struct {
+[s S191 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S191 . RX9D OERR FERR ADDEN CREN SREN RX9 SPEN ]
+"4957
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 4957:     struct {
+[s S192 :3 `uc 1 :1 `uc 1 ]
+[n S192 . . ADEN ]
+"4961
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 4961:     struct {
+[s S193 :5 `uc 1 :1 `uc 1 ]
+[n S193 . . SRENA ]
+"4965
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 4965:     struct {
+[s S194 :6 `uc 1 :1 `uc 1 ]
+[n S194 . . RC8_9 ]
+"4969
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 4969:     struct {
+[s S195 :6 `uc 1 :1 `uc 1 ]
+[n S195 . . RC9 ]
+"4973
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 4973:     struct {
+[s S196 :1 `uc 1 ]
+[n S196 . RCD8 ]
+"4946
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 4946: typedef union {
+[u S190 `S191 1 `S192 1 `S193 1 `S194 1 `S195 1 `S196 1 ]
+[n S190 . . . . . . . ]
+"4977
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 4977: extern volatile RCSTAbits_t RCSTAbits __attribute__((address(0xFAB)));
+[v _RCSTAbits `VS190 ~T0 @X0 0 e@4011 ]
+"2711
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 2711:     struct {
 [s S112 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S112 . RD0 RD1 RD2 RD3 RD4 RD5 RD6 RD7 ]
@@ -110,40 +141,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "13
 [; ;./Interruptions.h: 13: void yLimit();
 [v _yLimit `(v ~T0 @X0 0 e? ]
-"17 ./Comandos.h
-[; ;./Comandos.h: 17: void Completo(void);
+"19 ./Comandos.h
+[; ;./Comandos.h: 19: void Completo(void);
 [v _Completo `(v ~T0 @X0 0 ef ]
-"4947 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 4947:     struct {
-[s S191 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S191 . RX9D OERR FERR ADDEN CREN SREN RX9 SPEN ]
-"4957
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 4957:     struct {
-[s S192 :3 `uc 1 :1 `uc 1 ]
-[n S192 . . ADEN ]
-"4961
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 4961:     struct {
-[s S193 :5 `uc 1 :1 `uc 1 ]
-[n S193 . . SRENA ]
-"4965
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 4965:     struct {
-[s S194 :6 `uc 1 :1 `uc 1 ]
-[n S194 . . RC8_9 ]
-"4969
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 4969:     struct {
-[s S195 :6 `uc 1 :1 `uc 1 ]
-[n S195 . . RC9 ]
-"4973
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 4973:     struct {
-[s S196 :1 `uc 1 ]
-[n S196 . RCD8 ]
-"4946
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 4946: typedef union {
-[u S190 `S191 1 `S192 1 `S193 1 `S194 1 `S195 1 `S196 1 ]
-[n S190 . . . . . . . ]
-"4977
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 4977: extern volatile RCSTAbits_t RCSTAbits __attribute__((address(0xFAB)));
-[v _RCSTAbits `VS190 ~T0 @X0 0 e@4011 ]
 "6 ./USARTLIBRERIA.h
 [; ;./USARTLIBRERIA.h: 6: char USART_Rx();
 [; ;./USARTLIBRERIA.h: 6: char USART_Rx();
@@ -662,176 +662,171 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 8893: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
 "6 ./Comandos.h
-[; ;./Comandos.h: 6: char msgwrong []="COMANDO INCORRECTO\n";
-[v _msgwrong `uc ~T0 @X0 -> 20 `i e ]
+[; ;./Comandos.h: 6: char msgwrong []=" Error 0: Invalid Command\n";
+[v _msgwrong `uc ~T0 @X0 -> 27 `i e ]
 [i _msgwrong
 :U ..
--> 67 `c
--> 79 `c
--> 77 `c
--> 65 `c
--> 78 `c
--> 68 `c
--> 79 `c
+-> 32 `c
+-> 69 `c
+-> 114 `c
+-> 114 `c
+-> 111 `c
+-> 114 `c
+-> 32 `c
+-> 48 `c
+-> 58 `c
 -> 32 `c
 -> 73 `c
--> 78 `c
+-> 110 `c
+-> 118 `c
+-> 97 `c
+-> 108 `c
+-> 105 `c
+-> 100 `c
+-> 32 `c
 -> 67 `c
--> 79 `c
--> 82 `c
--> 82 `c
--> 69 `c
--> 67 `c
--> 84 `c
--> 79 `c
+-> 111 `c
+-> 109 `c
+-> 109 `c
+-> 97 `c
+-> 110 `c
+-> 100 `c
 -> 10 `c
 -> 0 `c
 ..
 ]
 "7
-[; ;./Comandos.h: 7: char msgeje []="COMANDO EJECUTANDOSE\n";
+[; ;./Comandos.h: 7: char msgeje []="Command in Execution\n";
 [v _msgeje `uc ~T0 @X0 -> 22 `i e ]
 [i _msgeje
 :U ..
 -> 67 `c
--> 79 `c
--> 77 `c
--> 65 `c
--> 78 `c
--> 68 `c
--> 79 `c
+-> 111 `c
+-> 109 `c
+-> 109 `c
+-> 97 `c
+-> 110 `c
+-> 100 `c
+-> 32 `c
+-> 105 `c
+-> 110 `c
 -> 32 `c
 -> 69 `c
--> 74 `c
--> 69 `c
--> 67 `c
--> 85 `c
--> 84 `c
--> 65 `c
--> 78 `c
--> 68 `c
--> 79 `c
--> 83 `c
--> 69 `c
+-> 120 `c
+-> 101 `c
+-> 99 `c
+-> 117 `c
+-> 116 `c
+-> 105 `c
+-> 111 `c
+-> 110 `c
 -> 10 `c
 -> 0 `c
 ..
 ]
 "8
-[; ;./Comandos.h: 8: char msgcomp []="COMANDO EJECUTADO\n";
-[v _msgcomp `uc ~T0 @X0 -> 19 `i e ]
+[; ;./Comandos.h: 8: char msgcomp []="Successfully Executed\n";
+[v _msgcomp `uc ~T0 @X0 -> 23 `i e ]
 [i _msgcomp
 :U ..
--> 67 `c
--> 79 `c
--> 77 `c
--> 65 `c
--> 78 `c
--> 68 `c
--> 79 `c
+-> 83 `c
+-> 117 `c
+-> 99 `c
+-> 99 `c
+-> 101 `c
+-> 115 `c
+-> 115 `c
+-> 102 `c
+-> 117 `c
+-> 108 `c
+-> 108 `c
+-> 121 `c
 -> 32 `c
 -> 69 `c
--> 74 `c
--> 69 `c
--> 67 `c
--> 85 `c
--> 84 `c
--> 65 `c
--> 68 `c
--> 79 `c
+-> 120 `c
+-> 101 `c
+-> 99 `c
+-> 117 `c
+-> 116 `c
+-> 101 `c
+-> 100 `c
 -> 10 `c
 -> 0 `c
 ..
 ]
 "9
-[; ;./Comandos.h: 9: char msleft[]="HACIA LA IZQUIERDA ";
-[v _msleft `uc ~T0 @X0 -> 20 `i e ]
+[; ;./Comandos.h: 9: char msleft[]="Going Left ";
+[v _msleft `uc ~T0 @X0 -> 12 `i e ]
 [i _msleft
 :U ..
--> 72 `c
--> 65 `c
--> 67 `c
--> 73 `c
--> 65 `c
+-> 71 `c
+-> 111 `c
+-> 105 `c
+-> 110 `c
+-> 103 `c
 -> 32 `c
 -> 76 `c
--> 65 `c
--> 32 `c
--> 73 `c
--> 90 `c
--> 81 `c
--> 85 `c
--> 73 `c
--> 69 `c
--> 82 `c
--> 68 `c
--> 65 `c
+-> 101 `c
+-> 102 `c
+-> 116 `c
 -> 32 `c
 -> 0 `c
 ..
 ]
 "10
-[; ;./Comandos.h: 10: char msup[]="HACIA ARRIBA ";
-[v _msup `uc ~T0 @X0 -> 14 `i e ]
+[; ;./Comandos.h: 10: char msup[]="Going Up\n ";
+[v _msup `uc ~T0 @X0 -> 11 `i e ]
 [i _msup
 :U ..
--> 72 `c
--> 65 `c
--> 67 `c
--> 73 `c
--> 65 `c
+-> 71 `c
+-> 111 `c
+-> 105 `c
+-> 110 `c
+-> 103 `c
 -> 32 `c
--> 65 `c
--> 82 `c
--> 82 `c
--> 73 `c
--> 66 `c
--> 65 `c
+-> 85 `c
+-> 112 `c
+-> 10 `c
 -> 32 `c
 -> 0 `c
 ..
 ]
 "11
-[; ;./Comandos.h: 11: char msdown[]="HACIA ABAJO ";
+[; ;./Comandos.h: 11: char msdown[]="Going Down\n ";
 [v _msdown `uc ~T0 @X0 -> 13 `i e ]
 [i _msdown
 :U ..
--> 72 `c
--> 65 `c
--> 67 `c
--> 73 `c
--> 65 `c
+-> 71 `c
+-> 111 `c
+-> 105 `c
+-> 110 `c
+-> 103 `c
 -> 32 `c
--> 65 `c
--> 66 `c
--> 65 `c
--> 74 `c
--> 79 `c
+-> 68 `c
+-> 111 `c
+-> 119 `c
+-> 110 `c
+-> 10 `c
 -> 32 `c
 -> 0 `c
 ..
 ]
 "12
-[; ;./Comandos.h: 12: char msright[]="HACIA LA DERECHA ";
-[v _msright `uc ~T0 @X0 -> 18 `i e ]
+[; ;./Comandos.h: 12: char msright[]="Going Right ";
+[v _msright `uc ~T0 @X0 -> 13 `i e ]
 [i _msright
 :U ..
--> 72 `c
--> 65 `c
--> 67 `c
--> 73 `c
--> 65 `c
+-> 71 `c
+-> 111 `c
+-> 105 `c
+-> 110 `c
+-> 103 `c
 -> 32 `c
--> 76 `c
--> 65 `c
--> 32 `c
--> 68 `c
--> 69 `c
 -> 82 `c
--> 69 `c
--> 67 `c
--> 72 `c
--> 65 `c
+-> 105 `c
+-> 103 `c
+-> 104 `c
+-> 116 `c
 -> 32 `c
 -> 0 `c
 ..
@@ -884,26 +879,63 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-"19
-[; ;./Comandos.h: 19: uint16_t nvalorx =0;
+"15
+[; ;./Comandos.h: 15: char CE[]=" Error 1: Invalid Coordinate\n";
+[v _CE `uc ~T0 @X0 -> 30 `i e ]
+[i _CE
+:U ..
+-> 32 `c
+-> 69 `c
+-> 114 `c
+-> 114 `c
+-> 111 `c
+-> 114 `c
+-> 32 `c
+-> 49 `c
+-> 58 `c
+-> 32 `c
+-> 73 `c
+-> 110 `c
+-> 118 `c
+-> 97 `c
+-> 108 `c
+-> 105 `c
+-> 100 `c
+-> 32 `c
+-> 67 `c
+-> 111 `c
+-> 111 `c
+-> 114 `c
+-> 100 `c
+-> 105 `c
+-> 110 `c
+-> 97 `c
+-> 116 `c
+-> 101 `c
+-> 10 `c
+-> 0 `c
+..
+]
+"21
+[; ;./Comandos.h: 21: uint16_t nvalorx =0;
 [v _nvalorx `us ~T0 @X0 1 e ]
 [i _nvalorx
 -> -> 0 `i `us
 ]
-"20
-[; ;./Comandos.h: 20: uint16_t nvalory =0;
+"22
+[; ;./Comandos.h: 22: uint16_t nvalory =0;
 [v _nvalory `us ~T0 @X0 1 e ]
 [i _nvalory
 -> -> 0 `i `us
 ]
-"24
-[; ;./Comandos.h: 24: uint16_t x=0;
+"26
+[; ;./Comandos.h: 26: uint16_t x=0;
 [v _x `us ~T0 @X0 1 e ]
 [i _x
 -> -> 0 `i `us
 ]
-"25
-[; ;./Comandos.h: 25: uint16_t y=0;
+"27
+[; ;./Comandos.h: 27: uint16_t y=0;
 [v _y `us ~T0 @X0 1 e ]
 [i _y
 -> -> 0 `i `us
@@ -1041,8 +1073,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;MAINSPARC.c: 38:     USART_Init(9600);
 [e ( _USART_Init (1 -> -> 9600 `i `l ]
 "39
-[; ;MAINSPARC.c: 39:     INTCON2bits.RBPU=0;
-[e = . . _INTCON2bits 2 3 -> -> 0 `i `uc ]
+[; ;MAINSPARC.c: 39:     INTCON2bits.RBPU=1;
+[e = . . _INTCON2bits 2 3 -> -> 1 `i `uc ]
 "40
 [; ;MAINSPARC.c: 40:     gpioInit();
 [e ( _gpioInit ..  ]
@@ -1052,38 +1084,41 @@ Version 4.0 HI-TECH Software Intermediate Code
 "42
 [; ;MAINSPARC.c: 42:    interruptionsInit();
 [e ( _interruptionsInit ..  ]
-"43
-[; ;MAINSPARC.c: 43:     PORTDbits.RD2= 1;
-[e = . . _PORTDbits 0 2 -> -> 1 `i `uc ]
 "44
-[; ;MAINSPARC.c: 44:     PORTDbits.RD3= 1;
-[e = . . _PORTDbits 0 3 -> -> 1 `i `uc ]
+[; ;MAINSPARC.c: 44:    RCSTAbits.CREN=0;;
+[e = . . _RCSTAbits 0 4 -> -> 0 `i `uc ]
 "45
-[; ;MAINSPARC.c: 45:     char instruccion[8];
-[v _instruccion `uc ~T0 @X0 -> 8 `i a ]
+[; ;MAINSPARC.c: 45:     PORTDbits.RD2= 1;
+[e = . . _PORTDbits 0 2 -> -> 1 `i `uc ]
 "46
-[; ;MAINSPARC.c: 46:     PORTDbits.RD4=1;
-[e = . . _PORTDbits 0 4 -> -> 1 `i `uc ]
+[; ;MAINSPARC.c: 46:     PORTDbits.RD3= 1;
+[e = . . _PORTDbits 0 3 -> -> 1 `i `uc ]
 "47
-[; ;MAINSPARC.c: 47:     PORTDbits.RD5=0;
-[e = . . _PORTDbits 0 5 -> -> 0 `i `uc ]
+[; ;MAINSPARC.c: 47:     char instruccion[8];
+[v _instruccion `uc ~T0 @X0 -> 8 `i a ]
 "48
-[; ;MAINSPARC.c: 48:     PORTDbits.RD6=0;
-[e = . . _PORTDbits 0 6 -> -> 0 `i `uc ]
+[; ;MAINSPARC.c: 48:     PORTDbits.RD4=1;
+[e = . . _PORTDbits 0 4 -> -> 1 `i `uc ]
 "49
-[; ;MAINSPARC.c: 49:     PORTDbits.RD0=1;
-[e = . . _PORTDbits 0 0 -> -> 1 `i `uc ]
+[; ;MAINSPARC.c: 49:     PORTDbits.RD5=0;
+[e = . . _PORTDbits 0 5 -> -> 0 `i `uc ]
 "50
-[; ;MAINSPARC.c: 50:     PORTDbits.RD1=0;
-[e = . . _PORTDbits 0 1 -> -> 0 `i `uc ]
+[; ;MAINSPARC.c: 50:     PORTDbits.RD6=0;
+[e = . . _PORTDbits 0 6 -> -> 0 `i `uc ]
 "51
-[; ;MAINSPARC.c: 51:     PORTDbits.RD3=0;
-[e = . . _PORTDbits 0 3 -> -> 0 `i `uc ]
+[; ;MAINSPARC.c: 51:     PORTDbits.RD0=1;
+[e = . . _PORTDbits 0 0 -> -> 1 `i `uc ]
 "52
-[; ;MAINSPARC.c: 52:     PORTDbits.RD2=0;
-[e = . . _PORTDbits 0 2 -> -> 0 `i `uc ]
+[; ;MAINSPARC.c: 52:     PORTDbits.RD1=0;
+[e = . . _PORTDbits 0 1 -> -> 0 `i `uc ]
 "53
-[; ;MAINSPARC.c: 53:     while(PORTBbits.RB1==0){}
+[; ;MAINSPARC.c: 53:     PORTDbits.RD3=0;
+[e = . . _PORTDbits 0 3 -> -> 0 `i `uc ]
+"54
+[; ;MAINSPARC.c: 54:     PORTDbits.RD2=0;
+[e = . . _PORTDbits 0 2 -> -> 0 `i `uc ]
+"55
+[; ;MAINSPARC.c: 55:     while(PORTBbits.RB1==0){}
 [e $U 377  ]
 [e :U 378 ]
 {
@@ -1091,29 +1126,29 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 377 ]
 [e $ == -> . . _PORTBbits 0 1 `i -> 0 `i 378  ]
 [e :U 379 ]
-"54
-[; ;MAINSPARC.c: 54:     PORTDbits.RD3=1;
-[e = . . _PORTDbits 0 3 -> -> 1 `i `uc ]
-"55
-[; ;MAINSPARC.c: 55:     PORTDbits.RD2=1;
-[e = . . _PORTDbits 0 2 -> -> 1 `i `uc ]
 "56
-[; ;MAINSPARC.c: 56:     xLimit();
-[e ( _xLimit ..  ]
+[; ;MAINSPARC.c: 56:     PORTDbits.RD3=1;
+[e = . . _PORTDbits 0 3 -> -> 1 `i `uc ]
 "57
-[; ;MAINSPARC.c: 57:     PORTDbits.RD0=0;
-[e = . . _PORTDbits 0 0 -> -> 0 `i `uc ]
+[; ;MAINSPARC.c: 57:     PORTDbits.RD2=1;
+[e = . . _PORTDbits 0 2 -> -> 1 `i `uc ]
 "58
-[; ;MAINSPARC.c: 58:     PORTDbits.RD1=0;
-[e = . . _PORTDbits 0 1 -> -> 0 `i `uc ]
+[; ;MAINSPARC.c: 58:     xLimit();
+[e ( _xLimit ..  ]
 "59
-[; ;MAINSPARC.c: 59:     PORTDbits.RD3=0;
-[e = . . _PORTDbits 0 3 -> -> 0 `i `uc ]
+[; ;MAINSPARC.c: 59:     PORTDbits.RD0=1;
+[e = . . _PORTDbits 0 0 -> -> 1 `i `uc ]
 "60
-[; ;MAINSPARC.c: 60:     PORTDbits.RD2=0;
-[e = . . _PORTDbits 0 2 -> -> 0 `i `uc ]
+[; ;MAINSPARC.c: 60:     PORTDbits.RD1=1;
+[e = . . _PORTDbits 0 1 -> -> 1 `i `uc ]
 "61
-[; ;MAINSPARC.c: 61:     while(PORTBbits.RB0==0){}
+[; ;MAINSPARC.c: 61:     PORTDbits.RD3=0;
+[e = . . _PORTDbits 0 3 -> -> 0 `i `uc ]
+"62
+[; ;MAINSPARC.c: 62:     PORTDbits.RD2=0;
+[e = . . _PORTDbits 0 2 -> -> 0 `i `uc ]
+"63
+[; ;MAINSPARC.c: 63:     while(PORTBbits.RB0==0){}
 [e $U 380  ]
 [e :U 381 ]
 {
@@ -1121,85 +1156,85 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 380 ]
 [e $ == -> . . _PORTBbits 0 0 `i -> 0 `i 381  ]
 [e :U 382 ]
-"62
-[; ;MAINSPARC.c: 62:     PORTDbits.RD3=1;
-[e = . . _PORTDbits 0 3 -> -> 1 `i `uc ]
-"63
-[; ;MAINSPARC.c: 63:     PORTDbits.RD2=1;
-[e = . . _PORTDbits 0 2 -> -> 1 `i `uc ]
 "64
-[; ;MAINSPARC.c: 64:     yLimit();
-[e ( _yLimit ..  ]
+[; ;MAINSPARC.c: 64:     PORTDbits.RD3=1;
+[e = . . _PORTDbits 0 3 -> -> 1 `i `uc ]
 "65
-[; ;MAINSPARC.c: 65:     x=0;
-[e = _x -> -> 0 `i `us ]
+[; ;MAINSPARC.c: 65:     PORTDbits.RD2=1;
+[e = . . _PORTDbits 0 2 -> -> 1 `i `uc ]
 "66
-[; ;MAINSPARC.c: 66:     y=0;
-[e = _y -> -> 0 `i `us ]
+[; ;MAINSPARC.c: 66:     yLimit();
+[e ( _yLimit ..  ]
 "67
-[; ;MAINSPARC.c: 67:     Completo();
+[; ;MAINSPARC.c: 67:     x=0;
+[e = _x -> -> 0 `i `us ]
+"68
+[; ;MAINSPARC.c: 68:     y=0;
+[e = _y -> -> 0 `i `us ]
+"69
+[; ;MAINSPARC.c: 69:     Completo();
 [e ( _Completo ..  ]
-"70
-[; ;MAINSPARC.c: 70:     while(1){
+"72
+[; ;MAINSPARC.c: 72:     while(1){
 [e :U 384 ]
 {
-"73
-[; ;MAINSPARC.c: 73:          RCSTAbits.CREN=1;;
+"75
+[; ;MAINSPARC.c: 75:          RCSTAbits.CREN=1;;
 [e = . . _RCSTAbits 0 4 -> -> 1 `i `uc ]
-"74
-[; ;MAINSPARC.c: 74:         for(uint8_t contador=0; contador<9; contador++){
+"76
+[; ;MAINSPARC.c: 76:         for(uint8_t contador=0; contador<8; contador++){
 {
 [v _contador `uc ~T0 @X0 1 a ]
 [e = _contador -> -> 0 `i `uc ]
-[e $ < -> _contador `i -> 9 `i 386  ]
+[e $ < -> _contador `i -> 8 `i 386  ]
 [e $U 387  ]
 [e :U 386 ]
 {
-"75
-[; ;MAINSPARC.c: 75:             instruccion[contador]=USART_Rx();
+"77
+[; ;MAINSPARC.c: 77:             instruccion[contador]=USART_Rx();
 [e = *U + &U _instruccion * -> _contador `ux -> -> # *U &U _instruccion `ui `ux ( _USART_Rx ..  ]
-"76
-[; ;MAINSPARC.c: 76:         }
+"78
+[; ;MAINSPARC.c: 78:         }
 }
 [e ++ _contador -> -> 1 `i `uc ]
-[e $ < -> _contador `i -> 9 `i 386  ]
+[e $ < -> _contador `i -> 8 `i 386  ]
 [e :U 387 ]
 }
-"79
-[; ;MAINSPARC.c: 79:        for(int i=0; i < 9; i++){
+"81
+[; ;MAINSPARC.c: 81:        for(int i=0; i < 8; i++){
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-[e $ < _i -> 9 `i 389  ]
+[e $ < _i -> 8 `i 389  ]
 [e $U 390  ]
 [e :U 389 ]
 {
-"80
-[; ;MAINSPARC.c: 80:     USART_Tx(instruccion[i]);
+"82
+[; ;MAINSPARC.c: 82:     USART_Tx(instruccion[i]);
 [e ( _USART_Tx (1 *U + &U _instruccion * -> -> _i `ui `ux -> -> # *U &U _instruccion `ui `ux ]
-"81
-[; ;MAINSPARC.c: 81:     }
+"83
+[; ;MAINSPARC.c: 83:     }
 }
 [e ++ _i -> 1 `i ]
-[e $ < _i -> 9 `i 389  ]
+[e $ < _i -> 8 `i 389  ]
 [e :U 390 ]
 }
-"82
-[; ;MAINSPARC.c: 82:           RCSTAbits.CREN=0;;
+"84
+[; ;MAINSPARC.c: 84:           RCSTAbits.CREN=0;;
 [e = . . _RCSTAbits 0 4 -> -> 0 `i `uc ]
-"83
-[; ;MAINSPARC.c: 83:         comandos(instruccion);
-[e ( _comandos (1 &U _instruccion ]
 "85
-[; ;MAINSPARC.c: 85:     }
+[; ;MAINSPARC.c: 85:         comandos(instruccion);
+[e ( _comandos (1 &U _instruccion ]
+"87
+[; ;MAINSPARC.c: 87:     }
 }
 [e :U 383 ]
 [e $U 384  ]
 [e :U 385 ]
-"87
-[; ;MAINSPARC.c: 87:     return;
+"89
+[; ;MAINSPARC.c: 89:     return;
 [e $UE 376  ]
-"88
-[; ;MAINSPARC.c: 88: }
+"90
+[; ;MAINSPARC.c: 90: }
 [e :UE 376 ]
 }

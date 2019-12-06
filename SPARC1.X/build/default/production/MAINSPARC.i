@@ -5781,15 +5781,17 @@ void *memccpy (void *restrict, const void *restrict, int, size_t);
 # 4 "./Comandos.h" 2
 
 int comandos(char comando[7]);
-char msgwrong []="COMANDO INCORRECTO\n";
-char msgeje []="COMANDO EJECUTANDOSE\n";
-char msgcomp []="COMANDO EJECUTADO\n";
-char msleft[]="HACIA LA IZQUIERDA ";
-char msup[]="HACIA ARRIBA ";
-char msdown[]="HACIA ABAJO ";
-char msright[]="HACIA LA DERECHA ";
+char msgwrong []=" Error 0: Invalid Command\n";
+char msgeje []="Command in Execution\n";
+char msgcomp []="Successfully Executed\n";
+char msleft[]="Going Left ";
+char msup[]="Going Up\n ";
+char msdown[]="Going Down\n ";
+char msright[]="Going Right ";
 char xl[]="Limit x Reached\n";
 char yl[]="Limit y Reached\n";
+char CE[]=" Error 1: Invalid Coordinate\n";
+void invalidCoordinate(void);
 void Error(void);
 void Ejecutandose(void);
 void Completo(void);
@@ -6009,10 +6011,12 @@ void main(void) {
     OSCCON=0x72;
 
     USART_Init(9600);
-    INTCON2bits.RBPU=0;
+    INTCON2bits.RBPU=1;
     gpioInit();
    pwm_init();
    interruptionsInit();
+
+   RCSTAbits.CREN=0;;
     PORTDbits.RD2= 1;
     PORTDbits.RD3= 1;
     char instruccion[8];
@@ -6027,8 +6031,8 @@ void main(void) {
     PORTDbits.RD3=1;
     PORTDbits.RD2=1;
     xLimit();
-    PORTDbits.RD0=0;
-    PORTDbits.RD1=0;
+    PORTDbits.RD0=1;
+    PORTDbits.RD1=1;
     PORTDbits.RD3=0;
     PORTDbits.RD2=0;
     while(PORTBbits.RB0==0){}
@@ -6044,12 +6048,12 @@ void main(void) {
 
 
          RCSTAbits.CREN=1;;
-        for(uint8_t contador=0; contador<9; contador++){
+        for(uint8_t contador=0; contador<8; contador++){
             instruccion[contador]=USART_Rx();
         }
 
 
-       for(int i=0; i < 9; i++){
+       for(int i=0; i < 8; i++){
     USART_Tx(instruccion[i]);
     }
           RCSTAbits.CREN=0;;

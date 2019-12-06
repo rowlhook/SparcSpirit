@@ -5780,15 +5780,17 @@ void *memccpy (void *restrict, const void *restrict, int, size_t);
 # 4 "./Comandos.h" 2
 
 int comandos(char comando[7]);
-char msgwrong []="COMANDO INCORRECTO\n";
-char msgeje []="COMANDO EJECUTANDOSE\n";
-char msgcomp []="COMANDO EJECUTADO\n";
-char msleft[]="HACIA LA IZQUIERDA ";
-char msup[]="HACIA ARRIBA ";
-char msdown[]="HACIA ABAJO ";
-char msright[]="HACIA LA DERECHA ";
+char msgwrong []=" Error 0: Invalid Command\n";
+char msgeje []="Command in Execution\n";
+char msgcomp []="Successfully Executed\n";
+char msleft[]="Going Left ";
+char msup[]="Going Up\n ";
+char msdown[]="Going Down\n ";
+char msright[]="Going Right ";
 char xl[]="Limit x Reached\n";
 char yl[]="Limit y Reached\n";
+char CE[]=" Error 1: Invalid Coordinate\n";
+void invalidCoordinate(void);
 void Error(void);
 void Ejecutandose(void);
 void Completo(void);
@@ -5825,6 +5827,15 @@ int keepgoing;
 
 
 
+void invalidCoordinate(){
+for(int i=0; i < strlen(CE); i++){
+    USART_Tx(CE[i]);
+    }
+    PORTDbits.RD4=1;
+    PORTDbits.RD5=0;
+    PORTDbits.RD6=0;
+    return;
+}
 void xLimit(){
     for(int i=0; i < strlen(xl); i++){
     USART_Tx(xl[i]);
@@ -5842,7 +5853,7 @@ void Error(){
     for(int i=0; i< strlen(msgwrong); i++){
     USART_Tx(msgwrong[i]);
     }
-  PORTDbits.RD4=1;
+    PORTDbits.RD4=1;
     PORTDbits.RD5=0;
     PORTDbits.RD6=0;
 }
@@ -5873,7 +5884,7 @@ void coordinateRefreshX(int newX){
        PORTDbits.RD0=1;
 
 
-       PORTDbits.RD1=0;
+       PORTDbits.RD1=1;
 
        for(int i=0; i < strlen(msleft); i++){
     USART_Tx(msleft[i]);
@@ -5883,7 +5894,7 @@ void coordinateRefreshX(int newX){
     }
     if(newX>x){
        PORTDbits.RD0=0;
-       PORTDbits.RD1=1;
+       PORTDbits.RD1=0;
 
 
 
@@ -5898,7 +5909,7 @@ void coordinateRefreshX(int newX){
 
 void coordinateRefreshY(int newY){
     if(newY<y){
-    PORTDbits.RD0=0;
+    PORTDbits.RD0=1;
        PORTDbits.RD1=0;
 
        for(int i=0; i < strlen(msdown); i++){
@@ -5907,7 +5918,7 @@ void coordinateRefreshY(int newY){
     contador_pulsosD(y-newY);
     }
     if(newY>y){
-        PORTDbits.RD0=1;
+        PORTDbits.RD0=0;
         PORTDbits.RD1=1;
 
     for(int j=0; j < strlen(msup); j++){
@@ -5939,31 +5950,31 @@ int comandos (char comando[7]){
                                     Completo();
                                 }
                                 else{
-                                    Error();
+                                    invalidCoordinate();
                                 }
                             }
                             else{
-                                Error();
+                                invalidCoordinate();
                             }
                         }
                         else{
-                            Error();
+                            invalidCoordinate();
                         }
                     }
                     else{
-                        Error();
+                        invalidCoordinate();
                     }
                 }
                 else{
-                    Error();
+                    invalidCoordinate();
                 }
             }
             else{
-                Error();
+                invalidCoordinate();
             }
         }
         else{
-            Error();
+            invalidCoordinate();
         }
     }
 
@@ -5984,8 +5995,8 @@ int comandos (char comando[7]){
                                      PORTDbits.RD3=1;
                                      PORTDbits.RD2=1;
                                      xLimit();
-                                     PORTDbits.RD0=0;
-                                     PORTDbits.RD1=0;
+                                     PORTDbits.RD0=1;
+                                     PORTDbits.RD1=1;
                                      PORTDbits.RD3=0;
                                      PORTDbits.RD2=0;
                                      while(PORTBbits.RB0==0){}
@@ -6078,7 +6089,7 @@ int comandos (char comando[7]){
                                 if (comando[7]=='P'){
                                     Ejecutandose();
                                     PORTDbits.RD7=1;
-                                    _delay((unsigned long)((2000)*(8000000L/4000.0)));
+                                    _delay((unsigned long)((1000)*(8000000L/4000.0)));
                                     PORTDbits.RD7=0;
 
                                     Completo();

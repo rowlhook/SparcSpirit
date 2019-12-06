@@ -3,15 +3,17 @@
 #include "USARTLIBRERIA.h"
 #include <string.h>
 int comandos(char comando[7]); //Declaración de función 
-char msgwrong []="COMANDO INCORRECTO\n";
-char msgeje []="COMANDO EJECUTANDOSE\n";
-char msgcomp []="COMANDO EJECUTADO\n";
-char msleft[]="HACIA LA IZQUIERDA ";
-char msup[]="HACIA ARRIBA ";
-char msdown[]="HACIA ABAJO ";
-char msright[]="HACIA LA DERECHA ";
+char msgwrong []=" Error 0: Invalid Command\n";
+char msgeje []="Command in Execution\n";
+char msgcomp []="Successfully Executed\n";
+char msleft[]="Going Left ";
+char msup[]="Going Up\n ";
+char msdown[]="Going Down\n ";
+char msright[]="Going Right ";
 char xl[]="Limit x Reached\n";
 char yl[]="Limit y Reached\n";
+char CE[]=" Error 1: Invalid Coordinate\n";
+void invalidCoordinate(void);
 void Error(void); //Declaración de función
 void Ejecutandose(void); //Declaración de función
 void Completo(void); //Declaración de funcion

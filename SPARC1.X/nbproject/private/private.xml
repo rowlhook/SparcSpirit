@@ -3,13 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Rulo/Desktop/Sparc/SPARC1.X/GPIO.h</file>
-            <file>file:/C:/Users/Rulo/Desktop/Sparc/SPARC1.X/CONFIGURACION1.h</file>
-            <file>file:/C:/Users/Rulo/Desktop/Sparc/SPARC1.X/MAINSPARC.c</file>
-            <file>file:/C:/Users/Rulo/Desktop/Sparc/SPARC1.X/Comandos.h</file>
-            <file>file:/C:/Users/Rulo/Desktop/Sparc/SPARC1.X/Interruptions.h</file>
-            <file>file:/C:/Users/Rulo/Desktop/Sparc/SPARC1.X/Comandos.c</file>
-            <file>file:/C:/Users/Rulo/Desktop/Sparc/SPARC1.X/GPIO.c</file>
+            <file>file:/C:/Users/Rulo/Desktop/School%20Crap/Industrial%20Programing/Semestre%20i/SparkSpirit/trunk/SPARC1.X/Interruptions.h</file>
+            <file>file:/C:/Users/Rulo/Desktop/School%20Crap/Industrial%20Programing/Semestre%20i/SparkSpirit/trunk/SPARC1.X/GPIO.c</file>
+            <file>file:/C:/Users/Rulo/Desktop/School%20Crap/Industrial%20Programing/Semestre%20i/SparkSpirit/trunk/SPARC1.X/MAINSPARC.c</file>
+            <file>file:/C:/Users/Rulo/Desktop/School%20Crap/Industrial%20Programing/Semestre%20i/SparkSpirit/trunk/SPARC1.X/Interruptions.c</file>
+            <file>file:/C:/Users/Rulo/Desktop/School%20Crap/Industrial%20Programing/Semestre%20i/SparkSpirit/trunk/SPARC1.X/pwm.h</file>
+            <file>file:/C:/Users/Rulo/Desktop/School%20Crap/Industrial%20Programing/Semestre%20i/SparkSpirit/trunk/SPARC1.X/Comandos.c</file>
+            <file>file:/C:/Users/Rulo/Desktop/School%20Crap/Industrial%20Programing/Semestre%20i/SparkSpirit/trunk/SPARC1.X/GPIO.h</file>
+            <file>file:/C:/Users/Rulo/Desktop/School%20Crap/Industrial%20Programing/Semestre%20i/SparkSpirit/trunk/SPARC1.X/Comandos.h</file>
+            <file>file:/C:/Users/Rulo/Desktop/School%20Crap/Industrial%20Programing/Semestre%20i/SparkSpirit/trunk/SPARC1.X/pwm.c</file>
         </group>
     </open-files>
 </project-private>

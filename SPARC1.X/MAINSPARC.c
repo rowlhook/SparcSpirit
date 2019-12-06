@@ -36,10 +36,12 @@ void main(void) {
     OSCCON=0x72;
     
     USART_Init(9600);
-    INTCON2bits.RBPU=0;
+    INTCON2bits.RBPU=1;
     gpioInit();
    pwm_init();
    interruptionsInit();
+   
+   DisableRx;
     Enable_D= OFF;
     Enable_I= OFF;
     char instruccion[8];
@@ -54,8 +56,8 @@ void main(void) {
     Enable_I=OFF;
     Enable_D=OFF;
     xLimit();
-    Sentido_D=IZQUIERDA;
-    Sentido_I=IZQUIERDA;
+    Sentido_D=DERECHA;
+    Sentido_I=DERECHA;
     Enable_I=ON;
     Enable_D=ON;
     while(SWITCHX==0){}
@@ -71,12 +73,12 @@ void main(void) {
         
         
          EnableRx;  
-        for(uint8_t contador=0; contador<9; contador++){
+        for(uint8_t contador=0; contador<8; contador++){
             instruccion[contador]=USART_Rx();
         }
         
         
-       for(int i=0; i < 9; i++){
+       for(int i=0; i < 8; i++){
     USART_Tx(instruccion[i]);
     } 
           DisableRx;  

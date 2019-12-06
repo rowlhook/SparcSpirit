@@ -7,6 +7,15 @@
 #include "CONFIGURACION1.h"
 /*La función imprime el mensaje de error por UART*/
 
+void invalidCoordinate(){
+for(int i=0; i < strlen(CE); i++){
+    USART_Tx(CE[i]);
+    }
+    LED_R=1;
+    LED_V=0;
+    LED_A=0;
+    return;
+}
 void xLimit(){
     for(int i=0; i < strlen(xl); i++){
     USART_Tx(xl[i]);
@@ -24,7 +33,7 @@ void Error(){
     for(int i=0; i< strlen(msgwrong); i++){ //para imprimir todas las letras del mensaje
     USART_Tx(msgwrong[i]); //Imprime caracter por caracter
     } 
-  LED_R=1;
+    LED_R=1;
     LED_V=0;
     LED_A=0;
 }
@@ -55,7 +64,7 @@ void coordinateRefreshX(int newX){
        Sentido_D=DERECHA;
        //Sentido_I=IZQUIERDA;
        //Sentido_D= DERECHA;
-       Sentido_I=IZQUIERDA;
+       Sentido_I=DERECHA;
        
        for(int i=0; i < strlen(msleft); i++){
     USART_Tx(msleft[i]);
@@ -65,7 +74,7 @@ void coordinateRefreshX(int newX){
     }
     if(newX>x){ //Si el valor nuevo es mayor al anterior
        Sentido_D=IZQUIERDA;
-       Sentido_I=DERECHA;
+       Sentido_I=IZQUIERDA;
        //Sentido_D=IZQUIERDA;
        //Sentido_I=IZQUIERDA;
       
@@ -80,7 +89,7 @@ void coordinateRefreshX(int newX){
 /*Función para saber cómo moverse en Y de acuerdo al valor nuevo y anterior*/
 void coordinateRefreshY(int newY){
     if(newY<y){ //si el nuevo valor es menor al anterior
-    Sentido_D=IZQUIERDA;
+    Sentido_D=DERECHA;
        Sentido_I=IZQUIERDA;
        
        for(int i=0; i < strlen(msdown); i++){
@@ -89,7 +98,7 @@ void coordinateRefreshY(int newY){
     contador_pulsosD(y-newY);   
     }
     if(newY>y){ //si el nuevo valor es mayor al anterior
-        Sentido_D=DERECHA;
+        Sentido_D=IZQUIERDA;
         Sentido_I=DERECHA;
       
     for(int j=0; j < strlen(msup); j++){
@@ -121,31 +130,31 @@ int comandos (char comando[7]){
                                     Completo();
                                 }
                                 else{
-                                    Error(); //Muestra mensaje de error
+                                    invalidCoordinate(); //Muestra mensaje de error
                                 }
                             }
                             else{
-                                Error();
+                                invalidCoordinate();
                             }
                         }
                         else{
-                            Error();  
+                            invalidCoordinate(); 
                         }
                     }
                     else{
-                        Error();
+                        invalidCoordinate();
                     }
                 }
                 else{
-                    Error();
+                    invalidCoordinate();
                 }
             }
             else{
-                Error();
+                invalidCoordinate();
             }
         } 
         else{
-            Error();
+            invalidCoordinate();
         }
     }
     
@@ -166,8 +175,8 @@ int comandos (char comando[7]){
                                      Enable_I=OFF;
                                      Enable_D=OFF;
                                      xLimit();
-                                     Sentido_D=IZQUIERDA;
-                                     Sentido_I=IZQUIERDA;
+                                     Sentido_D=DERECHA;
+                                     Sentido_I=DERECHA;
                                      Enable_I=ON;
                                      Enable_D=ON;
                                      while(SWITCHX==0){}
@@ -260,7 +269,7 @@ int comandos (char comando[7]){
                                 if (comando[7]=='P'){ /*ej MAKEATAP*/
                                     Ejecutandose();
                                     SOLENOID=1;
-                                    __delay_ms(2000);
+                                    __delay_ms(1000);
                                     SOLENOID=0;
                                     //Mensaje de ejecutandose
                                     Completo();

@@ -561,176 +561,171 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 8893: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
 "6 ./Comandos.h
-[; ;./Comandos.h: 6: char msgwrong []="COMANDO INCORRECTO\n";
-[v _msgwrong `uc ~T0 @X0 -> 20 `i e ]
+[; ;./Comandos.h: 6: char msgwrong []=" Error 0: Invalid Command\n";
+[v _msgwrong `uc ~T0 @X0 -> 27 `i e ]
 [i _msgwrong
 :U ..
--> 67 `c
--> 79 `c
--> 77 `c
--> 65 `c
--> 78 `c
--> 68 `c
--> 79 `c
+-> 32 `c
+-> 69 `c
+-> 114 `c
+-> 114 `c
+-> 111 `c
+-> 114 `c
+-> 32 `c
+-> 48 `c
+-> 58 `c
 -> 32 `c
 -> 73 `c
--> 78 `c
+-> 110 `c
+-> 118 `c
+-> 97 `c
+-> 108 `c
+-> 105 `c
+-> 100 `c
+-> 32 `c
 -> 67 `c
--> 79 `c
--> 82 `c
--> 82 `c
--> 69 `c
--> 67 `c
--> 84 `c
--> 79 `c
+-> 111 `c
+-> 109 `c
+-> 109 `c
+-> 97 `c
+-> 110 `c
+-> 100 `c
 -> 10 `c
 -> 0 `c
 ..
 ]
 "7
-[; ;./Comandos.h: 7: char msgeje []="COMANDO EJECUTANDOSE\n";
+[; ;./Comandos.h: 7: char msgeje []="Command in Execution\n";
 [v _msgeje `uc ~T0 @X0 -> 22 `i e ]
 [i _msgeje
 :U ..
 -> 67 `c
--> 79 `c
--> 77 `c
--> 65 `c
--> 78 `c
--> 68 `c
--> 79 `c
+-> 111 `c
+-> 109 `c
+-> 109 `c
+-> 97 `c
+-> 110 `c
+-> 100 `c
+-> 32 `c
+-> 105 `c
+-> 110 `c
 -> 32 `c
 -> 69 `c
--> 74 `c
--> 69 `c
--> 67 `c
--> 85 `c
--> 84 `c
--> 65 `c
--> 78 `c
--> 68 `c
--> 79 `c
--> 83 `c
--> 69 `c
+-> 120 `c
+-> 101 `c
+-> 99 `c
+-> 117 `c
+-> 116 `c
+-> 105 `c
+-> 111 `c
+-> 110 `c
 -> 10 `c
 -> 0 `c
 ..
 ]
 "8
-[; ;./Comandos.h: 8: char msgcomp []="COMANDO EJECUTADO\n";
-[v _msgcomp `uc ~T0 @X0 -> 19 `i e ]
+[; ;./Comandos.h: 8: char msgcomp []="Successfully Executed\n";
+[v _msgcomp `uc ~T0 @X0 -> 23 `i e ]
 [i _msgcomp
 :U ..
--> 67 `c
--> 79 `c
--> 77 `c
--> 65 `c
--> 78 `c
--> 68 `c
--> 79 `c
+-> 83 `c
+-> 117 `c
+-> 99 `c
+-> 99 `c
+-> 101 `c
+-> 115 `c
+-> 115 `c
+-> 102 `c
+-> 117 `c
+-> 108 `c
+-> 108 `c
+-> 121 `c
 -> 32 `c
 -> 69 `c
--> 74 `c
--> 69 `c
--> 67 `c
--> 85 `c
--> 84 `c
--> 65 `c
--> 68 `c
--> 79 `c
+-> 120 `c
+-> 101 `c
+-> 99 `c
+-> 117 `c
+-> 116 `c
+-> 101 `c
+-> 100 `c
 -> 10 `c
 -> 0 `c
 ..
 ]
 "9
-[; ;./Comandos.h: 9: char msleft[]="HACIA LA IZQUIERDA ";
-[v _msleft `uc ~T0 @X0 -> 20 `i e ]
+[; ;./Comandos.h: 9: char msleft[]="Going Left ";
+[v _msleft `uc ~T0 @X0 -> 12 `i e ]
 [i _msleft
 :U ..
--> 72 `c
--> 65 `c
--> 67 `c
--> 73 `c
--> 65 `c
+-> 71 `c
+-> 111 `c
+-> 105 `c
+-> 110 `c
+-> 103 `c
 -> 32 `c
 -> 76 `c
--> 65 `c
--> 32 `c
--> 73 `c
--> 90 `c
--> 81 `c
--> 85 `c
--> 73 `c
--> 69 `c
--> 82 `c
--> 68 `c
--> 65 `c
+-> 101 `c
+-> 102 `c
+-> 116 `c
 -> 32 `c
 -> 0 `c
 ..
 ]
 "10
-[; ;./Comandos.h: 10: char msup[]="HACIA ARRIBA ";
-[v _msup `uc ~T0 @X0 -> 14 `i e ]
+[; ;./Comandos.h: 10: char msup[]="Going Up\n ";
+[v _msup `uc ~T0 @X0 -> 11 `i e ]
 [i _msup
 :U ..
--> 72 `c
--> 65 `c
--> 67 `c
--> 73 `c
--> 65 `c
+-> 71 `c
+-> 111 `c
+-> 105 `c
+-> 110 `c
+-> 103 `c
 -> 32 `c
--> 65 `c
--> 82 `c
--> 82 `c
--> 73 `c
--> 66 `c
--> 65 `c
+-> 85 `c
+-> 112 `c
+-> 10 `c
 -> 32 `c
 -> 0 `c
 ..
 ]
 "11
-[; ;./Comandos.h: 11: char msdown[]="HACIA ABAJO ";
+[; ;./Comandos.h: 11: char msdown[]="Going Down\n ";
 [v _msdown `uc ~T0 @X0 -> 13 `i e ]
 [i _msdown
 :U ..
--> 72 `c
--> 65 `c
--> 67 `c
--> 73 `c
--> 65 `c
+-> 71 `c
+-> 111 `c
+-> 105 `c
+-> 110 `c
+-> 103 `c
 -> 32 `c
--> 65 `c
--> 66 `c
--> 65 `c
--> 74 `c
--> 79 `c
+-> 68 `c
+-> 111 `c
+-> 119 `c
+-> 110 `c
+-> 10 `c
 -> 32 `c
 -> 0 `c
 ..
 ]
 "12
-[; ;./Comandos.h: 12: char msright[]="HACIA LA DERECHA ";
-[v _msright `uc ~T0 @X0 -> 18 `i e ]
+[; ;./Comandos.h: 12: char msright[]="Going Right ";
+[v _msright `uc ~T0 @X0 -> 13 `i e ]
 [i _msright
 :U ..
--> 72 `c
--> 65 `c
--> 67 `c
--> 73 `c
--> 65 `c
+-> 71 `c
+-> 111 `c
+-> 105 `c
+-> 110 `c
+-> 103 `c
 -> 32 `c
--> 76 `c
--> 65 `c
--> 32 `c
--> 68 `c
--> 69 `c
 -> 82 `c
--> 69 `c
--> 67 `c
--> 72 `c
--> 65 `c
+-> 105 `c
+-> 103 `c
+-> 104 `c
+-> 116 `c
 -> 32 `c
 -> 0 `c
 ..
@@ -783,26 +778,63 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-"19
-[; ;./Comandos.h: 19: uint16_t nvalorx =0;
+"15
+[; ;./Comandos.h: 15: char CE[]=" Error 1: Invalid Coordinate\n";
+[v _CE `uc ~T0 @X0 -> 30 `i e ]
+[i _CE
+:U ..
+-> 32 `c
+-> 69 `c
+-> 114 `c
+-> 114 `c
+-> 111 `c
+-> 114 `c
+-> 32 `c
+-> 49 `c
+-> 58 `c
+-> 32 `c
+-> 73 `c
+-> 110 `c
+-> 118 `c
+-> 97 `c
+-> 108 `c
+-> 105 `c
+-> 100 `c
+-> 32 `c
+-> 67 `c
+-> 111 `c
+-> 111 `c
+-> 114 `c
+-> 100 `c
+-> 105 `c
+-> 110 `c
+-> 97 `c
+-> 116 `c
+-> 101 `c
+-> 10 `c
+-> 0 `c
+..
+]
+"21
+[; ;./Comandos.h: 21: uint16_t nvalorx =0;
 [v _nvalorx `us ~T0 @X0 1 e ]
 [i _nvalorx
 -> -> 0 `i `us
 ]
-"20
-[; ;./Comandos.h: 20: uint16_t nvalory =0;
+"22
+[; ;./Comandos.h: 22: uint16_t nvalory =0;
 [v _nvalory `us ~T0 @X0 1 e ]
 [i _nvalory
 -> -> 0 `i `us
 ]
-"24
-[; ;./Comandos.h: 24: uint16_t x=0;
+"26
+[; ;./Comandos.h: 26: uint16_t x=0;
 [v _x `us ~T0 @X0 1 e ]
 [i _x
 -> -> 0 `i `us
 ]
-"25
-[; ;./Comandos.h: 25: uint16_t y=0;
+"27
+[; ;./Comandos.h: 27: uint16_t y=0;
 [v _y `us ~T0 @X0 1 e ]
 [i _y
 -> -> 0 `i `us
@@ -811,13 +843,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./pwm.h: 6: int keepgoing;
 [v _keepgoing `i ~T0 @X0 1 e ]
 "10 Comandos.c
-[; ;Comandos.c: 10: void xLimit(){
-[v _xLimit `(v ~T0 @X0 1 ef ]
+[; ;Comandos.c: 10: void invalidCoordinate(){
+[v _invalidCoordinate `(v ~T0 @X0 1 ef ]
 {
-[e :U _xLimit ]
+[e :U _invalidCoordinate ]
 [f ]
 "11
-[; ;Comandos.c: 11:     for(int i=0; i < strlen(xl); i++){
+[; ;Comandos.c: 11: for(int i=0; i < strlen(CE); i++){
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
@@ -825,1190 +857,1231 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 369 ]
 {
 "12
-[; ;Comandos.c: 12:     USART_Tx(xl[i]);
-[e ( _USART_Tx (1 *U + &U _xl * -> -> _i `ui `ux -> -> # *U &U _xl `ui `ux ]
+[; ;Comandos.c: 12:     USART_Tx(CE[i]);
+[e ( _USART_Tx (1 *U + &U _CE * -> -> _i `ui `ux -> -> # *U &U _CE `ui `ux ]
 "13
 [; ;Comandos.c: 13:     }
 }
 [e ++ _i -> 1 `i ]
 [e :U 372 ]
-[e $ < -> _i `ui ( _strlen (1 -> &U _xl `*Cuc 369  ]
+[e $ < -> _i `ui ( _strlen (1 -> &U _CE `*Cuc 369  ]
 [e :U 370 ]
 }
 "14
-[; ;Comandos.c: 14:     return;
-[e $UE 368  ]
+[; ;Comandos.c: 14:     PORTDbits.RD4=1;
+[e = . . _PORTDbits 0 4 -> -> 1 `i `uc ]
 "15
-[; ;Comandos.c: 15: }
+[; ;Comandos.c: 15:     PORTDbits.RD5=0;
+[e = . . _PORTDbits 0 5 -> -> 0 `i `uc ]
+"16
+[; ;Comandos.c: 16:     PORTDbits.RD6=0;
+[e = . . _PORTDbits 0 6 -> -> 0 `i `uc ]
+"17
+[; ;Comandos.c: 17:     return;
+[e $UE 368  ]
+"18
+[; ;Comandos.c: 18: }
 [e :UE 368 ]
 }
-"17
-[; ;Comandos.c: 17: void yLimit(){
-[v _yLimit `(v ~T0 @X0 1 ef ]
+"19
+[; ;Comandos.c: 19: void xLimit(){
+[v _xLimit `(v ~T0 @X0 1 ef ]
 {
-[e :U _yLimit ]
+[e :U _xLimit ]
 [f ]
-"18
-[; ;Comandos.c: 18:     for(int i=0; i < strlen(yl); i++){
+"20
+[; ;Comandos.c: 20:     for(int i=0; i < strlen(xl); i++){
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
 [e $U 377  ]
 [e :U 374 ]
 {
-"19
-[; ;Comandos.c: 19:     USART_Tx(yl[i]);
-[e ( _USART_Tx (1 *U + &U _yl * -> -> _i `ui `ux -> -> # *U &U _yl `ui `ux ]
-"20
-[; ;Comandos.c: 20:     } return;
+"21
+[; ;Comandos.c: 21:     USART_Tx(xl[i]);
+[e ( _USART_Tx (1 *U + &U _xl * -> -> _i `ui `ux -> -> # *U &U _xl `ui `ux ]
+"22
+[; ;Comandos.c: 22:     }
 }
 [e ++ _i -> 1 `i ]
 [e :U 377 ]
-[e $ < -> _i `ui ( _strlen (1 -> &U _yl `*Cuc 374  ]
+[e $ < -> _i `ui ( _strlen (1 -> &U _xl `*Cuc 374  ]
 [e :U 375 ]
 }
+"23
+[; ;Comandos.c: 23:     return;
 [e $UE 373  ]
-"21
-[; ;Comandos.c: 21: }
+"24
+[; ;Comandos.c: 24: }
 [e :UE 373 ]
 }
-"23
-[; ;Comandos.c: 23: void Error(){
-[v _Error `(v ~T0 @X0 1 ef ]
+"26
+[; ;Comandos.c: 26: void yLimit(){
+[v _yLimit `(v ~T0 @X0 1 ef ]
 {
-[e :U _Error ]
+[e :U _yLimit ]
 [f ]
-"24
-[; ;Comandos.c: 24:     for(int i=0; i< strlen(msgwrong); i++){
+"27
+[; ;Comandos.c: 27:     for(int i=0; i < strlen(yl); i++){
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
 [e $U 382  ]
 [e :U 379 ]
 {
-"25
-[; ;Comandos.c: 25:     USART_Tx(msgwrong[i]);
-[e ( _USART_Tx (1 *U + &U _msgwrong * -> -> _i `ui `ux -> -> # *U &U _msgwrong `ui `ux ]
-"26
-[; ;Comandos.c: 26:     }
+"28
+[; ;Comandos.c: 28:     USART_Tx(yl[i]);
+[e ( _USART_Tx (1 *U + &U _yl * -> -> _i `ui `ux -> -> # *U &U _yl `ui `ux ]
+"29
+[; ;Comandos.c: 29:     } return;
 }
 [e ++ _i -> 1 `i ]
 [e :U 382 ]
-[e $ < -> _i `ui ( _strlen (1 -> &U _msgwrong `*Cuc 379  ]
+[e $ < -> _i `ui ( _strlen (1 -> &U _yl `*Cuc 379  ]
 [e :U 380 ]
 }
-"27
-[; ;Comandos.c: 27:   PORTDbits.RD4=1;
-[e = . . _PORTDbits 0 4 -> -> 1 `i `uc ]
-"28
-[; ;Comandos.c: 28:     PORTDbits.RD5=0;
-[e = . . _PORTDbits 0 5 -> -> 0 `i `uc ]
-"29
-[; ;Comandos.c: 29:     PORTDbits.RD6=0;
-[e = . . _PORTDbits 0 6 -> -> 0 `i `uc ]
+[e $UE 378  ]
 "30
 [; ;Comandos.c: 30: }
 [e :UE 378 ]
 }
-"33
-[; ;Comandos.c: 33: void Ejecutandose(){
-[v _Ejecutandose `(v ~T0 @X0 1 ef ]
+"32
+[; ;Comandos.c: 32: void Error(){
+[v _Error `(v ~T0 @X0 1 ef ]
 {
-[e :U _Ejecutandose ]
+[e :U _Error ]
 [f ]
-"34
-[; ;Comandos.c: 34:     for(int i=0; i < strlen(msgeje); i++){
+"33
+[; ;Comandos.c: 33:     for(int i=0; i< strlen(msgwrong); i++){
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
 [e $U 387  ]
 [e :U 384 ]
 {
+"34
+[; ;Comandos.c: 34:     USART_Tx(msgwrong[i]);
+[e ( _USART_Tx (1 *U + &U _msgwrong * -> -> _i `ui `ux -> -> # *U &U _msgwrong `ui `ux ]
 "35
-[; ;Comandos.c: 35:     USART_Tx(msgeje[i]);
-[e ( _USART_Tx (1 *U + &U _msgeje * -> -> _i `ui `ux -> -> # *U &U _msgeje `ui `ux ]
-"36
-[; ;Comandos.c: 36:     }
+[; ;Comandos.c: 35:     }
 }
 [e ++ _i -> 1 `i ]
 [e :U 387 ]
-[e $ < -> _i `ui ( _strlen (1 -> &U _msgeje `*Cuc 384  ]
+[e $ < -> _i `ui ( _strlen (1 -> &U _msgwrong `*Cuc 384  ]
 [e :U 385 ]
 }
+"36
+[; ;Comandos.c: 36:     PORTDbits.RD4=1;
+[e = . . _PORTDbits 0 4 -> -> 1 `i `uc ]
 "37
-[; ;Comandos.c: 37:       PORTDbits.RD4=0;
-[e = . . _PORTDbits 0 4 -> -> 0 `i `uc ]
-"38
-[; ;Comandos.c: 38:     PORTDbits.RD5=0;
+[; ;Comandos.c: 37:     PORTDbits.RD5=0;
 [e = . . _PORTDbits 0 5 -> -> 0 `i `uc ]
+"38
+[; ;Comandos.c: 38:     PORTDbits.RD6=0;
+[e = . . _PORTDbits 0 6 -> -> 0 `i `uc ]
 "39
-[; ;Comandos.c: 39:     PORTDbits.RD6=1;
-[e = . . _PORTDbits 0 6 -> -> 1 `i `uc ]
-"40
-[; ;Comandos.c: 40: }
+[; ;Comandos.c: 39: }
 [e :UE 383 ]
 }
-"43
-[; ;Comandos.c: 43: void Completo(){
-[v _Completo `(v ~T0 @X0 1 ef ]
+"42
+[; ;Comandos.c: 42: void Ejecutandose(){
+[v _Ejecutandose `(v ~T0 @X0 1 ef ]
 {
-[e :U _Completo ]
+[e :U _Ejecutandose ]
 [f ]
-"44
-[; ;Comandos.c: 44:     for(int i=0; i < strlen(msgcomp); i++){
+"43
+[; ;Comandos.c: 43:     for(int i=0; i < strlen(msgeje); i++){
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
 [e $U 392  ]
 [e :U 389 ]
 {
+"44
+[; ;Comandos.c: 44:     USART_Tx(msgeje[i]);
+[e ( _USART_Tx (1 *U + &U _msgeje * -> -> _i `ui `ux -> -> # *U &U _msgeje `ui `ux ]
 "45
-[; ;Comandos.c: 45:     USART_Tx(msgcomp[i]);
-[e ( _USART_Tx (1 *U + &U _msgcomp * -> -> _i `ui `ux -> -> # *U &U _msgcomp `ui `ux ]
-"46
-[; ;Comandos.c: 46:     }
+[; ;Comandos.c: 45:     }
 }
 [e ++ _i -> 1 `i ]
 [e :U 392 ]
-[e $ < -> _i `ui ( _strlen (1 -> &U _msgcomp `*Cuc 389  ]
+[e $ < -> _i `ui ( _strlen (1 -> &U _msgeje `*Cuc 389  ]
 [e :U 390 ]
 }
-"47
-[; ;Comandos.c: 47:       PORTDbits.RD4=0;
+"46
+[; ;Comandos.c: 46:       PORTDbits.RD4=0;
 [e = . . _PORTDbits 0 4 -> -> 0 `i `uc ]
+"47
+[; ;Comandos.c: 47:     PORTDbits.RD5=0;
+[e = . . _PORTDbits 0 5 -> -> 0 `i `uc ]
 "48
-[; ;Comandos.c: 48:     PORTDbits.RD5=1;
-[e = . . _PORTDbits 0 5 -> -> 1 `i `uc ]
+[; ;Comandos.c: 48:     PORTDbits.RD6=1;
+[e = . . _PORTDbits 0 6 -> -> 1 `i `uc ]
 "49
-[; ;Comandos.c: 49:     PORTDbits.RD6=0;
-[e = . . _PORTDbits 0 6 -> -> 0 `i `uc ]
-"50
-[; ;Comandos.c: 50: }
+[; ;Comandos.c: 49: }
 [e :UE 388 ]
 }
+"52
+[; ;Comandos.c: 52: void Completo(){
+[v _Completo `(v ~T0 @X0 1 ef ]
+{
+[e :U _Completo ]
+[f ]
 "53
-[; ;Comandos.c: 53: void coordinateRefreshX(int newX){
+[; ;Comandos.c: 53:     for(int i=0; i < strlen(msgcomp); i++){
+{
+[v _i `i ~T0 @X0 1 a ]
+[e = _i -> 0 `i ]
+[e $U 397  ]
+[e :U 394 ]
+{
+"54
+[; ;Comandos.c: 54:     USART_Tx(msgcomp[i]);
+[e ( _USART_Tx (1 *U + &U _msgcomp * -> -> _i `ui `ux -> -> # *U &U _msgcomp `ui `ux ]
+"55
+[; ;Comandos.c: 55:     }
+}
+[e ++ _i -> 1 `i ]
+[e :U 397 ]
+[e $ < -> _i `ui ( _strlen (1 -> &U _msgcomp `*Cuc 394  ]
+[e :U 395 ]
+}
+"56
+[; ;Comandos.c: 56:       PORTDbits.RD4=0;
+[e = . . _PORTDbits 0 4 -> -> 0 `i `uc ]
+"57
+[; ;Comandos.c: 57:     PORTDbits.RD5=1;
+[e = . . _PORTDbits 0 5 -> -> 1 `i `uc ]
+"58
+[; ;Comandos.c: 58:     PORTDbits.RD6=0;
+[e = . . _PORTDbits 0 6 -> -> 0 `i `uc ]
+"59
+[; ;Comandos.c: 59: }
+[e :UE 393 ]
+}
+"62
+[; ;Comandos.c: 62: void coordinateRefreshX(int newX){
 [v _coordinateRefreshX `(v ~T0 @X0 1 ef1`i ]
 {
 [e :U _coordinateRefreshX ]
 [v _newX `i ~T0 @X0 1 r1 ]
 [f ]
-"54
-[; ;Comandos.c: 54:     if(newX<x){
-[e $ ! < -> _newX `ui -> _x `ui 394  ]
+"63
+[; ;Comandos.c: 63:     if(newX<x){
+[e $ ! < -> _newX `ui -> _x `ui 399  ]
 {
-"55
-[; ;Comandos.c: 55:        PORTDbits.RD0=1;
+"64
+[; ;Comandos.c: 64:        PORTDbits.RD0=1;
 [e = . . _PORTDbits 0 0 -> -> 1 `i `uc ]
-"58
-[; ;Comandos.c: 58:        PORTDbits.RD1=0;
-[e = . . _PORTDbits 0 1 -> -> 0 `i `uc ]
-"60
-[; ;Comandos.c: 60:        for(int i=0; i < strlen(msleft); i++){
+"67
+[; ;Comandos.c: 67:        PORTDbits.RD1=1;
+[e = . . _PORTDbits 0 1 -> -> 1 `i `uc ]
+"69
+[; ;Comandos.c: 69:        for(int i=0; i < strlen(msleft); i++){
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-[e $U 398  ]
-[e :U 395 ]
-{
-"61
-[; ;Comandos.c: 61:     USART_Tx(msleft[i]);
-[e ( _USART_Tx (1 *U + &U _msleft * -> -> _i `ui `ux -> -> # *U &U _msleft `ui `ux ]
-"62
-[; ;Comandos.c: 62:     }
-}
-[e ++ _i -> 1 `i ]
-[e :U 398 ]
-[e $ < -> _i `ui ( _strlen (1 -> &U _msleft `*Cuc 395  ]
-[e :U 396 ]
-}
-"63
-[; ;Comandos.c: 63:        contador_pulsosD(x-newX);
-[e ( _contador_pulsosD (1 -> - -> _x `ui -> _newX `ui `i ]
-"65
-[; ;Comandos.c: 65:     }
-}
-[e :U 394 ]
-"66
-[; ;Comandos.c: 66:     if(newX>x){
-[e $ ! > -> _newX `ui -> _x `ui 399  ]
-{
-"67
-[; ;Comandos.c: 67:        PORTDbits.RD0=0;
-[e = . . _PORTDbits 0 0 -> -> 0 `i `uc ]
-"68
-[; ;Comandos.c: 68:        PORTDbits.RD1=1;
-[e = . . _PORTDbits 0 1 -> -> 1 `i `uc ]
-"72
-[; ;Comandos.c: 72:        for(int j=0; j < strlen(msright); j++){
-{
-[v _j `i ~T0 @X0 1 a ]
-[e = _j -> 0 `i ]
 [e $U 403  ]
 [e :U 400 ]
 {
-"73
-[; ;Comandos.c: 73:     USART_Tx(msright[j]);
-[e ( _USART_Tx (1 *U + &U _msright * -> -> _j `ui `ux -> -> # *U &U _msright `ui `ux ]
+"70
+[; ;Comandos.c: 70:     USART_Tx(msleft[i]);
+[e ( _USART_Tx (1 *U + &U _msleft * -> -> _i `ui `ux -> -> # *U &U _msleft `ui `ux ]
+"71
+[; ;Comandos.c: 71:     }
+}
+[e ++ _i -> 1 `i ]
+[e :U 403 ]
+[e $ < -> _i `ui ( _strlen (1 -> &U _msleft `*Cuc 400  ]
+[e :U 401 ]
+}
+"72
+[; ;Comandos.c: 72:        contador_pulsosD(x-newX);
+[e ( _contador_pulsosD (1 -> - -> _x `ui -> _newX `ui `i ]
 "74
 [; ;Comandos.c: 74:     }
 }
-[e ++ _j -> 1 `i ]
-[e :U 403 ]
-[e $ < -> _j `ui ( _strlen (1 -> &U _msright `*Cuc 400  ]
-[e :U 401 ]
-}
-"75
-[; ;Comandos.c: 75:         contador_pulsosD(newX-x);
-[e ( _contador_pulsosD (1 -> - -> _newX `ui -> _x `ui `i ]
-"76
-[; ;Comandos.c: 76:     }
-}
 [e :U 399 ]
+"75
+[; ;Comandos.c: 75:     if(newX>x){
+[e $ ! > -> _newX `ui -> _x `ui 404  ]
+{
+"76
+[; ;Comandos.c: 76:        PORTDbits.RD0=0;
+[e = . . _PORTDbits 0 0 -> -> 0 `i `uc ]
 "77
-[; ;Comandos.c: 77:     x=newX;
-[e = _x -> _newX `us ]
-"78
-[; ;Comandos.c: 78: }
-[e :UE 393 ]
-}
+[; ;Comandos.c: 77:        PORTDbits.RD1=0;
+[e = . . _PORTDbits 0 1 -> -> 0 `i `uc ]
 "81
-[; ;Comandos.c: 81: void coordinateRefreshY(int newY){
+[; ;Comandos.c: 81:        for(int j=0; j < strlen(msright); j++){
+{
+[v _j `i ~T0 @X0 1 a ]
+[e = _j -> 0 `i ]
+[e $U 408  ]
+[e :U 405 ]
+{
+"82
+[; ;Comandos.c: 82:     USART_Tx(msright[j]);
+[e ( _USART_Tx (1 *U + &U _msright * -> -> _j `ui `ux -> -> # *U &U _msright `ui `ux ]
+"83
+[; ;Comandos.c: 83:     }
+}
+[e ++ _j -> 1 `i ]
+[e :U 408 ]
+[e $ < -> _j `ui ( _strlen (1 -> &U _msright `*Cuc 405  ]
+[e :U 406 ]
+}
+"84
+[; ;Comandos.c: 84:         contador_pulsosD(newX-x);
+[e ( _contador_pulsosD (1 -> - -> _newX `ui -> _x `ui `i ]
+"85
+[; ;Comandos.c: 85:     }
+}
+[e :U 404 ]
+"86
+[; ;Comandos.c: 86:     x=newX;
+[e = _x -> _newX `us ]
+"87
+[; ;Comandos.c: 87: }
+[e :UE 398 ]
+}
+"90
+[; ;Comandos.c: 90: void coordinateRefreshY(int newY){
 [v _coordinateRefreshY `(v ~T0 @X0 1 ef1`i ]
 {
 [e :U _coordinateRefreshY ]
 [v _newY `i ~T0 @X0 1 r1 ]
 [f ]
-"82
-[; ;Comandos.c: 82:     if(newY<y){
-[e $ ! < -> _newY `ui -> _y `ui 405  ]
+"91
+[; ;Comandos.c: 91:     if(newY<y){
+[e $ ! < -> _newY `ui -> _y `ui 410  ]
 {
-"83
-[; ;Comandos.c: 83:     PORTDbits.RD0=0;
-[e = . . _PORTDbits 0 0 -> -> 0 `i `uc ]
-"84
-[; ;Comandos.c: 84:        PORTDbits.RD1=0;
+"92
+[; ;Comandos.c: 92:     PORTDbits.RD0=1;
+[e = . . _PORTDbits 0 0 -> -> 1 `i `uc ]
+"93
+[; ;Comandos.c: 93:        PORTDbits.RD1=0;
 [e = . . _PORTDbits 0 1 -> -> 0 `i `uc ]
-"86
-[; ;Comandos.c: 86:        for(int i=0; i < strlen(msdown); i++){
+"95
+[; ;Comandos.c: 95:        for(int i=0; i < strlen(msdown); i++){
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-[e $U 409  ]
-[e :U 406 ]
-{
-"87
-[; ;Comandos.c: 87:     USART_Tx(msdown[i]);
-[e ( _USART_Tx (1 *U + &U _msdown * -> -> _i `ui `ux -> -> # *U &U _msdown `ui `ux ]
-"88
-[; ;Comandos.c: 88:     }
-}
-[e ++ _i -> 1 `i ]
-[e :U 409 ]
-[e $ < -> _i `ui ( _strlen (1 -> &U _msdown `*Cuc 406  ]
-[e :U 407 ]
-}
-"89
-[; ;Comandos.c: 89:     contador_pulsosD(y-newY);
-[e ( _contador_pulsosD (1 -> - -> _y `ui -> _newY `ui `i ]
-"90
-[; ;Comandos.c: 90:     }
-}
-[e :U 405 ]
-"91
-[; ;Comandos.c: 91:     if(newY>y){
-[e $ ! > -> _newY `ui -> _y `ui 410  ]
-{
-"92
-[; ;Comandos.c: 92:         PORTDbits.RD0=1;
-[e = . . _PORTDbits 0 0 -> -> 1 `i `uc ]
-"93
-[; ;Comandos.c: 93:         PORTDbits.RD1=1;
-[e = . . _PORTDbits 0 1 -> -> 1 `i `uc ]
-"95
-[; ;Comandos.c: 95:     for(int j=0; j < strlen(msup); j++){
-{
-[v _j `i ~T0 @X0 1 a ]
-[e = _j -> 0 `i ]
 [e $U 414  ]
 [e :U 411 ]
 {
 "96
-[; ;Comandos.c: 96:     USART_Tx(msup[j]);
-[e ( _USART_Tx (1 *U + &U _msup * -> -> _j `ui `ux -> -> # *U &U _msup `ui `ux ]
+[; ;Comandos.c: 96:     USART_Tx(msdown[i]);
+[e ( _USART_Tx (1 *U + &U _msdown * -> -> _i `ui `ux -> -> # *U &U _msdown `ui `ux ]
 "97
 [; ;Comandos.c: 97:     }
 }
-[e ++ _j -> 1 `i ]
+[e ++ _i -> 1 `i ]
 [e :U 414 ]
-[e $ < -> _j `ui ( _strlen (1 -> &U _msup `*Cuc 411  ]
+[e $ < -> _i `ui ( _strlen (1 -> &U _msdown `*Cuc 411  ]
 [e :U 412 ]
 }
+"98
+[; ;Comandos.c: 98:     contador_pulsosD(y-newY);
+[e ( _contador_pulsosD (1 -> - -> _y `ui -> _newY `ui `i ]
 "99
-[; ;Comandos.c: 99:         contador_pulsosD(newY-y);
-[e ( _contador_pulsosD (1 -> - -> _newY `ui -> _y `ui `i ]
-"100
-[; ;Comandos.c: 100:     }
+[; ;Comandos.c: 99:     }
 }
 [e :U 410 ]
+"100
+[; ;Comandos.c: 100:     if(newY>y){
+[e $ ! > -> _newY `ui -> _y `ui 415  ]
+{
 "101
-[; ;Comandos.c: 101:     y=newY;
-[e = _y -> _newY `us ]
+[; ;Comandos.c: 101:         PORTDbits.RD0=0;
+[e = . . _PORTDbits 0 0 -> -> 0 `i `uc ]
 "102
-[; ;Comandos.c: 102: }
-[e :UE 404 ]
-}
+[; ;Comandos.c: 102:         PORTDbits.RD1=1;
+[e = . . _PORTDbits 0 1 -> -> 1 `i `uc ]
+"104
+[; ;Comandos.c: 104:     for(int j=0; j < strlen(msup); j++){
+{
+[v _j `i ~T0 @X0 1 a ]
+[e = _j -> 0 `i ]
+[e $U 419  ]
+[e :U 416 ]
+{
+"105
+[; ;Comandos.c: 105:     USART_Tx(msup[j]);
+[e ( _USART_Tx (1 *U + &U _msup * -> -> _j `ui `ux -> -> # *U &U _msup `ui `ux ]
 "106
-[; ;Comandos.c: 106: int comandos (char comando[7]){
+[; ;Comandos.c: 106:     }
+}
+[e ++ _j -> 1 `i ]
+[e :U 419 ]
+[e $ < -> _j `ui ( _strlen (1 -> &U _msup `*Cuc 416  ]
+[e :U 417 ]
+}
+"108
+[; ;Comandos.c: 108:         contador_pulsosD(newY-y);
+[e ( _contador_pulsosD (1 -> - -> _newY `ui -> _y `ui `i ]
+"109
+[; ;Comandos.c: 109:     }
+}
+[e :U 415 ]
+"110
+[; ;Comandos.c: 110:     y=newY;
+[e = _y -> _newY `us ]
+"111
+[; ;Comandos.c: 111: }
+[e :UE 409 ]
+}
+"115
+[; ;Comandos.c: 115: int comandos (char comando[7]){
 [v _comandos `(i ~T0 @X0 1 ef1`*uc ]
 {
 [e :U _comandos ]
 [v _comando `*uc ~T0 @X0 1 r1 ]
 [f ]
-"107
-[; ;Comandos.c: 107:     if(comando[0]=='C'){
-[e $ ! == -> *U + _comando * -> -> 0 `i `x -> -> # *U _comando `i `x `ui -> 67 `ui 416  ]
-{
-"108
-[; ;Comandos.c: 108:         if (comando[1]>='0' && comando[1]<='3'){
-[e $ ! && >= -> *U + _comando * -> -> 1 `i `x -> -> # *U _comando `i `x `ui -> 48 `ui <= -> *U + _comando * -> -> 1 `i `x -> -> # *U _comando `i `x `ui -> 51 `ui 417  ]
-{
-"109
-[; ;Comandos.c: 109:             if (comando[2]>='0' && comando[2]<='9'){
-[e $ ! && >= -> *U + _comando * -> -> 2 `i `x -> -> # *U _comando `i `x `ui -> 48 `ui <= -> *U + _comando * -> -> 2 `i `x -> -> # *U _comando `i `x `ui -> 57 `ui 418  ]
-{
-"110
-[; ;Comandos.c: 110:                 if (comando[3]>='0' && comando[3]<='9'){
-[e $ ! && >= -> *U + _comando * -> -> 3 `i `x -> -> # *U _comando `i `x `ui -> 48 `ui <= -> *U + _comando * -> -> 3 `i `x -> -> # *U _comando `i `x `ui -> 57 `ui 419  ]
-{
-"111
-[; ;Comandos.c: 111:                     if (comando[4]==','){
-[e $ ! == -> *U + _comando * -> -> 4 `i `x -> -> # *U _comando `i `x `ui -> 44 `ui 420  ]
-{
-"112
-[; ;Comandos.c: 112:                         if (comando[5]>='0' && comando[5]<='3'){
-[e $ ! && >= -> *U + _comando * -> -> 5 `i `x -> -> # *U _comando `i `x `ui -> 48 `ui <= -> *U + _comando * -> -> 5 `i `x -> -> # *U _comando `i `x `ui -> 51 `ui 421  ]
-{
-"113
-[; ;Comandos.c: 113:                             if (comando[6]>='0' && comando[6]<='9'){
-[e $ ! && >= -> *U + _comando * -> -> 6 `i `x -> -> # *U _comando `i `x `ui -> 48 `ui <= -> *U + _comando * -> -> 6 `i `x -> -> # *U _comando `i `x `ui -> 57 `ui 422  ]
-{
-"114
-[; ;Comandos.c: 114:                                 if (comando[7]>='0' && comando[7]<='9'){
-[e $ ! && >= -> *U + _comando * -> -> 7 `i `x -> -> # *U _comando `i `x `ui -> 48 `ui <= -> *U + _comando * -> -> 7 `i `x -> -> # *U _comando `i `x `ui -> 57 `ui 423  ]
-{
-"115
-[; ;Comandos.c: 115:                                     Ejecutandose();
-[e ( _Ejecutandose ..  ]
 "116
-[; ;Comandos.c: 116:                                     nvalorx= ((comando[1]-48)*100)+((comando[2]-48)*10)+(comando[3]-48);
-[e = _nvalorx -> + + * - -> *U + _comando * -> -> 1 `i `x -> -> # *U _comando `i `x `i -> 48 `i -> 100 `i * - -> *U + _comando * -> -> 2 `i `x -> -> # *U _comando `i `x `i -> 48 `i -> 10 `i - -> *U + _comando * -> -> 3 `i `x -> -> # *U _comando `i `x `i -> 48 `i `us ]
+[; ;Comandos.c: 116:     if(comando[0]=='C'){
+[e $ ! == -> *U + _comando * -> -> 0 `i `x -> -> # *U _comando `i `x `ui -> 67 `ui 421  ]
+{
 "117
-[; ;Comandos.c: 117:                                     nvalory= ((comando[5]-48)*100)+((comando[6]-48)*10)+(comando[7]-48);
-[e = _nvalory -> + + * - -> *U + _comando * -> -> 5 `i `x -> -> # *U _comando `i `x `i -> 48 `i -> 100 `i * - -> *U + _comando * -> -> 6 `i `x -> -> # *U _comando `i `x `i -> 48 `i -> 10 `i - -> *U + _comando * -> -> 7 `i `x -> -> # *U _comando `i `x `i -> 48 `i `us ]
+[; ;Comandos.c: 117:         if (comando[1]>='0' && comando[1]<='3'){
+[e $ ! && >= -> *U + _comando * -> -> 1 `i `x -> -> # *U _comando `i `x `ui -> 48 `ui <= -> *U + _comando * -> -> 1 `i `x -> -> # *U _comando `i `x `ui -> 51 `ui 422  ]
+{
+"118
+[; ;Comandos.c: 118:             if (comando[2]>='0' && comando[2]<='9'){
+[e $ ! && >= -> *U + _comando * -> -> 2 `i `x -> -> # *U _comando `i `x `ui -> 48 `ui <= -> *U + _comando * -> -> 2 `i `x -> -> # *U _comando `i `x `ui -> 57 `ui 423  ]
+{
 "119
-[; ;Comandos.c: 119:                                     coordinateRefreshX(nvalorx);
-[e ( _coordinateRefreshX (1 -> _nvalorx `i ]
+[; ;Comandos.c: 119:                 if (comando[3]>='0' && comando[3]<='9'){
+[e $ ! && >= -> *U + _comando * -> -> 3 `i `x -> -> # *U _comando `i `x `ui -> 48 `ui <= -> *U + _comando * -> -> 3 `i `x -> -> # *U _comando `i `x `ui -> 57 `ui 424  ]
+{
 "120
-[; ;Comandos.c: 120:                                     coordinateRefreshY(nvalory);
-[e ( _coordinateRefreshY (1 -> _nvalory `i ]
+[; ;Comandos.c: 120:                     if (comando[4]==','){
+[e $ ! == -> *U + _comando * -> -> 4 `i `x -> -> # *U _comando `i `x `ui -> 44 `ui 425  ]
+{
 "121
-[; ;Comandos.c: 121:                                     Completo();
-[e ( _Completo ..  ]
+[; ;Comandos.c: 121:                         if (comando[5]>='0' && comando[5]<='3'){
+[e $ ! && >= -> *U + _comando * -> -> 5 `i `x -> -> # *U _comando `i `x `ui -> 48 `ui <= -> *U + _comando * -> -> 5 `i `x -> -> # *U _comando `i `x `ui -> 51 `ui 426  ]
+{
 "122
-[; ;Comandos.c: 122:                                 }
-}
-[e $U 424  ]
+[; ;Comandos.c: 122:                             if (comando[6]>='0' && comando[6]<='9'){
+[e $ ! && >= -> *U + _comando * -> -> 6 `i `x -> -> # *U _comando `i `x `ui -> 48 `ui <= -> *U + _comando * -> -> 6 `i `x -> -> # *U _comando `i `x `ui -> 57 `ui 427  ]
+{
 "123
-[; ;Comandos.c: 123:                                 else{
-[e :U 423 ]
+[; ;Comandos.c: 123:                                 if (comando[7]>='0' && comando[7]<='9'){
+[e $ ! && >= -> *U + _comando * -> -> 7 `i `x -> -> # *U _comando `i `x `ui -> 48 `ui <= -> *U + _comando * -> -> 7 `i `x -> -> # *U _comando `i `x `ui -> 57 `ui 428  ]
 {
 "124
-[; ;Comandos.c: 124:                                     Error();
-[e ( _Error ..  ]
+[; ;Comandos.c: 124:                                     Ejecutandose();
+[e ( _Ejecutandose ..  ]
 "125
-[; ;Comandos.c: 125:                                 }
-}
-[e :U 424 ]
+[; ;Comandos.c: 125:                                     nvalorx= ((comando[1]-48)*100)+((comando[2]-48)*10)+(comando[3]-48);
+[e = _nvalorx -> + + * - -> *U + _comando * -> -> 1 `i `x -> -> # *U _comando `i `x `i -> 48 `i -> 100 `i * - -> *U + _comando * -> -> 2 `i `x -> -> # *U _comando `i `x `i -> 48 `i -> 10 `i - -> *U + _comando * -> -> 3 `i `x -> -> # *U _comando `i `x `i -> 48 `i `us ]
 "126
-[; ;Comandos.c: 126:                             }
-}
-[e $U 425  ]
-"127
-[; ;Comandos.c: 127:                             else{
-[e :U 422 ]
-{
+[; ;Comandos.c: 126:                                     nvalory= ((comando[5]-48)*100)+((comando[6]-48)*10)+(comando[7]-48);
+[e = _nvalory -> + + * - -> *U + _comando * -> -> 5 `i `x -> -> # *U _comando `i `x `i -> 48 `i -> 100 `i * - -> *U + _comando * -> -> 6 `i `x -> -> # *U _comando `i `x `i -> 48 `i -> 10 `i - -> *U + _comando * -> -> 7 `i `x -> -> # *U _comando `i `x `i -> 48 `i `us ]
 "128
-[; ;Comandos.c: 128:                                 Error();
-[e ( _Error ..  ]
+[; ;Comandos.c: 128:                                     coordinateRefreshX(nvalorx);
+[e ( _coordinateRefreshX (1 -> _nvalorx `i ]
 "129
-[; ;Comandos.c: 129:                             }
-}
-[e :U 425 ]
+[; ;Comandos.c: 129:                                     coordinateRefreshY(nvalory);
+[e ( _coordinateRefreshY (1 -> _nvalory `i ]
 "130
-[; ;Comandos.c: 130:                         }
-}
-[e $U 426  ]
+[; ;Comandos.c: 130:                                     Completo();
+[e ( _Completo ..  ]
 "131
-[; ;Comandos.c: 131:                         else{
-[e :U 421 ]
-{
-"132
-[; ;Comandos.c: 132:                             Error();
-[e ( _Error ..  ]
-"133
-[; ;Comandos.c: 133:                         }
-}
-[e :U 426 ]
-"134
-[; ;Comandos.c: 134:                     }
-}
-[e $U 427  ]
-"135
-[; ;Comandos.c: 135:                     else{
-[e :U 420 ]
-{
-"136
-[; ;Comandos.c: 136:                         Error();
-[e ( _Error ..  ]
-"137
-[; ;Comandos.c: 137:                     }
-}
-[e :U 427 ]
-"138
-[; ;Comandos.c: 138:                 }
-}
-[e $U 428  ]
-"139
-[; ;Comandos.c: 139:                 else{
-[e :U 419 ]
-{
-"140
-[; ;Comandos.c: 140:                     Error();
-[e ( _Error ..  ]
-"141
-[; ;Comandos.c: 141:                 }
-}
-[e :U 428 ]
-"142
-[; ;Comandos.c: 142:             }
+[; ;Comandos.c: 131:                                 }
 }
 [e $U 429  ]
-"143
-[; ;Comandos.c: 143:             else{
-[e :U 418 ]
+"132
+[; ;Comandos.c: 132:                                 else{
+[e :U 428 ]
 {
-"144
-[; ;Comandos.c: 144:                 Error();
-[e ( _Error ..  ]
-"145
-[; ;Comandos.c: 145:             }
+"133
+[; ;Comandos.c: 133:                                     invalidCoordinate();
+[e ( _invalidCoordinate ..  ]
+"134
+[; ;Comandos.c: 134:                                 }
 }
 [e :U 429 ]
-"146
-[; ;Comandos.c: 146:         }
+"135
+[; ;Comandos.c: 135:                             }
 }
 [e $U 430  ]
-"147
-[; ;Comandos.c: 147:         else{
-[e :U 417 ]
+"136
+[; ;Comandos.c: 136:                             else{
+[e :U 427 ]
 {
-"148
-[; ;Comandos.c: 148:             Error();
-[e ( _Error ..  ]
-"149
-[; ;Comandos.c: 149:         }
+"137
+[; ;Comandos.c: 137:                                 invalidCoordinate();
+[e ( _invalidCoordinate ..  ]
+"138
+[; ;Comandos.c: 138:                             }
 }
 [e :U 430 ]
-"150
-[; ;Comandos.c: 150:     }
+"139
+[; ;Comandos.c: 139:                         }
 }
 [e $U 431  ]
+"140
+[; ;Comandos.c: 140:                         else{
+[e :U 426 ]
+{
+"141
+[; ;Comandos.c: 141:                             invalidCoordinate();
+[e ( _invalidCoordinate ..  ]
+"142
+[; ;Comandos.c: 142:                         }
+}
+[e :U 431 ]
+"143
+[; ;Comandos.c: 143:                     }
+}
+[e $U 432  ]
+"144
+[; ;Comandos.c: 144:                     else{
+[e :U 425 ]
+{
+"145
+[; ;Comandos.c: 145:                         invalidCoordinate();
+[e ( _invalidCoordinate ..  ]
+"146
+[; ;Comandos.c: 146:                     }
+}
+[e :U 432 ]
+"147
+[; ;Comandos.c: 147:                 }
+}
+[e $U 433  ]
+"148
+[; ;Comandos.c: 148:                 else{
+[e :U 424 ]
+{
+"149
+[; ;Comandos.c: 149:                     invalidCoordinate();
+[e ( _invalidCoordinate ..  ]
+"150
+[; ;Comandos.c: 150:                 }
+}
+[e :U 433 ]
+"151
+[; ;Comandos.c: 151:             }
+}
+[e $U 434  ]
 "152
-[; ;Comandos.c: 152:     else if(comando[0]=='G'){
-[e :U 416 ]
-[e $ ! == -> *U + _comando * -> -> 0 `i `x -> -> # *U _comando `i `x `ui -> 71 `ui 432  ]
+[; ;Comandos.c: 152:             else{
+[e :U 423 ]
 {
 "153
-[; ;Comandos.c: 153:         if (comando[1]=='O'){
-[e $ ! == -> *U + _comando * -> -> 1 `i `x -> -> # *U _comando `i `x `ui -> 79 `ui 433  ]
-{
+[; ;Comandos.c: 153:                 invalidCoordinate();
+[e ( _invalidCoordinate ..  ]
 "154
-[; ;Comandos.c: 154:             if (comando[2]=='T'){
-[e $ ! == -> *U + _comando * -> -> 2 `i `x -> -> # *U _comando `i `x `ui -> 84 `ui 434  ]
-{
+[; ;Comandos.c: 154:             }
+}
+[e :U 434 ]
 "155
-[; ;Comandos.c: 155:                 if (comando[3]=='O'){
-[e $ ! == -> *U + _comando * -> -> 3 `i `x -> -> # *U _comando `i `x `ui -> 79 `ui 435  ]
-{
+[; ;Comandos.c: 155:         }
+}
+[e $U 435  ]
 "156
-[; ;Comandos.c: 156:                     if (comando[4]=='H'){
-[e $ ! == -> *U + _comando * -> -> 4 `i `x -> -> # *U _comando `i `x `ui -> 72 `ui 436  ]
+[; ;Comandos.c: 156:         else{
+[e :U 422 ]
 {
 "157
-[; ;Comandos.c: 157:                         if (comando[5]=='O'){
-[e $ ! == -> *U + _comando * -> -> 5 `i `x -> -> # *U _comando `i `x `ui -> 79 `ui 437  ]
-{
+[; ;Comandos.c: 157:             invalidCoordinate();
+[e ( _invalidCoordinate ..  ]
 "158
-[; ;Comandos.c: 158:                             if (comando[6]=='M'){
-[e $ ! == -> *U + _comando * -> -> 6 `i `x -> -> # *U _comando `i `x `ui -> 77 `ui 438  ]
-{
+[; ;Comandos.c: 158:         }
+}
+[e :U 435 ]
 "159
-[; ;Comandos.c: 159:                                 if (comando[7]=='E'){
-[e $ ! == -> *U + _comando * -> -> 7 `i `x -> -> # *U _comando `i `x `ui -> 69 `ui 439  ]
-{
-"160
-[; ;Comandos.c: 160:                                     Ejecutandose();
-[e ( _Ejecutandose ..  ]
+[; ;Comandos.c: 159:     }
+}
+[e $U 436  ]
 "161
-[; ;Comandos.c: 161:                                      PORTDbits.RD0=1;
-[e = . . _PORTDbits 0 0 -> -> 1 `i `uc ]
+[; ;Comandos.c: 161:     else if(comando[0]=='G'){
+[e :U 421 ]
+[e $ ! == -> *U + _comando * -> -> 0 `i `x -> -> # *U _comando `i `x `ui -> 71 `ui 437  ]
+{
 "162
-[; ;Comandos.c: 162:                                      PORTDbits.RD1=0;
-[e = . . _PORTDbits 0 1 -> -> 0 `i `uc ]
+[; ;Comandos.c: 162:         if (comando[1]=='O'){
+[e $ ! == -> *U + _comando * -> -> 1 `i `x -> -> # *U _comando `i `x `ui -> 79 `ui 438  ]
+{
 "163
-[; ;Comandos.c: 163:                                      PORTDbits.RD3=0;
-[e = . . _PORTDbits 0 3 -> -> 0 `i `uc ]
+[; ;Comandos.c: 163:             if (comando[2]=='T'){
+[e $ ! == -> *U + _comando * -> -> 2 `i `x -> -> # *U _comando `i `x `ui -> 84 `ui 439  ]
+{
 "164
-[; ;Comandos.c: 164:                                      PORTDbits.RD2=0;
-[e = . . _PORTDbits 0 2 -> -> 0 `i `uc ]
+[; ;Comandos.c: 164:                 if (comando[3]=='O'){
+[e $ ! == -> *U + _comando * -> -> 3 `i `x -> -> # *U _comando `i `x `ui -> 79 `ui 440  ]
+{
 "165
-[; ;Comandos.c: 165:                                      while(PORTBbits.RB1==0){}
-[e $U 440  ]
-[e :U 441 ]
+[; ;Comandos.c: 165:                     if (comando[4]=='H'){
+[e $ ! == -> *U + _comando * -> -> 4 `i `x -> -> # *U _comando `i `x `ui -> 72 `ui 441  ]
 {
-}
-[e :U 440 ]
-[e $ == -> . . _PORTBbits 0 1 `i -> 0 `i 441  ]
-[e :U 442 ]
 "166
-[; ;Comandos.c: 166:                                      PORTDbits.RD3=1;
-[e = . . _PORTDbits 0 3 -> -> 1 `i `uc ]
+[; ;Comandos.c: 166:                         if (comando[5]=='O'){
+[e $ ! == -> *U + _comando * -> -> 5 `i `x -> -> # *U _comando `i `x `ui -> 79 `ui 442  ]
+{
 "167
-[; ;Comandos.c: 167:                                      PORTDbits.RD2=1;
-[e = . . _PORTDbits 0 2 -> -> 1 `i `uc ]
+[; ;Comandos.c: 167:                             if (comando[6]=='M'){
+[e $ ! == -> *U + _comando * -> -> 6 `i `x -> -> # *U _comando `i `x `ui -> 77 `ui 443  ]
+{
 "168
-[; ;Comandos.c: 168:                                      xLimit();
-[e ( _xLimit ..  ]
+[; ;Comandos.c: 168:                                 if (comando[7]=='E'){
+[e $ ! == -> *U + _comando * -> -> 7 `i `x -> -> # *U _comando `i `x `ui -> 69 `ui 444  ]
+{
 "169
-[; ;Comandos.c: 169:                                      PORTDbits.RD0=0;
-[e = . . _PORTDbits 0 0 -> -> 0 `i `uc ]
+[; ;Comandos.c: 169:                                     Ejecutandose();
+[e ( _Ejecutandose ..  ]
 "170
-[; ;Comandos.c: 170:                                      PORTDbits.RD1=0;
-[e = . . _PORTDbits 0 1 -> -> 0 `i `uc ]
+[; ;Comandos.c: 170:                                      PORTDbits.RD0=1;
+[e = . . _PORTDbits 0 0 -> -> 1 `i `uc ]
 "171
-[; ;Comandos.c: 171:                                      PORTDbits.RD3=0;
-[e = . . _PORTDbits 0 3 -> -> 0 `i `uc ]
+[; ;Comandos.c: 171:                                      PORTDbits.RD1=0;
+[e = . . _PORTDbits 0 1 -> -> 0 `i `uc ]
 "172
-[; ;Comandos.c: 172:                                      PORTDbits.RD2=0;
-[e = . . _PORTDbits 0 2 -> -> 0 `i `uc ]
+[; ;Comandos.c: 172:                                      PORTDbits.RD3=0;
+[e = . . _PORTDbits 0 3 -> -> 0 `i `uc ]
 "173
-[; ;Comandos.c: 173:                                      while(PORTBbits.RB0==0){}
-[e $U 443  ]
-[e :U 444 ]
-{
-}
-[e :U 443 ]
-[e $ == -> . . _PORTBbits 0 0 `i -> 0 `i 444  ]
-[e :U 445 ]
+[; ;Comandos.c: 173:                                      PORTDbits.RD2=0;
+[e = . . _PORTDbits 0 2 -> -> 0 `i `uc ]
 "174
-[; ;Comandos.c: 174:                                      PORTDbits.RD3=1;
-[e = . . _PORTDbits 0 3 -> -> 1 `i `uc ]
-"175
-[; ;Comandos.c: 175:                                      PORTDbits.RD2=1;
-[e = . . _PORTDbits 0 2 -> -> 1 `i `uc ]
-"176
-[; ;Comandos.c: 176:                                      yLimit();
-[e ( _yLimit ..  ]
-"177
-[; ;Comandos.c: 177:                                      x=0;
-[e = _x -> -> 0 `i `us ]
-"178
-[; ;Comandos.c: 178:                                      y=0;
-[e = _y -> -> 0 `i `us ]
-"179
-[; ;Comandos.c: 179:                                      Completo();
-[e ( _Completo ..  ]
-"180
-[; ;Comandos.c: 180:                                 }
-}
-[e $U 446  ]
-"181
-[; ;Comandos.c: 181:                                 else{
-[e :U 439 ]
-{
-"182
-[; ;Comandos.c: 182:                                     Error();
-[e ( _Error ..  ]
-"183
-[; ;Comandos.c: 183:                                 }
-}
+[; ;Comandos.c: 174:                                      while(PORTBbits.RB1==0){}
+[e $U 445  ]
 [e :U 446 ]
-"184
-[; ;Comandos.c: 184:                             }
-}
-[e $U 447  ]
-"185
-[; ;Comandos.c: 185:                             else{
-[e :U 438 ]
 {
-"186
-[; ;Comandos.c: 186:                                 Error();
-[e ( _Error ..  ]
-"187
-[; ;Comandos.c: 187:                             }
 }
+[e :U 445 ]
+[e $ == -> . . _PORTBbits 0 1 `i -> 0 `i 446  ]
 [e :U 447 ]
-"188
-[; ;Comandos.c: 188:                         }
-}
+"175
+[; ;Comandos.c: 175:                                      PORTDbits.RD3=1;
+[e = . . _PORTDbits 0 3 -> -> 1 `i `uc ]
+"176
+[; ;Comandos.c: 176:                                      PORTDbits.RD2=1;
+[e = . . _PORTDbits 0 2 -> -> 1 `i `uc ]
+"177
+[; ;Comandos.c: 177:                                      xLimit();
+[e ( _xLimit ..  ]
+"178
+[; ;Comandos.c: 178:                                      PORTDbits.RD0=1;
+[e = . . _PORTDbits 0 0 -> -> 1 `i `uc ]
+"179
+[; ;Comandos.c: 179:                                      PORTDbits.RD1=1;
+[e = . . _PORTDbits 0 1 -> -> 1 `i `uc ]
+"180
+[; ;Comandos.c: 180:                                      PORTDbits.RD3=0;
+[e = . . _PORTDbits 0 3 -> -> 0 `i `uc ]
+"181
+[; ;Comandos.c: 181:                                      PORTDbits.RD2=0;
+[e = . . _PORTDbits 0 2 -> -> 0 `i `uc ]
+"182
+[; ;Comandos.c: 182:                                      while(PORTBbits.RB0==0){}
 [e $U 448  ]
-"189
-[; ;Comandos.c: 189:                         else{
-[e :U 437 ]
+[e :U 449 ]
 {
-"190
-[; ;Comandos.c: 190:                             Error();
-[e ( _Error ..  ]
-"191
-[; ;Comandos.c: 191:                         }
 }
 [e :U 448 ]
-"192
-[; ;Comandos.c: 192:                     }
-}
-[e $U 449  ]
-"193
-[; ;Comandos.c: 193:                     else{
-[e :U 436 ]
-{
-"194
-[; ;Comandos.c: 194:                         Error();
-[e ( _Error ..  ]
-"195
-[; ;Comandos.c: 195:                     }
-}
-[e :U 449 ]
-"196
-[; ;Comandos.c: 196:                 }
-}
-[e $U 450  ]
-"197
-[; ;Comandos.c: 197:                 else{
-[e :U 435 ]
-{
-"198
-[; ;Comandos.c: 198:                     Error();
-[e ( _Error ..  ]
-"199
-[; ;Comandos.c: 199:                 }
-}
+[e $ == -> . . _PORTBbits 0 0 `i -> 0 `i 449  ]
 [e :U 450 ]
-"200
-[; ;Comandos.c: 200:             }
+"183
+[; ;Comandos.c: 183:                                      PORTDbits.RD3=1;
+[e = . . _PORTDbits 0 3 -> -> 1 `i `uc ]
+"184
+[; ;Comandos.c: 184:                                      PORTDbits.RD2=1;
+[e = . . _PORTDbits 0 2 -> -> 1 `i `uc ]
+"185
+[; ;Comandos.c: 185:                                      yLimit();
+[e ( _yLimit ..  ]
+"186
+[; ;Comandos.c: 186:                                      x=0;
+[e = _x -> -> 0 `i `us ]
+"187
+[; ;Comandos.c: 187:                                      y=0;
+[e = _y -> -> 0 `i `us ]
+"188
+[; ;Comandos.c: 188:                                      Completo();
+[e ( _Completo ..  ]
+"189
+[; ;Comandos.c: 189:                                 }
 }
 [e $U 451  ]
-"201
-[; ;Comandos.c: 201:             else{
-[e :U 434 ]
+"190
+[; ;Comandos.c: 190:                                 else{
+[e :U 444 ]
 {
-"202
-[; ;Comandos.c: 202:                 Error();
+"191
+[; ;Comandos.c: 191:                                     Error();
 [e ( _Error ..  ]
-"203
-[; ;Comandos.c: 203:             }
+"192
+[; ;Comandos.c: 192:                                 }
 }
 [e :U 451 ]
-"204
-[; ;Comandos.c: 204:         }
+"193
+[; ;Comandos.c: 193:                             }
 }
 [e $U 452  ]
-"205
-[; ;Comandos.c: 205:         else{
-[e :U 433 ]
+"194
+[; ;Comandos.c: 194:                             else{
+[e :U 443 ]
 {
-"206
-[; ;Comandos.c: 206:             Error();
+"195
+[; ;Comandos.c: 195:                                 Error();
 [e ( _Error ..  ]
-"207
-[; ;Comandos.c: 207:         }
+"196
+[; ;Comandos.c: 196:                             }
 }
 [e :U 452 ]
-"208
-[; ;Comandos.c: 208:     }
+"197
+[; ;Comandos.c: 197:                         }
 }
 [e $U 453  ]
+"198
+[; ;Comandos.c: 198:                         else{
+[e :U 442 ]
+{
+"199
+[; ;Comandos.c: 199:                             Error();
+[e ( _Error ..  ]
+"200
+[; ;Comandos.c: 200:                         }
+}
+[e :U 453 ]
+"201
+[; ;Comandos.c: 201:                     }
+}
+[e $U 454  ]
+"202
+[; ;Comandos.c: 202:                     else{
+[e :U 441 ]
+{
+"203
+[; ;Comandos.c: 203:                         Error();
+[e ( _Error ..  ]
+"204
+[; ;Comandos.c: 204:                     }
+}
+[e :U 454 ]
+"205
+[; ;Comandos.c: 205:                 }
+}
+[e $U 455  ]
+"206
+[; ;Comandos.c: 206:                 else{
+[e :U 440 ]
+{
+"207
+[; ;Comandos.c: 207:                     Error();
+[e ( _Error ..  ]
+"208
+[; ;Comandos.c: 208:                 }
+}
+[e :U 455 ]
+"209
+[; ;Comandos.c: 209:             }
+}
+[e $U 456  ]
 "210
-[; ;Comandos.c: 210:     else if(comando[0]=='S'){
-[e :U 432 ]
-[e $ ! == -> *U + _comando * -> -> 0 `i `x -> -> # *U _comando `i `x `ui -> 83 `ui 454  ]
+[; ;Comandos.c: 210:             else{
+[e :U 439 ]
 {
 "211
-[; ;Comandos.c: 211:         if (comando[1]=='T'){
-[e $ ! == -> *U + _comando * -> -> 1 `i `x -> -> # *U _comando `i `x `ui -> 84 `ui 455  ]
-{
+[; ;Comandos.c: 211:                 Error();
+[e ( _Error ..  ]
 "212
-[; ;Comandos.c: 212:             if (comando[2]=='C'){
-[e $ ! == -> *U + _comando * -> -> 2 `i `x -> -> # *U _comando `i `x `ui -> 67 `ui 456  ]
-{
+[; ;Comandos.c: 212:             }
+}
+[e :U 456 ]
 "213
-[; ;Comandos.c: 213:                 if (comando[3]=='T'){
-[e $ ! == -> *U + _comando * -> -> 3 `i `x -> -> # *U _comando `i `x `ui -> 84 `ui 457  ]
-{
+[; ;Comandos.c: 213:         }
+}
+[e $U 457  ]
 "214
-[; ;Comandos.c: 214:                     if (comando[4]=='O'){
-[e $ ! == -> *U + _comando * -> -> 4 `i `x -> -> # *U _comando `i `x `ui -> 79 `ui 458  ]
+[; ;Comandos.c: 214:         else{
+[e :U 438 ]
 {
 "215
-[; ;Comandos.c: 215:                         if (comando[5]=='U'){
-[e $ ! == -> *U + _comando * -> -> 5 `i `x -> -> # *U _comando `i `x `ui -> 85 `ui 459  ]
-{
+[; ;Comandos.c: 215:             Error();
+[e ( _Error ..  ]
 "216
-[; ;Comandos.c: 216:                             if (comando[6]=='C'){
-[e $ ! == -> *U + _comando * -> -> 6 `i `x -> -> # *U _comando `i `x `ui -> 67 `ui 460  ]
-{
-"217
-[; ;Comandos.c: 217:                                 if (comando[7]=='H'){
-[e $ ! == -> *U + _comando * -> -> 7 `i `x -> -> # *U _comando `i `x `ui -> 72 `ui 461  ]
-{
-"218
-[; ;Comandos.c: 218:                                     Ejecutandose();
-[e ( _Ejecutandose ..  ]
-"219
-[; ;Comandos.c: 219:                                     PORTDbits.RD7=1;
-[e = . . _PORTDbits 0 7 -> -> 1 `i `uc ]
-"220
-[; ;Comandos.c: 220:                                     Completo();
-[e ( _Completo ..  ]
-"221
-[; ;Comandos.c: 221:                                 }
+[; ;Comandos.c: 216:         }
 }
-[e $U 462  ]
+[e :U 457 ]
+"217
+[; ;Comandos.c: 217:     }
+}
+[e $U 458  ]
+"219
+[; ;Comandos.c: 219:     else if(comando[0]=='S'){
+[e :U 437 ]
+[e $ ! == -> *U + _comando * -> -> 0 `i `x -> -> # *U _comando `i `x `ui -> 83 `ui 459  ]
+{
+"220
+[; ;Comandos.c: 220:         if (comando[1]=='T'){
+[e $ ! == -> *U + _comando * -> -> 1 `i `x -> -> # *U _comando `i `x `ui -> 84 `ui 460  ]
+{
+"221
+[; ;Comandos.c: 221:             if (comando[2]=='C'){
+[e $ ! == -> *U + _comando * -> -> 2 `i `x -> -> # *U _comando `i `x `ui -> 67 `ui 461  ]
+{
 "222
-[; ;Comandos.c: 222:                                 else{
-[e :U 461 ]
+[; ;Comandos.c: 222:                 if (comando[3]=='T'){
+[e $ ! == -> *U + _comando * -> -> 3 `i `x -> -> # *U _comando `i `x `ui -> 84 `ui 462  ]
 {
 "223
-[; ;Comandos.c: 223:                                     Error();
-[e ( _Error ..  ]
+[; ;Comandos.c: 223:                     if (comando[4]=='O'){
+[e $ ! == -> *U + _comando * -> -> 4 `i `x -> -> # *U _comando `i `x `ui -> 79 `ui 463  ]
+{
 "224
-[; ;Comandos.c: 224:                                 }
-}
-[e :U 462 ]
+[; ;Comandos.c: 224:                         if (comando[5]=='U'){
+[e $ ! == -> *U + _comando * -> -> 5 `i `x -> -> # *U _comando `i `x `ui -> 85 `ui 464  ]
+{
 "225
-[; ;Comandos.c: 225:                             }
-}
-[e $U 463  ]
+[; ;Comandos.c: 225:                             if (comando[6]=='C'){
+[e $ ! == -> *U + _comando * -> -> 6 `i `x -> -> # *U _comando `i `x `ui -> 67 `ui 465  ]
+{
 "226
-[; ;Comandos.c: 226:                             else{
-[e :U 460 ]
+[; ;Comandos.c: 226:                                 if (comando[7]=='H'){
+[e $ ! == -> *U + _comando * -> -> 7 `i `x -> -> # *U _comando `i `x `ui -> 72 `ui 466  ]
 {
 "227
-[; ;Comandos.c: 227:                                 Error();
-[e ( _Error ..  ]
+[; ;Comandos.c: 227:                                     Ejecutandose();
+[e ( _Ejecutandose ..  ]
 "228
-[; ;Comandos.c: 228:                             }
-}
-[e :U 463 ]
+[; ;Comandos.c: 228:                                     PORTDbits.RD7=1;
+[e = . . _PORTDbits 0 7 -> -> 1 `i `uc ]
 "229
-[; ;Comandos.c: 229:                         }
-}
-[e $U 464  ]
+[; ;Comandos.c: 229:                                     Completo();
+[e ( _Completo ..  ]
 "230
-[; ;Comandos.c: 230:                         else{
-[e :U 459 ]
-{
-"231
-[; ;Comandos.c: 231:                             Error();
-[e ( _Error ..  ]
-"232
-[; ;Comandos.c: 232:                         }
-}
-[e :U 464 ]
-"233
-[; ;Comandos.c: 233:                     }
-}
-[e $U 465  ]
-"234
-[; ;Comandos.c: 234:                     else{
-[e :U 458 ]
-{
-"235
-[; ;Comandos.c: 235:                         Error();
-[e ( _Error ..  ]
-"236
-[; ;Comandos.c: 236:                     }
-}
-[e :U 465 ]
-"237
-[; ;Comandos.c: 237:                 }
-}
-[e $U 466  ]
-"238
-[; ;Comandos.c: 238:                 else{
-[e :U 457 ]
-{
-"239
-[; ;Comandos.c: 239:                     Error();
-[e ( _Error ..  ]
-"240
-[; ;Comandos.c: 240:                 }
-}
-[e :U 466 ]
-"241
-[; ;Comandos.c: 241:             }
+[; ;Comandos.c: 230:                                 }
 }
 [e $U 467  ]
-"242
-[; ;Comandos.c: 242:             else{
-[e :U 456 ]
+"231
+[; ;Comandos.c: 231:                                 else{
+[e :U 466 ]
 {
-"243
-[; ;Comandos.c: 243:                 Error();
+"232
+[; ;Comandos.c: 232:                                     Error();
 [e ( _Error ..  ]
-"244
-[; ;Comandos.c: 244:             }
+"233
+[; ;Comandos.c: 233:                                 }
 }
 [e :U 467 ]
-"245
-[; ;Comandos.c: 245:         }
+"234
+[; ;Comandos.c: 234:                             }
 }
 [e $U 468  ]
-"246
-[; ;Comandos.c: 246:         else{
-[e :U 455 ]
+"235
+[; ;Comandos.c: 235:                             else{
+[e :U 465 ]
 {
-"247
-[; ;Comandos.c: 247:             Error();
+"236
+[; ;Comandos.c: 236:                                 Error();
 [e ( _Error ..  ]
-"248
-[; ;Comandos.c: 248:         }
+"237
+[; ;Comandos.c: 237:                             }
 }
 [e :U 468 ]
-"249
-[; ;Comandos.c: 249:     }
+"238
+[; ;Comandos.c: 238:                         }
 }
 [e $U 469  ]
+"239
+[; ;Comandos.c: 239:                         else{
+[e :U 464 ]
+{
+"240
+[; ;Comandos.c: 240:                             Error();
+[e ( _Error ..  ]
+"241
+[; ;Comandos.c: 241:                         }
+}
+[e :U 469 ]
+"242
+[; ;Comandos.c: 242:                     }
+}
+[e $U 470  ]
+"243
+[; ;Comandos.c: 243:                     else{
+[e :U 463 ]
+{
+"244
+[; ;Comandos.c: 244:                         Error();
+[e ( _Error ..  ]
+"245
+[; ;Comandos.c: 245:                     }
+}
+[e :U 470 ]
+"246
+[; ;Comandos.c: 246:                 }
+}
+[e $U 471  ]
+"247
+[; ;Comandos.c: 247:                 else{
+[e :U 462 ]
+{
+"248
+[; ;Comandos.c: 248:                     Error();
+[e ( _Error ..  ]
+"249
+[; ;Comandos.c: 249:                 }
+}
+[e :U 471 ]
+"250
+[; ;Comandos.c: 250:             }
+}
+[e $U 472  ]
+"251
+[; ;Comandos.c: 251:             else{
+[e :U 461 ]
+{
+"252
+[; ;Comandos.c: 252:                 Error();
+[e ( _Error ..  ]
 "253
-[; ;Comandos.c: 253:     else if(comando[0]=='M'){
-[e :U 454 ]
-[e $ ! == -> *U + _comando * -> -> 0 `i `x -> -> # *U _comando `i `x `ui -> 77 `ui 470  ]
-{
+[; ;Comandos.c: 253:             }
+}
+[e :U 472 ]
 "254
-[; ;Comandos.c: 254:         if (comando[1]=='A'){
-[e $ ! == -> *U + _comando * -> -> 1 `i `x -> -> # *U _comando `i `x `ui -> 65 `ui 471  ]
-{
+[; ;Comandos.c: 254:         }
+}
+[e $U 473  ]
 "255
-[; ;Comandos.c: 255:             if (comando[2]=='K'){
-[e $ ! == -> *U + _comando * -> -> 2 `i `x -> -> # *U _comando `i `x `ui -> 75 `ui 472  ]
+[; ;Comandos.c: 255:         else{
+[e :U 460 ]
 {
 "256
-[; ;Comandos.c: 256:                 if (comando[3]=='E'){
-[e $ ! == -> *U + _comando * -> -> 3 `i `x -> -> # *U _comando `i `x `ui -> 69 `ui 473  ]
-{
+[; ;Comandos.c: 256:             Error();
+[e ( _Error ..  ]
 "257
-[; ;Comandos.c: 257:                     if (comando[4]=='A'){
-[e $ ! == -> *U + _comando * -> -> 4 `i `x -> -> # *U _comando `i `x `ui -> 65 `ui 474  ]
-{
-"258
-[; ;Comandos.c: 258:                         if (comando[5]=='T'){
-[e $ ! == -> *U + _comando * -> -> 5 `i `x -> -> # *U _comando `i `x `ui -> 84 `ui 475  ]
-{
-"259
-[; ;Comandos.c: 259:                             if (comando[6]=='A'){
-[e $ ! == -> *U + _comando * -> -> 6 `i `x -> -> # *U _comando `i `x `ui -> 65 `ui 476  ]
-{
-"260
-[; ;Comandos.c: 260:                                 if (comando[7]=='P'){
-[e $ ! == -> *U + _comando * -> -> 7 `i `x -> -> # *U _comando `i `x `ui -> 80 `ui 477  ]
-{
-"261
-[; ;Comandos.c: 261:                                     Ejecutandose();
-[e ( _Ejecutandose ..  ]
-"262
-[; ;Comandos.c: 262:                                     PORTDbits.RD7=1;
-[e = . . _PORTDbits 0 7 -> -> 1 `i `uc ]
-"263
-[; ;Comandos.c: 263:                                     _delay((unsigned long)((2000)*(8000000L/4000.0)));
-[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"264
-[; ;Comandos.c: 264:                                     PORTDbits.RD7=0;
-[e = . . _PORTDbits 0 7 -> -> 0 `i `uc ]
-"266
-[; ;Comandos.c: 266:                                     Completo();
-[e ( _Completo ..  ]
-"267
-[; ;Comandos.c: 267:                                 }
+[; ;Comandos.c: 257:         }
 }
-[e $U 478  ]
+[e :U 473 ]
+"258
+[; ;Comandos.c: 258:     }
+}
+[e $U 474  ]
+"262
+[; ;Comandos.c: 262:     else if(comando[0]=='M'){
+[e :U 459 ]
+[e $ ! == -> *U + _comando * -> -> 0 `i `x -> -> # *U _comando `i `x `ui -> 77 `ui 475  ]
+{
+"263
+[; ;Comandos.c: 263:         if (comando[1]=='A'){
+[e $ ! == -> *U + _comando * -> -> 1 `i `x -> -> # *U _comando `i `x `ui -> 65 `ui 476  ]
+{
+"264
+[; ;Comandos.c: 264:             if (comando[2]=='K'){
+[e $ ! == -> *U + _comando * -> -> 2 `i `x -> -> # *U _comando `i `x `ui -> 75 `ui 477  ]
+{
+"265
+[; ;Comandos.c: 265:                 if (comando[3]=='E'){
+[e $ ! == -> *U + _comando * -> -> 3 `i `x -> -> # *U _comando `i `x `ui -> 69 `ui 478  ]
+{
+"266
+[; ;Comandos.c: 266:                     if (comando[4]=='A'){
+[e $ ! == -> *U + _comando * -> -> 4 `i `x -> -> # *U _comando `i `x `ui -> 65 `ui 479  ]
+{
+"267
+[; ;Comandos.c: 267:                         if (comando[5]=='T'){
+[e $ ! == -> *U + _comando * -> -> 5 `i `x -> -> # *U _comando `i `x `ui -> 84 `ui 480  ]
+{
+"268
+[; ;Comandos.c: 268:                             if (comando[6]=='A'){
+[e $ ! == -> *U + _comando * -> -> 6 `i `x -> -> # *U _comando `i `x `ui -> 65 `ui 481  ]
+{
 "269
-[; ;Comandos.c: 269:                                 else{
-[e :U 477 ]
+[; ;Comandos.c: 269:                                 if (comando[7]=='P'){
+[e $ ! == -> *U + _comando * -> -> 7 `i `x -> -> # *U _comando `i `x `ui -> 80 `ui 482  ]
 {
 "270
-[; ;Comandos.c: 270:                                     Error();
-[e ( _Error ..  ]
+[; ;Comandos.c: 270:                                     Ejecutandose();
+[e ( _Ejecutandose ..  ]
 "271
-[; ;Comandos.c: 271:                                 }
-}
-[e :U 478 ]
+[; ;Comandos.c: 271:                                     PORTDbits.RD7=1;
+[e = . . _PORTDbits 0 7 -> -> 1 `i `uc ]
 "272
-[; ;Comandos.c: 272:                             }
-}
-[e $U 479  ]
+[; ;Comandos.c: 272:                                     _delay((unsigned long)((1000)*(8000000L/4000.0)));
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "273
-[; ;Comandos.c: 273:                             else{
-[e :U 476 ]
-{
-"274
-[; ;Comandos.c: 274:                                 Error();
-[e ( _Error ..  ]
+[; ;Comandos.c: 273:                                     PORTDbits.RD7=0;
+[e = . . _PORTDbits 0 7 -> -> 0 `i `uc ]
 "275
-[; ;Comandos.c: 275:                             }
-}
-[e :U 479 ]
+[; ;Comandos.c: 275:                                     Completo();
+[e ( _Completo ..  ]
 "276
-[; ;Comandos.c: 276:                         }
-}
-[e $U 480  ]
-"277
-[; ;Comandos.c: 277:                         else{
-[e :U 475 ]
-{
-"278
-[; ;Comandos.c: 278:                             Error();
-[e ( _Error ..  ]
-"279
-[; ;Comandos.c: 279:                         }
-}
-[e :U 480 ]
-"280
-[; ;Comandos.c: 280:                     }
-}
-[e $U 481  ]
-"281
-[; ;Comandos.c: 281:                     else{
-[e :U 474 ]
-{
-"282
-[; ;Comandos.c: 282:                         Error();
-[e ( _Error ..  ]
-"283
-[; ;Comandos.c: 283:                     }
-}
-[e :U 481 ]
-"284
-[; ;Comandos.c: 284:                 }
-}
-[e $U 482  ]
-"285
-[; ;Comandos.c: 285:                 else{
-[e :U 473 ]
-{
-"286
-[; ;Comandos.c: 286:                     Error();
-[e ( _Error ..  ]
-"287
-[; ;Comandos.c: 287:                 }
-}
-[e :U 482 ]
-"288
-[; ;Comandos.c: 288:             }
+[; ;Comandos.c: 276:                                 }
 }
 [e $U 483  ]
-"289
-[; ;Comandos.c: 289:             else{
-[e :U 472 ]
+"278
+[; ;Comandos.c: 278:                                 else{
+[e :U 482 ]
 {
-"290
-[; ;Comandos.c: 290:                 Error();
+"279
+[; ;Comandos.c: 279:                                     Error();
 [e ( _Error ..  ]
-"291
-[; ;Comandos.c: 291:             }
+"280
+[; ;Comandos.c: 280:                                 }
 }
 [e :U 483 ]
-"292
-[; ;Comandos.c: 292:         }
+"281
+[; ;Comandos.c: 281:                             }
 }
 [e $U 484  ]
-"293
-[; ;Comandos.c: 293:         else{
-[e :U 471 ]
+"282
+[; ;Comandos.c: 282:                             else{
+[e :U 481 ]
 {
-"294
-[; ;Comandos.c: 294:             Error();
+"283
+[; ;Comandos.c: 283:                                 Error();
 [e ( _Error ..  ]
-"295
-[; ;Comandos.c: 295:         }
+"284
+[; ;Comandos.c: 284:                             }
 }
 [e :U 484 ]
-"296
-[; ;Comandos.c: 296:     }
+"285
+[; ;Comandos.c: 285:                         }
 }
 [e $U 485  ]
+"286
+[; ;Comandos.c: 286:                         else{
+[e :U 480 ]
+{
+"287
+[; ;Comandos.c: 287:                             Error();
+[e ( _Error ..  ]
+"288
+[; ;Comandos.c: 288:                         }
+}
+[e :U 485 ]
+"289
+[; ;Comandos.c: 289:                     }
+}
+[e $U 486  ]
+"290
+[; ;Comandos.c: 290:                     else{
+[e :U 479 ]
+{
+"291
+[; ;Comandos.c: 291:                         Error();
+[e ( _Error ..  ]
+"292
+[; ;Comandos.c: 292:                     }
+}
+[e :U 486 ]
+"293
+[; ;Comandos.c: 293:                 }
+}
+[e $U 487  ]
+"294
+[; ;Comandos.c: 294:                 else{
+[e :U 478 ]
+{
+"295
+[; ;Comandos.c: 295:                     Error();
+[e ( _Error ..  ]
+"296
+[; ;Comandos.c: 296:                 }
+}
+[e :U 487 ]
+"297
+[; ;Comandos.c: 297:             }
+}
+[e $U 488  ]
+"298
+[; ;Comandos.c: 298:             else{
+[e :U 477 ]
+{
 "299
-[; ;Comandos.c: 299:     else if(comando[0]=='T'){
-[e :U 470 ]
-[e $ ! == -> *U + _comando * -> -> 0 `i `x -> -> # *U _comando `i `x `ui -> 84 `ui 486  ]
-{
+[; ;Comandos.c: 299:                 Error();
+[e ( _Error ..  ]
 "300
-[; ;Comandos.c: 300:         if (comando[1]=='A'){
-[e $ ! == -> *U + _comando * -> -> 1 `i `x -> -> # *U _comando `i `x `ui -> 65 `ui 487  ]
-{
+[; ;Comandos.c: 300:             }
+}
+[e :U 488 ]
 "301
-[; ;Comandos.c: 301:             if (comando[2]=='K'){
-[e $ ! == -> *U + _comando * -> -> 2 `i `x -> -> # *U _comando `i `x `ui -> 75 `ui 488  ]
-{
+[; ;Comandos.c: 301:         }
+}
+[e $U 489  ]
 "302
-[; ;Comandos.c: 302:                 if (comando[3]=='E'){
-[e $ ! == -> *U + _comando * -> -> 3 `i `x -> -> # *U _comando `i `x `ui -> 69 `ui 489  ]
+[; ;Comandos.c: 302:         else{
+[e :U 476 ]
 {
 "303
-[; ;Comandos.c: 303:                     if (comando[4]=='L'){
-[e $ ! == -> *U + _comando * -> -> 4 `i `x -> -> # *U _comando `i `x `ui -> 76 `ui 490  ]
-{
+[; ;Comandos.c: 303:             Error();
+[e ( _Error ..  ]
 "304
-[; ;Comandos.c: 304:                         if (comando[5]=='I'){
-[e $ ! == -> *U + _comando * -> -> 5 `i `x -> -> # *U _comando `i `x `ui -> 73 `ui 491  ]
-{
-"305
-[; ;Comandos.c: 305:                             if (comando[6]=='F'){
-[e $ ! == -> *U + _comando * -> -> 6 `i `x -> -> # *U _comando `i `x `ui -> 70 `ui 492  ]
-{
-"306
-[; ;Comandos.c: 306:                                 if (comando[7]=='T'){
-[e $ ! == -> *U + _comando * -> -> 7 `i `x -> -> # *U _comando `i `x `ui -> 84 `ui 493  ]
-{
-"307
-[; ;Comandos.c: 307:                                     Ejecutandose();
-[e ( _Ejecutandose ..  ]
-"308
-[; ;Comandos.c: 308:                                     PORTDbits.RD7=0;
-[e = . . _PORTDbits 0 7 -> -> 0 `i `uc ]
-"309
-[; ;Comandos.c: 309:                                     Completo();
-[e ( _Completo ..  ]
-"310
-[; ;Comandos.c: 310:                                 }
+[; ;Comandos.c: 304:         }
 }
-[e $U 494  ]
+[e :U 489 ]
+"305
+[; ;Comandos.c: 305:     }
+}
+[e $U 490  ]
+"308
+[; ;Comandos.c: 308:     else if(comando[0]=='T'){
+[e :U 475 ]
+[e $ ! == -> *U + _comando * -> -> 0 `i `x -> -> # *U _comando `i `x `ui -> 84 `ui 491  ]
+{
+"309
+[; ;Comandos.c: 309:         if (comando[1]=='A'){
+[e $ ! == -> *U + _comando * -> -> 1 `i `x -> -> # *U _comando `i `x `ui -> 65 `ui 492  ]
+{
+"310
+[; ;Comandos.c: 310:             if (comando[2]=='K'){
+[e $ ! == -> *U + _comando * -> -> 2 `i `x -> -> # *U _comando `i `x `ui -> 75 `ui 493  ]
+{
 "311
-[; ;Comandos.c: 311:                                 else{
-[e :U 493 ]
+[; ;Comandos.c: 311:                 if (comando[3]=='E'){
+[e $ ! == -> *U + _comando * -> -> 3 `i `x -> -> # *U _comando `i `x `ui -> 69 `ui 494  ]
 {
 "312
-[; ;Comandos.c: 312:                                     Error();
-[e ( _Error ..  ]
+[; ;Comandos.c: 312:                     if (comando[4]=='L'){
+[e $ ! == -> *U + _comando * -> -> 4 `i `x -> -> # *U _comando `i `x `ui -> 76 `ui 495  ]
+{
 "313
-[; ;Comandos.c: 313:                                 }
-}
-[e :U 494 ]
+[; ;Comandos.c: 313:                         if (comando[5]=='I'){
+[e $ ! == -> *U + _comando * -> -> 5 `i `x -> -> # *U _comando `i `x `ui -> 73 `ui 496  ]
+{
 "314
-[; ;Comandos.c: 314:                             }
-}
-[e $U 495  ]
+[; ;Comandos.c: 314:                             if (comando[6]=='F'){
+[e $ ! == -> *U + _comando * -> -> 6 `i `x -> -> # *U _comando `i `x `ui -> 70 `ui 497  ]
+{
 "315
-[; ;Comandos.c: 315:                             else{
-[e :U 492 ]
+[; ;Comandos.c: 315:                                 if (comando[7]=='T'){
+[e $ ! == -> *U + _comando * -> -> 7 `i `x -> -> # *U _comando `i `x `ui -> 84 `ui 498  ]
 {
 "316
-[; ;Comandos.c: 316:                                 Error();
-[e ( _Error ..  ]
+[; ;Comandos.c: 316:                                     Ejecutandose();
+[e ( _Ejecutandose ..  ]
 "317
-[; ;Comandos.c: 317:                             }
-}
-[e :U 495 ]
+[; ;Comandos.c: 317:                                     PORTDbits.RD7=0;
+[e = . . _PORTDbits 0 7 -> -> 0 `i `uc ]
 "318
-[; ;Comandos.c: 318:                         }
-}
-[e $U 496  ]
+[; ;Comandos.c: 318:                                     Completo();
+[e ( _Completo ..  ]
 "319
-[; ;Comandos.c: 319:                         else{
-[e :U 491 ]
-{
-"320
-[; ;Comandos.c: 320:                             Error();
-[e ( _Error ..  ]
-"321
-[; ;Comandos.c: 321:                         }
-}
-[e :U 496 ]
-"322
-[; ;Comandos.c: 322:                     }
-}
-[e $U 497  ]
-"323
-[; ;Comandos.c: 323:                     else{
-[e :U 490 ]
-{
-"324
-[; ;Comandos.c: 324:                         Error();
-[e ( _Error ..  ]
-"325
-[; ;Comandos.c: 325:                     }
-}
-[e :U 497 ]
-"326
-[; ;Comandos.c: 326:                 }
-}
-[e $U 498  ]
-"327
-[; ;Comandos.c: 327:                 else{
-[e :U 489 ]
-{
-"328
-[; ;Comandos.c: 328:                     Error();
-[e ( _Error ..  ]
-"329
-[; ;Comandos.c: 329:                 }
-}
-[e :U 498 ]
-"330
-[; ;Comandos.c: 330:             }
+[; ;Comandos.c: 319:                                 }
 }
 [e $U 499  ]
-"331
-[; ;Comandos.c: 331:             else{
-[e :U 488 ]
+"320
+[; ;Comandos.c: 320:                                 else{
+[e :U 498 ]
 {
-"332
-[; ;Comandos.c: 332:                 Error();
+"321
+[; ;Comandos.c: 321:                                     Error();
 [e ( _Error ..  ]
-"333
-[; ;Comandos.c: 333:             }
+"322
+[; ;Comandos.c: 322:                                 }
 }
 [e :U 499 ]
-"334
-[; ;Comandos.c: 334:         }
+"323
+[; ;Comandos.c: 323:                             }
 }
 [e $U 500  ]
-"335
-[; ;Comandos.c: 335:         else{
-[e :U 487 ]
+"324
+[; ;Comandos.c: 324:                             else{
+[e :U 497 ]
 {
-"336
-[; ;Comandos.c: 336:             Error();
+"325
+[; ;Comandos.c: 325:                                 Error();
 [e ( _Error ..  ]
-"337
-[; ;Comandos.c: 337:         }
+"326
+[; ;Comandos.c: 326:                             }
 }
 [e :U 500 ]
-"338
-[; ;Comandos.c: 338:     }
+"327
+[; ;Comandos.c: 327:                         }
 }
 [e $U 501  ]
+"328
+[; ;Comandos.c: 328:                         else{
+[e :U 496 ]
+{
+"329
+[; ;Comandos.c: 329:                             Error();
+[e ( _Error ..  ]
+"330
+[; ;Comandos.c: 330:                         }
+}
+[e :U 501 ]
+"331
+[; ;Comandos.c: 331:                     }
+}
+[e $U 502  ]
+"332
+[; ;Comandos.c: 332:                     else{
+[e :U 495 ]
+{
+"333
+[; ;Comandos.c: 333:                         Error();
+[e ( _Error ..  ]
+"334
+[; ;Comandos.c: 334:                     }
+}
+[e :U 502 ]
+"335
+[; ;Comandos.c: 335:                 }
+}
+[e $U 503  ]
+"336
+[; ;Comandos.c: 336:                 else{
+[e :U 494 ]
+{
+"337
+[; ;Comandos.c: 337:                     Error();
+[e ( _Error ..  ]
+"338
+[; ;Comandos.c: 338:                 }
+}
+[e :U 503 ]
 "339
-[; ;Comandos.c: 339:     else{Error();}
-[e :U 486 ]
+[; ;Comandos.c: 339:             }
+}
+[e $U 504  ]
+"340
+[; ;Comandos.c: 340:             else{
+[e :U 493 ]
+{
+"341
+[; ;Comandos.c: 341:                 Error();
+[e ( _Error ..  ]
+"342
+[; ;Comandos.c: 342:             }
+}
+[e :U 504 ]
+"343
+[; ;Comandos.c: 343:         }
+}
+[e $U 505  ]
+"344
+[; ;Comandos.c: 344:         else{
+[e :U 492 ]
+{
+"345
+[; ;Comandos.c: 345:             Error();
+[e ( _Error ..  ]
+"346
+[; ;Comandos.c: 346:         }
+}
+[e :U 505 ]
+"347
+[; ;Comandos.c: 347:     }
+}
+[e $U 506  ]
+"348
+[; ;Comandos.c: 348:     else{Error();}
+[e :U 491 ]
 {
 [e ( _Error ..  ]
 }
-[e :U 501 ]
-[e :U 485 ]
-[e :U 469 ]
-[e :U 453 ]
-[e :U 431 ]
-"341
-[; ;Comandos.c: 341: }
-[e :UE 415 ]
+[e :U 506 ]
+[e :U 490 ]
+[e :U 474 ]
+[e :U 458 ]
+[e :U 436 ]
+"350
+[; ;Comandos.c: 350: }
+[e :UE 420 ]
 }

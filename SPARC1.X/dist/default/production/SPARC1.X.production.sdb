@@ -34,33 +34,35 @@
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"10 C:\Users\Rulo\Desktop\Sparc\SPARC1.X\Comandos.c
+"10 C:\Users\Rulo\Desktop\School Crap\Industrial Programing\Semestre i\SparkSpirit\trunk\SPARC1.X\Comandos.c
+[v _invalidCoordinate invalidCoordinate `(v  1 e 1 0 ]
+"19
 [v _xLimit xLimit `(v  1 e 1 0 ]
-"17
+"26
 [v _yLimit yLimit `(v  1 e 1 0 ]
-"23
+"32
 [v _Error Error `(v  1 e 1 0 ]
-"33
+"42
 [v _Ejecutandose Ejecutandose `(v  1 e 1 0 ]
-"43
+"52
 [v _Completo Completo `(v  1 e 1 0 ]
-"53
+"62
 [v _coordinateRefreshX coordinateRefreshX `(v  1 e 1 0 ]
-"81
+"90
 [v _coordinateRefreshY coordinateRefreshY `(v  1 e 1 0 ]
-"106
+"115
 [v _comandos comandos `(i  1 e 2 0 ]
-"2 C:\Users\Rulo\Desktop\Sparc\SPARC1.X\GPIO.c
+"2 C:\Users\Rulo\Desktop\School Crap\Industrial Programing\Semestre i\SparkSpirit\trunk\SPARC1.X\GPIO.c
 [v _gpioInit gpioInit `(v  1 e 1 0 ]
-"10 C:\Users\Rulo\Desktop\Sparc\SPARC1.X\Interruptions.c
+"10 C:\Users\Rulo\Desktop\School Crap\Industrial Programing\Semestre i\SparkSpirit\trunk\SPARC1.X\Interruptions.c
 [v _interruptionsInit interruptionsInit `(v  1 e 1 0 ]
 "26
 [v _emergencyButton emergencyButton `(v  1 e 1 0 ]
-"21 C:\Users\Rulo\Desktop\Sparc\SPARC1.X\MAINSPARC.c
+"21 C:\Users\Rulo\Desktop\School Crap\Industrial Programing\Semestre i\SparkSpirit\trunk\SPARC1.X\MAINSPARC.c
 [v _INT_isr INT_isr `IIH(v  1 e 1 0 ]
 "35
 [v _main main `(v  1 e 1 0 ]
-"23 C:\Users\Rulo\Desktop\Sparc\SPARC1.X\pwm.c
+"23 C:\Users\Rulo\Desktop\School Crap\Industrial Programing\Semestre i\SparkSpirit\trunk\SPARC1.X\pwm.c
 [v _pwm_init pwm_init `(v  1 e 1 0 ]
 "38
 [v _contador_pulsosD contador_pulsosD `(v  1 e 1 0 ]
@@ -68,44 +70,46 @@
 [v _oneShot oneShot `(v  1 e 1 0 ]
 "65
 [v _clearOneShot clearOneShot `(v  1 e 1 0 ]
-"6 C:\Users\Rulo\Desktop\Sparc\SPARC1.X\USART.c
+"6 C:\Users\Rulo\Desktop\School Crap\Industrial Programing\Semestre i\SparkSpirit\trunk\SPARC1.X\USART.c
 [v _USART_Init USART_Init `(v  1 e 1 0 ]
 "27
 [v _USART_Tx USART_Tx `(v  1 e 1 0 ]
 [v i2_USART_Tx USART_Tx `(v  1 e 1 0 ]
 "32
 [v _USART_Rx USART_Rx `(uc  1 e 1 0 ]
-"6 C:\Users\Rulo\Desktop\Sparc\SPARC1.X/Comandos.h
-[v _msgwrong msgwrong `[20]uc  1 e 20 0 ]
+"6 C:\Users\Rulo\Desktop\School Crap\Industrial Programing\Semestre i\SparkSpirit\trunk\SPARC1.X/Comandos.h
+[v _msgwrong msgwrong `[27]uc  1 e 27 0 ]
 "7
 [v _msgeje msgeje `[22]uc  1 e 22 0 ]
 "8
-[v _msgcomp msgcomp `[19]uc  1 e 19 0 ]
+[v _msgcomp msgcomp `[23]uc  1 e 23 0 ]
 "9
-[v _msleft msleft `[20]uc  1 e 20 0 ]
+[v _msleft msleft `[12]uc  1 e 12 0 ]
 "10
-[v _msup msup `[14]uc  1 e 14 0 ]
+[v _msup msup `[11]uc  1 e 11 0 ]
 "11
 [v _msdown msdown `[13]uc  1 e 13 0 ]
 "12
-[v _msright msright `[18]uc  1 e 18 0 ]
+[v _msright msright `[13]uc  1 e 13 0 ]
 "13
 [v _xl xl `[17]uc  1 e 17 0 ]
 "14
 [v _yl yl `[17]uc  1 e 17 0 ]
-"19
+"15
+[v _CE CE `[30]uc  1 e 30 0 ]
+"21
 [v _nvalorx nvalorx `us  1 e 2 0 ]
-"20
+"22
 [v _nvalory nvalory `us  1 e 2 0 ]
-"24
+"26
 [v _x x `us  1 e 2 0 ]
-"25
+"27
 [v _y y `us  1 e 2 0 ]
-"8 C:\Users\Rulo\Desktop\Sparc\SPARC1.X/Interruptions.h
+"8 C:\Users\Rulo\Desktop\School Crap\Industrial Programing\Semestre i\SparkSpirit\trunk\SPARC1.X/Interruptions.h
 [v _emergency emergency `[26]uc  1 e 26 0 ]
 "9
 [v _check check `[23]uc  1 e 23 0 ]
-"6 C:\Users\Rulo\Desktop\Sparc\SPARC1.X/pwm.h
+"6 C:\Users\Rulo\Desktop\School Crap\Industrial Programing\Semestre i\SparkSpirit\trunk\SPARC1.X/pwm.h
 [v _keepgoing keepgoing `i  1 e 2 0 ]
 "2453 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
 [v _PORTB PORTB `VEuc  1 e 1 @3969 ]
@@ -134,7 +138,7 @@
 [v _PORTBbits PORTBbits `VES106  1 e 1 @3969 ]
 "2563
 [v _PORTC PORTC `VEuc  1 e 1 @3970 ]
-[s S336 . 1 `uc 1 RC0 1 0 :1:0 
+[s S340 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -144,29 +148,29 @@
 `uc 1 RC7 1 0 :1:7 
 ]
 "2605
-[s S345 . 1 `uc 1 T1OSO 1 0 :1:0 
+[s S349 . 1 `uc 1 T1OSO 1 0 :1:0 
 `uc 1 T1OSI 1 0 :1:1 
 `uc 1 CCP1 1 0 :1:2 
 `uc 1 . 1 0 :3:3 
 `uc 1 TX 1 0 :1:6 
 `uc 1 RX 1 0 :1:7 
 ]
-[s S352 . 1 `uc 1 T13CKI 1 0 :1:0 
+[s S356 . 1 `uc 1 T13CKI 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 P1A 1 0 :1:2 
 `uc 1 . 1 0 :3:3 
 `uc 1 CK 1 0 :1:6 
 `uc 1 DT 1 0 :1:7 
 ]
-[s S359 . 1 `uc 1 . 1 0 :1:0 
+[s S363 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 CCP2 1 0 :1:1 
 `uc 1 PA1 1 0 :1:2 
 ]
-[s S363 . 1 `uc 1 . 1 0 :1:0 
+[s S367 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 PA2 1 0 :1:1 
 ]
-[u S366 . 1 `S336 1 . 1 0 `S345 1 . 1 0 `S352 1 . 1 0 `S359 1 . 1 0 `S363 1 . 1 0 ]
-[v _PORTCbits PORTCbits `VES366  1 e 1 @3970 ]
+[u S370 . 1 `S340 1 . 1 0 `S349 1 . 1 0 `S356 1 . 1 0 `S363 1 . 1 0 `S367 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES370  1 e 1 @3970 ]
 "2705
 [v _PORTD PORTD `VEuc  1 e 1 @3971 ]
 [s S34 . 1 `uc 1 RD0 1 0 :1:0 
@@ -201,7 +205,7 @@
 [v _LATD LATD `VEuc  1 e 1 @3980 ]
 "3625
 [v _TRISB TRISB `VEuc  1 e 1 @3987 ]
-[s S233 . 1 `uc 1 TRISC0 1 0 :1:0 
+[s S237 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 . 1 0 :3:3 
@@ -209,18 +213,18 @@
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "3875
-[s S240 . 1 `uc 1 RC0 1 0 :1:0 
+[s S244 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 . 1 0 :3:3 
 `uc 1 RC6 1 0 :1:6 
 `uc 1 RC7 1 0 :1:7 
 ]
-[u S247 . 1 `S233 1 . 1 0 `S240 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES247  1 e 1 @3988 ]
+[u S251 . 1 `S237 1 . 1 0 `S244 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES251  1 e 1 @3988 ]
 "4001
 [v _TRISD TRISD `VEuc  1 e 1 @3989 ]
-[s S806 . 1 `uc 1 TMR1IF 1 0 :1:0 
+[s S811 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 CCP1IF 1 0 :1:2 
 `uc 1 SSPIF 1 0 :1:3 
@@ -230,15 +234,15 @@
 `uc 1 SPPIF 1 0 :1:7 
 ]
 "4492
-[s S815 . 1 `uc 1 . 1 0 :4:0 
+[s S820 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 TX1IF 1 0 :1:4 
 `uc 1 RC1IF 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 `uc 1 PSPIF 1 0 :1:7 
 ]
-[u S821 . 1 `S806 1 . 1 0 `S815 1 . 1 0 ]
-[v _PIR1bits PIR1bits `VES821  1 e 1 @3998 ]
-[s S591 . 1 `uc 1 RX9D 1 0 :1:0 
+[u S826 . 1 `S811 1 . 1 0 `S820 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES826  1 e 1 @3998 ]
+[s S541 . 1 `uc 1 RX9D 1 0 :1:0 
 `uc 1 OERR 1 0 :1:1 
 `uc 1 FERR 1 0 :1:2 
 `uc 1 ADDEN 1 0 :1:3 
@@ -248,23 +252,23 @@
 `uc 1 SPEN 1 0 :1:7 
 ]
 "4977
-[s S600 . 1 `uc 1 . 1 0 :3:0 
+[s S550 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 ADEN 1 0 :1:3 
 ]
-[s S603 . 1 `uc 1 . 1 0 :5:0 
+[s S553 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 SRENA 1 0 :1:5 
 ]
-[s S606 . 1 `uc 1 . 1 0 :6:0 
+[s S556 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 RC8_9 1 0 :1:6 
 ]
-[s S609 . 1 `uc 1 . 1 0 :6:0 
+[s S559 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 RC9 1 0 :1:6 
 ]
-[s S612 . 1 `uc 1 RCD8 1 0 :1:0 
+[s S562 . 1 `uc 1 RCD8 1 0 :1:0 
 ]
-[u S614 . 1 `S591 1 . 1 0 `S600 1 . 1 0 `S603 1 . 1 0 `S606 1 . 1 0 `S609 1 . 1 0 `S612 1 . 1 0 ]
-[v _RCSTAbits RCSTAbits `VES614  1 e 1 @4011 ]
-[s S723 . 1 `uc 1 TX9D 1 0 :1:0 
+[u S564 . 1 `S541 1 . 1 0 `S550 1 . 1 0 `S553 1 . 1 0 `S556 1 . 1 0 `S559 1 . 1 0 `S562 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES564  1 e 1 @4011 ]
+[s S728 . 1 `uc 1 TX9D 1 0 :1:0 
 `uc 1 TRMT 1 0 :1:1 
 `uc 1 BRGH 1 0 :1:2 
 `uc 1 SENDB 1 0 :1:3 
@@ -274,7 +278,7 @@
 `uc 1 CSRC 1 0 :1:7 
 ]
 "5185
-[s S732 . 1 `uc 1 TX9D1 1 0 :1:0 
+[s S737 . 1 `uc 1 TX9D1 1 0 :1:0 
 `uc 1 TRMT1 1 0 :1:1 
 `uc 1 BRGH1 1 0 :1:2 
 `uc 1 SENDB1 1 0 :1:3 
@@ -283,13 +287,13 @@
 `uc 1 TX91 1 0 :1:6 
 `uc 1 CSRC1 1 0 :1:7 
 ]
-[s S741 . 1 `uc 1 . 1 0 :6:0 
+[s S746 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 TX8_9 1 0 :1:6 
 ]
-[s S744 . 1 `uc 1 TXD8 1 0 :1:0 
+[s S749 . 1 `uc 1 TXD8 1 0 :1:0 
 ]
-[u S746 . 1 `S723 1 . 1 0 `S732 1 . 1 0 `S741 1 . 1 0 `S744 1 . 1 0 ]
-[v _TXSTAbits TXSTAbits `VES746  1 e 1 @4012 ]
+[u S751 . 1 `S728 1 . 1 0 `S737 1 . 1 0 `S746 1 . 1 0 `S749 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES751  1 e 1 @4012 ]
 "5402
 [v _TXREG TXREG `VEuc  1 e 1 @4013 ]
 "5414
@@ -308,12 +312,12 @@
 [v _CCPR1L CCPR1L `VEuc  1 e 1 @4030 ]
 "7200
 [v _T2CON T2CON `VEuc  1 e 1 @4042 ]
-[s S269 . 1 `uc 1 T2CKPS 1 0 :2:0 
+[s S273 . 1 `uc 1 T2CKPS 1 0 :2:0 
 `uc 1 TMR2ON 1 0 :1:2 
 `uc 1 TOUTPS 1 0 :4:3 
 ]
 "7228
-[s S273 . 1 `uc 1 T2CKPS0 1 0 :1:0 
+[s S277 . 1 `uc 1 T2CKPS0 1 0 :1:0 
 `uc 1 T2CKPS1 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 T2OUTPS0 1 0 :1:3 
@@ -321,34 +325,34 @@
 `uc 1 T2OUTPS2 1 0 :1:5 
 `uc 1 T2OUTPS3 1 0 :1:6 
 ]
-[s S281 . 1 `uc 1 . 1 0 :3:0 
+[s S285 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 TOUTPS0 1 0 :1:3 
 `uc 1 TOUTPS1 1 0 :1:4 
 `uc 1 TOUTPS2 1 0 :1:5 
 `uc 1 TOUTPS3 1 0 :1:6 
 ]
-[u S287 . 1 `S269 1 . 1 0 `S273 1 . 1 0 `S281 1 . 1 0 ]
-[v _T2CONbits T2CONbits `VES287  1 e 1 @4042 ]
+[u S291 . 1 `S273 1 . 1 0 `S277 1 . 1 0 `S285 1 . 1 0 ]
+[v _T2CONbits T2CONbits `VES291  1 e 1 @4042 ]
 "7298
 [v _PR2 PR2 `VEuc  1 e 1 @4043 ]
 "7408
 [v _TMR2 TMR2 `VEuc  1 e 1 @4044 ]
-[s S866 . 1 `uc 1 NOT_BOR 1 0 :1:0 
+[s S871 . 1 `uc 1 NOT_BOR 1 0 :1:0 
 ]
 "7588
-[s S868 . 1 `uc 1 . 1 0 :1:0 
+[s S873 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 NOT_POR 1 0 :1:1 
 ]
-[s S871 . 1 `uc 1 . 1 0 :2:0 
+[s S876 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 NOT_PD 1 0 :1:2 
 ]
-[s S874 . 1 `uc 1 . 1 0 :3:0 
+[s S879 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 NOT_TO 1 0 :1:3 
 ]
-[s S877 . 1 `uc 1 . 1 0 :4:0 
+[s S882 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 NOT_RI 1 0 :1:4 
 ]
-[s S880 . 1 `uc 1 nBOR 1 0 :1:0 
+[s S885 . 1 `uc 1 nBOR 1 0 :1:0 
 `uc 1 nPOR 1 0 :1:1 
 `uc 1 nPD 1 0 :1:2 
 `uc 1 nTO 1 0 :1:3 
@@ -357,10 +361,10 @@
 `uc 1 SBOREN 1 0 :1:6 
 `uc 1 IPEN 1 0 :1:7 
 ]
-[s S889 . 1 `uc 1 . 1 0 :7:0 
+[s S894 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 NOT_IPEN 1 0 :1:7 
 ]
-[s S892 . 1 `uc 1 BOR 1 0 :1:0 
+[s S897 . 1 `uc 1 BOR 1 0 :1:0 
 `uc 1 POR 1 0 :1:1 
 `uc 1 PD 1 0 :1:2 
 `uc 1 TO 1 0 :1:3 
@@ -368,11 +372,11 @@
 `uc 1 . 1 0 :2:5 
 `uc 1 nIPEN 1 0 :1:7 
 ]
-[u S900 . 1 `S866 1 . 1 0 `S868 1 . 1 0 `S871 1 . 1 0 `S874 1 . 1 0 `S877 1 . 1 0 `S880 1 . 1 0 `S889 1 . 1 0 `S892 1 . 1 0 ]
-[v _RCONbits RCONbits `VES900  1 e 1 @4048 ]
+[u S905 . 1 `S871 1 . 1 0 `S873 1 . 1 0 `S876 1 . 1 0 `S879 1 . 1 0 `S882 1 . 1 0 `S885 1 . 1 0 `S894 1 . 1 0 `S897 1 . 1 0 ]
+[v _RCONbits RCONbits `VES905  1 e 1 @4048 ]
 "7986
 [v _OSCCON OSCCON `VEuc  1 e 1 @4051 ]
-[s S440 . 1 `uc 1 INT1IF 1 0 :1:0 
+[s S444 . 1 `uc 1 INT1IF 1 0 :1:0 
 `uc 1 INT2IF 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 INT1IE 1 0 :1:3 
@@ -382,7 +386,7 @@
 `uc 1 INT2IP 1 0 :1:7 
 ]
 "8440
-[s S449 . 1 `uc 1 INT1F 1 0 :1:0 
+[s S453 . 1 `uc 1 INT1F 1 0 :1:0 
 `uc 1 INT2F 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 INT1E 1 0 :1:3 
@@ -391,13 +395,13 @@
 `uc 1 INT1P 1 0 :1:6 
 `uc 1 INT2P 1 0 :1:7 
 ]
-[u S458 . 1 `S440 1 . 1 0 `S449 1 . 1 0 ]
-[v _INTCON3bits INTCON3bits `VES458  1 e 1 @4080 ]
-[s S492 . 1 `uc 1 . 1 0 :7:0 
+[u S462 . 1 `S444 1 . 1 0 `S453 1 . 1 0 ]
+[v _INTCON3bits INTCON3bits `VES462  1 e 1 @4080 ]
+[s S496 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 NOT_RBPU 1 0 :1:7 
 ]
 "8532
-[s S495 . 1 `uc 1 RBIP 1 0 :1:0 
+[s S499 . 1 `uc 1 RBIP 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 TMR0IP 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -406,14 +410,14 @@
 `uc 1 INTEDG0 1 0 :1:6 
 `uc 1 nRBPU 1 0 :1:7 
 ]
-[s S504 . 1 `uc 1 . 1 0 :2:0 
+[s S508 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 T0IP 1 0 :1:2 
 `uc 1 . 1 0 :4:3 
 `uc 1 RBPU 1 0 :1:7 
 ]
-[u S509 . 1 `S492 1 . 1 0 `S495 1 . 1 0 `S504 1 . 1 0 ]
-[v _INTCON2bits INTCON2bits `VES509  1 e 1 @4081 ]
-[s S944 . 1 `uc 1 RBIF 1 0 :1:0 
+[u S513 . 1 `S496 1 . 1 0 `S499 1 . 1 0 `S508 1 . 1 0 ]
+[v _INTCON2bits INTCON2bits `VES513  1 e 1 @4081 ]
+[s S949 . 1 `uc 1 RBIF 1 0 :1:0 
 `uc 1 INT0IF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 RBIE 1 0 :1:3 
@@ -423,7 +427,7 @@
 `uc 1 GIE_GIEH 1 0 :1:7 
 ]
 "8614
-[s S953 . 1 `uc 1 . 1 0 :1:0 
+[s S958 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 INT0F 1 0 :1:1 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -432,87 +436,94 @@
 `uc 1 PEIE 1 0 :1:6 
 `uc 1 GIE 1 0 :1:7 
 ]
-[s S962 . 1 `uc 1 . 1 0 :6:0 
+[s S967 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 GIEL 1 0 :1:6 
 `uc 1 GIEH 1 0 :1:7 
 ]
-[u S966 . 1 `S944 1 . 1 0 `S953 1 . 1 0 `S962 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES966  1 e 1 @4082 ]
+[u S971 . 1 `S949 1 . 1 0 `S958 1 . 1 0 `S967 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES971  1 e 1 @4082 ]
 "10443
 [v _RCIF RCIF `VEb  1 e 0 @31989 ]
-"8 C:\Users\Rulo\Desktop\Sparc\SPARC1.X\pwm.c
+"8 C:\Users\Rulo\Desktop\School Crap\Industrial Programing\Semestre i\SparkSpirit\trunk\SPARC1.X\pwm.c
 [v _ons ons `uc  1 e 1 0 ]
 "9
 [v _cnt cnt `i  1 e 2 0 ]
-"35 C:\Users\Rulo\Desktop\Sparc\SPARC1.X\MAINSPARC.c
+"35 C:\Users\Rulo\Desktop\School Crap\Industrial Programing\Semestre i\SparkSpirit\trunk\SPARC1.X\MAINSPARC.c
 [v _main main `(v  1 e 1 0 ]
 {
-"79
-[v main@i i `i  1 a 2 8 ]
-"74
-[v main@contador contador `uc  1 a 1 10 ]
-"45
-[v main@instruccion instruccion `[8]uc  1 a 8 0 ]
-"88
+"81
+[v main@i i `i  1 a 2 41 ]
+"76
+[v main@contador contador `uc  1 a 1 43 ]
+"47
+[v main@instruccion instruccion `[8]uc  1 a 8 33 ]
+"90
 } 0
-"23 C:\Users\Rulo\Desktop\Sparc\SPARC1.X\pwm.c
+"23 C:\Users\Rulo\Desktop\School Crap\Industrial Programing\Semestre i\SparkSpirit\trunk\SPARC1.X\pwm.c
 [v _pwm_init pwm_init `(v  1 e 1 0 ]
 {
 "35
 } 0
-"10 C:\Users\Rulo\Desktop\Sparc\SPARC1.X\Interruptions.c
+"10 C:\Users\Rulo\Desktop\School Crap\Industrial Programing\Semestre i\SparkSpirit\trunk\SPARC1.X\Interruptions.c
 [v _interruptionsInit interruptionsInit `(v  1 e 1 0 ]
 {
 "22
 } 0
-"2 C:\Users\Rulo\Desktop\Sparc\SPARC1.X\GPIO.c
+"2 C:\Users\Rulo\Desktop\School Crap\Industrial Programing\Semestre i\SparkSpirit\trunk\SPARC1.X\GPIO.c
 [v _gpioInit gpioInit `(v  1 e 1 0 ]
 {
 "16
 } 0
-"106 C:\Users\Rulo\Desktop\Sparc\SPARC1.X\Comandos.c
+"115 C:\Users\Rulo\Desktop\School Crap\Industrial Programing\Semestre i\SparkSpirit\trunk\SPARC1.X\Comandos.c
 [v _comandos comandos `(i  1 e 2 0 ]
 {
 [v comandos@comando comando `*.39uc  1 p 2 26 ]
-"341
+"350
 } 0
-"17
+"26
 [v _yLimit yLimit `(v  1 e 1 0 ]
 {
-"18
+"27
 [v yLimit@i i `i  1 a 2 15 ]
-"21
+"30
 } 0
-"10
+"19
 [v _xLimit xLimit `(v  1 e 1 0 ]
 {
-"11
+"20
 [v xLimit@i i `i  1 a 2 15 ]
-"15
+"24
 } 0
-"81
+"10
+[v _invalidCoordinate invalidCoordinate `(v  1 e 1 0 ]
+{
+"11
+[v invalidCoordinate@i i `i  1 a 2 15 ]
+"18
+} 0
+"90
 [v _coordinateRefreshY coordinateRefreshY `(v  1 e 1 0 ]
 {
-"95
+"104
 [v coordinateRefreshY@j j `i  1 a 2 24 ]
-"86
+"95
 [v coordinateRefreshY@i i `i  1 a 2 22 ]
-"81
+"90
 [v coordinateRefreshY@newY newY `i  1 p 2 20 ]
-"102
+"111
 } 0
-"53
+"62
 [v _coordinateRefreshX coordinateRefreshX `(v  1 e 1 0 ]
 {
-"72
+"81
 [v coordinateRefreshX@j j `i  1 a 2 24 ]
-"60
+"69
 [v coordinateRefreshX@i i `i  1 a 2 22 ]
-"53
+"62
 [v coordinateRefreshX@newX newX `i  1 p 2 20 ]
-"78
+"87
 } 0
-"38 C:\Users\Rulo\Desktop\Sparc\SPARC1.X\pwm.c
+"38 C:\Users\Rulo\Desktop\School Crap\Industrial Programing\Semestre i\SparkSpirit\trunk\SPARC1.X\pwm.c
 [v _contador_pulsosD contador_pulsosD `(v  1 e 1 0 ]
 {
 [v contador_pulsosD@pulsoD pulsoD `i  1 p 2 17 ]
@@ -538,26 +549,26 @@
 [v ___wmul@multiplicand multiplicand `ui  1 p 2 13 ]
 "53
 } 0
-"23 C:\Users\Rulo\Desktop\Sparc\SPARC1.X\Comandos.c
+"32 C:\Users\Rulo\Desktop\School Crap\Industrial Programing\Semestre i\SparkSpirit\trunk\SPARC1.X\Comandos.c
 [v _Error Error `(v  1 e 1 0 ]
 {
-"24
-[v Error@i i `i  1 a 2 15 ]
-"30
-} 0
 "33
+[v Error@i i `i  1 a 2 15 ]
+"39
+} 0
+"42
 [v _Ejecutandose Ejecutandose `(v  1 e 1 0 ]
 {
-"34
-[v Ejecutandose@i i `i  1 a 2 15 ]
-"40
-} 0
 "43
+[v Ejecutandose@i i `i  1 a 2 15 ]
+"49
+} 0
+"52
 [v _Completo Completo `(v  1 e 1 0 ]
 {
-"44
+"53
 [v Completo@i i `i  1 a 2 15 ]
-"50
+"59
 } 0
 "5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\strlen.c
 [v _strlen strlen `(ui  1 e 2 0 ]
@@ -568,7 +579,7 @@
 [v strlen@s s `*.39Cuc  1 p 2 11 ]
 "12
 } 0
-"27 C:\Users\Rulo\Desktop\Sparc\SPARC1.X\USART.c
+"27 C:\Users\Rulo\Desktop\School Crap\Industrial Programing\Semestre i\SparkSpirit\trunk\SPARC1.X\USART.c
 [v _USART_Tx USART_Tx `(v  1 e 1 0 ]
 {
 [v USART_Tx@data data `uc  1 a 1 wreg ]
@@ -600,14 +611,14 @@
 [v ___aldiv@divisor divisor `l  1 p 4 15 ]
 "41
 } 0
-"21 C:\Users\Rulo\Desktop\Sparc\SPARC1.X\MAINSPARC.c
+"21 C:\Users\Rulo\Desktop\School Crap\Industrial Programing\Semestre i\SparkSpirit\trunk\SPARC1.X\MAINSPARC.c
 [v _INT_isr INT_isr `IIH(v  1 e 1 0 ]
 {
 "31
 [v INT_isr@i i `i  1 a 2 9 ]
 "34
 } 0
-"26 C:\Users\Rulo\Desktop\Sparc\SPARC1.X\Interruptions.c
+"26 C:\Users\Rulo\Desktop\School Crap\Industrial Programing\Semestre i\SparkSpirit\trunk\SPARC1.X\Interruptions.c
 [v _emergencyButton emergencyButton `(v  1 e 1 0 ]
 {
 "27
@@ -621,7 +632,7 @@
 [v i2strlen@s s `*.39Cuc  1 p 2 0 ]
 "12
 } 0
-"27 C:\Users\Rulo\Desktop\Sparc\SPARC1.X\USART.c
+"27 C:\Users\Rulo\Desktop\School Crap\Industrial Programing\Semestre i\SparkSpirit\trunk\SPARC1.X\USART.c
 [v i2_USART_Tx USART_Tx `(v  1 e 1 0 ]
 {
 [v i2USART_Tx@data data `uc  1 a 1 wreg ]
