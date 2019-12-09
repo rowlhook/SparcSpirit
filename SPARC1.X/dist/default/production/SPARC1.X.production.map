@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files (x86)\Microchip\xc8\v2.10\pic\dat\en_msgs.txt \
   -cs -h+dist/default/production\SPARC1.X.production.sym \
   --cmf=dist/default/production\SPARC1.X.production.cmf -z -Q18F4550 \
-  -oC:\Users\Rulo\AppData\Local\Temp\sfi8.2 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\Rulo\AppData\Local\Temp\so9s.2 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/SPARC1.X.production.map -E1 -ver=XC8 \
   --acfsm=1493 -ASTACK=0139h-07FFh -pstack=STACK -ACODE=00h-07FFFh \
   -ACONST=00h-07FFFh -ASMALLCONST=0800h-08FFhx120 \
@@ -23,7 +23,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  C:\Users\Rulo\AppData\Local\Temp\sfi8.o \
+  C:\Users\Rulo\AppData\Local\Temp\so9s.o \
   dist/default/production\SPARC1.X.production.o 
 
 Object code version is 3.11
@@ -36,7 +36,7 @@ Call graph: (short form)
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\Rulo\AppData\Local\Temp\sfi8.o
+C:\Users\Rulo\AppData\Local\Temp\so9s.o
                 init                                  E        E        4        4       0
                 reset_vec                             0        0        4        0       0
                 idloc                            200000   200000        8   200000       0
@@ -222,9 +222,9 @@ UNUSED ADDRESS RANGES
 ?___wmul                     cstackCOMRAM 00000C
 ?_strlen                     cstackCOMRAM 00000C
 ?i2_strlen                   cstackCOMRAM 000001
-Completo@i                   cstackCOMRAM 000010
-Ejecutandose@i               cstackCOMRAM 000010
+Complete@i                   cstackCOMRAM 000010
 Error@i                      cstackCOMRAM 000010
+Executing@i                  cstackCOMRAM 000010
 INT_isr@i                    cstackCOMRAM 00000A
 USART_Init@BAUD              cstackCOMRAM 00001A
 USART_Tx@data                cstackCOMRAM 00000C
@@ -234,9 +234,9 @@ _CCPR1L                      (abs)        000FBE
 _CCPR2L                      (abs)        000FBB
 _CE                          dataBANK1    000100
 _CMCON                       (abs)        000FB4
-_Completo                    text16       000E76
-_Ejecutandose                text15       000E2A
-_Error                       text14       000DDE
+_Complete                    text16       000E76
+_Error                       text15       000E2A
+_Executing                   text14       000DDE
 _INTCON2bits                 (abs)        000FF1
 _INTCON3bits                 (abs)        000FF0
 _INTCONbits                  (abs)        000FF2
@@ -475,9 +475,9 @@ ___wmul@multiplier           cstackCOMRAM 00000C
 ___wmul@product              cstackCOMRAM 000010
 __accesstop                  (abs)        000060
 __activetblptr               (abs)        000000
-__end_of_Completo            text16       000EC2
-__end_of_Ejecutandose        text15       000E76
-__end_of_Error               text14       000E2A
+__end_of_Complete            text16       000EC2
+__end_of_Error               text15       000E76
+__end_of_Executing           text14       000E2A
 __end_of_INT_isr             intcode_body 000C3E
 __end_of_USART_Init          text20       000D24
 __end_of_USART_Rx            text19       0010EE
@@ -486,8 +486,7 @@ __end_of___aldiv             text21       0007DA
 __end_of___wmul              text13       001042
 __end_of__initialization     cinit        000CAA
 __end_of_clearOneShot        text12       0010DC
-__end_of_comandos            text4        0006CE
-__end_of_contador_pulsosD    text10       000BBE
+__end_of_commands            text4        0006CE
 __end_of_coordinateRefreshX  text9        000AA2
 __end_of_coordinateRefreshY  text8        0009BC
 __end_of_emergencyButton     text23       000D92
@@ -496,6 +495,7 @@ __end_of_interruptionsInit   text2        0010FE
 __end_of_invalidCoordinate   text7        000DDE
 __end_of_main                text0        0008D6
 __end_of_oneShot             text11       001084
+__end_of_pulseCounter        text10       000BBE
 __end_of_pwm_init            text1        001066
 __end_of_strlen              text17       000FBE
 __end_of_xLimit              text6        000F4E
@@ -541,9 +541,9 @@ __ptext7                     text7        000D92
 __ptext8                     text8        0008D6
 __ptext9                     text9        0009BC
 __ramtop                     ramtop       000800
-__size_of_Completo           (abs)        000000
-__size_of_Ejecutandose       (abs)        000000
+__size_of_Complete           (abs)        000000
 __size_of_Error              (abs)        000000
+__size_of_Executing          (abs)        000000
 __size_of_INT_isr            (abs)        000000
 __size_of_USART_Init         (abs)        000000
 __size_of_USART_Rx           (abs)        000000
@@ -551,8 +551,7 @@ __size_of_USART_Tx           (abs)        000000
 __size_of___aldiv            (abs)        000000
 __size_of___wmul             (abs)        000000
 __size_of_clearOneShot       (abs)        000000
-__size_of_comandos           (abs)        000000
-__size_of_contador_pulsosD   (abs)        000000
+__size_of_commands           (abs)        000000
 __size_of_coordinateRefreshX (abs)        000000
 __size_of_coordinateRefreshY (abs)        000000
 __size_of_emergencyButton    (abs)        000000
@@ -561,6 +560,7 @@ __size_of_interruptionsInit  (abs)        000000
 __size_of_invalidCoordinate  (abs)        000000
 __size_of_main               (abs)        000000
 __size_of_oneShot            (abs)        000000
+__size_of_pulseCounter       (abs)        000000
 __size_of_pwm_init           (abs)        000000
 __size_of_strlen             (abs)        000000
 __size_of_xLimit             (abs)        000000
@@ -571,8 +571,7 @@ __smallconst                 smallconst   000000
 _check                       dataBANK0    00007A
 _clearOneShot                text12       0010C8
 _cnt                         bssCOMRAM    000044
-_comandos                    text4        000012
-_contador_pulsosD            text10       000B3C
+_commands                    text4        000012
 _coordinateRefreshX          text9        0009BC
 _coordinateRefreshY          text8        0008D6
 _emergency                   dataBANK0    000060
@@ -594,6 +593,7 @@ _nvalorx                     bssCOMRAM    000050
 _nvalory                     bssCOMRAM    00004E
 _oneShot                     text11       001066
 _ons                         bssCOMRAM    000052
+_pulseCounter                text10       000B3C
 _pwm_init                    text1        001042
 _strlen                      text17       000F88
 _x                           bssCOMRAM    00004C
@@ -603,8 +603,7 @@ _y                           bssCOMRAM    00004A
 _yLimit                      text5        000EC2
 _yl                          dataBANK0    0000BE
 btemp                        temp         000053
-comandos@comando             cstackCOMRAM 00001B
-contador_pulsosD@pulsoD      cstackCOMRAM 000012
+commands@comando             cstackCOMRAM 00001B
 coordinateRefreshX@i         cstackCOMRAM 000017
 coordinateRefreshX@j         cstackCOMRAM 000019
 coordinateRefreshX@newX      cstackCOMRAM 000015
@@ -628,6 +627,7 @@ invalidCoordinate@i          cstackCOMRAM 000010
 main@contador                cstackCOMRAM 00002C
 main@i                       cstackCOMRAM 00002A
 main@instruccion             cstackCOMRAM 000022
+pulseCounter@pulsoD          cstackCOMRAM 000012
 stackhi                      (abs)        0007FF
 stacklo                      (abs)        000139
 start                        init         00000E
@@ -669,11 +669,11 @@ FUNCTION INFORMATION:
 Total ram usage:       11 bytes
  Hardware stack levels required when called:    7
  This function calls:
-		_Completo
+		_Complete
 		_USART_Init
 		_USART_Rx
 		_USART_Tx
-		_comandos
+		_commands
 		_gpioInit
 		_interruptionsInit
 		_pwm_init
@@ -774,9 +774,9 @@ Total ram usage:        0 bytes
  This function uses a non-reentrant model
 
 
- *************** function _comandos *****************
+ *************** function _commands *****************
  Defined at:
-		line 115 in file "Comandos.c"
+		line 116 in file "Comandos.c"
  Parameters:    Size  Location     Type
   comando         2   26[COMRAM] PTR unsigned char 
 		 -> main@instruccion(8), 
@@ -799,9 +799,9 @@ Total ram usage:        7 bytes
  Hardware stack levels used:    1
  Hardware stack levels required when called:    6
  This function calls:
-		_Completo
-		_Ejecutandose
+		_Complete
 		_Error
+		_Executing
 		_coordinateRefreshX
 		_coordinateRefreshY
 		_invalidCoordinate
@@ -839,7 +839,7 @@ Total ram usage:        2 bytes
 		_USART_Tx
 		_strlen
  This function is called by:
-		_comandos
+		_commands
 		_main
  This function uses a non-reentrant model
 
@@ -871,7 +871,7 @@ Total ram usage:        2 bytes
 		_USART_Tx
 		_strlen
  This function is called by:
-		_comandos
+		_commands
 		_main
  This function uses a non-reentrant model
 
@@ -903,13 +903,13 @@ Total ram usage:        2 bytes
 		_USART_Tx
 		_strlen
  This function is called by:
-		_comandos
+		_commands
  This function uses a non-reentrant model
 
 
  *************** function _coordinateRefreshY *****************
  Defined at:
-		line 90 in file "Comandos.c"
+		line 91 in file "Comandos.c"
  Parameters:    Size  Location     Type
   newY            2   20[COMRAM] int 
  Auto vars:     Size  Location     Type
@@ -933,10 +933,10 @@ Total ram usage:        6 bytes
  Hardware stack levels required when called:    5
  This function calls:
 		_USART_Tx
-		_contador_pulsosD
+		_pulseCounter
 		_strlen
  This function is called by:
-		_comandos
+		_commands
  This function uses a non-reentrant model
 
 
@@ -966,14 +966,14 @@ Total ram usage:        6 bytes
  Hardware stack levels required when called:    5
  This function calls:
 		_USART_Tx
-		_contador_pulsosD
+		_pulseCounter
 		_strlen
  This function is called by:
-		_comandos
+		_commands
  This function uses a non-reentrant model
 
 
- *************** function _contador_pulsosD *****************
+ *************** function _pulseCounter *****************
  Defined at:
 		line 38 in file "pwm.c"
  Parameters:    Size  Location     Type
@@ -1032,7 +1032,7 @@ Total ram usage:        0 bytes
  This function calls:
 		Nothing
  This function is called by:
-		_contador_pulsosD
+		_pulseCounter
  This function uses a non-reentrant model
 
 
@@ -1062,7 +1062,7 @@ Total ram usage:        0 bytes
  This function calls:
 		Nothing
  This function is called by:
-		_contador_pulsosD
+		_pulseCounter
  This function uses a non-reentrant model
 
 
@@ -1093,7 +1093,38 @@ Total ram usage:        6 bytes
  This function calls:
 		Nothing
  This function is called by:
-		_contador_pulsosD
+		_pulseCounter
+ This function uses a non-reentrant model
+
+
+ *************** function _Executing *****************
+ Defined at:
+		line 42 in file "Comandos.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+  i               2   15[COMRAM] int 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr2l, fsr2h, status,2, status,0, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+      Params:         0       0       0       0       0       0       0       0       0
+      Locals:         2       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0
+      Totals:         2       0       0       0       0       0       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    4
+ This function calls:
+		_USART_Tx
+		_strlen
+ This function is called by:
+		_commands
  This function uses a non-reentrant model
 
 
@@ -1124,42 +1155,11 @@ Total ram usage:        2 bytes
 		_USART_Tx
 		_strlen
  This function is called by:
-		_comandos
+		_commands
  This function uses a non-reentrant model
 
 
- *************** function _Ejecutandose *****************
- Defined at:
-		line 42 in file "Comandos.c"
- Parameters:    Size  Location     Type
-		None
- Auto vars:     Size  Location     Type
-  i               2   15[COMRAM] int 
- Return value:  Size  Location     Type
-                  1    wreg      void 
- Registers used:
-		wreg, fsr2l, fsr2h, status,2, status,0, cstack
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
-      Params:         0       0       0       0       0       0       0       0       0
-      Locals:         2       0       0       0       0       0       0       0       0
-      Temps:          0       0       0       0       0       0       0       0       0
-      Totals:         2       0       0       0       0       0       0       0       0
-Total ram usage:        2 bytes
- Hardware stack levels used:    1
- Hardware stack levels required when called:    4
- This function calls:
-		_USART_Tx
-		_strlen
- This function is called by:
-		_comandos
- This function uses a non-reentrant model
-
-
- *************** function _Completo *****************
+ *************** function _Complete *****************
  Defined at:
 		line 52 in file "Comandos.c"
  Parameters:    Size  Location     Type
@@ -1186,7 +1186,7 @@ Total ram usage:        2 bytes
 		_USART_Tx
 		_strlen
  This function is called by:
-		_comandos
+		_commands
 		_main
  This function uses a non-reentrant model
 
@@ -1227,8 +1227,8 @@ Total ram usage:        4 bytes
 		_xLimit
 		_yLimit
 		_Error
-		_Ejecutandose
-		_Completo
+		_Executing
+		_Complete
 		_coordinateRefreshX
 		_coordinateRefreshY
  This function uses a non-reentrant model
@@ -1264,8 +1264,8 @@ Total ram usage:        1 bytes
 		_xLimit
 		_yLimit
 		_Error
-		_Ejecutandose
-		_Completo
+		_Executing
+		_Complete
 		_coordinateRefreshX
 		_coordinateRefreshY
 		_main
@@ -1506,15 +1506,15 @@ USART.c
 USART.c estimated size: 155
 
 Comandos.c
-		_comandos      		CODE           	0012	0000	1725
 		_coordinateRefreshX		CODE           	09BC	0000	231
 		_coordinateRefreshY		CODE           	08D6	0000	231
-		_Error         		CODE           	0DDE	0000	77
-		_Completo      		CODE           	0E76	0000	77
+		_Error         		CODE           	0E2A	0000	77
+		_Executing     		CODE           	0DDE	0000	77
+		_Complete      		CODE           	0E76	0000	77
 		_invalidCoordinate		CODE           	0D92	0000	77
-		_Ejecutandose  		CODE           	0E2A	0000	77
 		_xLimit        		CODE           	0F08	0000	71
 		_yLimit        		CODE           	0EC2	0000	71
+		_commands      		CODE           	0012	0000	1725
 
 Comandos.c estimated size: 2637
 
@@ -1535,7 +1535,7 @@ C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c
 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\aldiv.c estimated size: 269
 
 pwm.c
-		_contador_pulsosD		CODE           	0B3C	0000	131
+		_pulseCounter  		CODE           	0B3C	0000	131
 		_clearOneShot  		CODE           	10C8	0000	21
 		_pwm_init      		CODE           	1042	0000	37
 		_oneShot       		CODE           	1066	0000	31

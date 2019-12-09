@@ -39,7 +39,7 @@ void Error(){
 }
 
 /*Function Prints execution message unto UART*/
-void Ejecutandose(){
+void Executing(){
     for(int i=0; i < strlen(msgeje); i++){
     USART_Tx(msgeje[i]);
     } 
@@ -49,7 +49,7 @@ void Ejecutandose(){
 }
 
 /*Function Types Complete message unto UART*/
-void Completo(){
+void Complete(){
     for(int i=0; i < strlen(msgcomp); i++){
     USART_Tx(msgcomp[i]);
     } 
@@ -69,7 +69,7 @@ void coordinateRefreshX(int newX){
        for(int i=0; i < strlen(msleft); i++){
     USART_Tx(msleft[i]);
     }
-       contador_pulsosD(x-newX);
+       pulseCounter(x-newX);
        //Go left function
     }
     if(newX>x){ //If new  value is larger than previous
@@ -81,7 +81,7 @@ void coordinateRefreshX(int newX){
        for(int j=0; j < strlen(msright); j++){
     USART_Tx(msright[j]);
     }
-        contador_pulsosD(newX-x);//Go right function
+        pulseCounter(newX-x);//Go right function
     }
     x=newX;  //New coordinate value is set
 }
@@ -96,7 +96,7 @@ void coordinateRefreshY(int newY){
        for(int i=0; i < strlen(msdown); i++){
     USART_Tx(msdown[i]);
     }
-    contador_pulsosD(y-newY);   
+    pulseCounter(y-newY);   
     }
     if(newY>y){ //If new value is larger thatn previous
         Sentido_D=IZQUIERDA;
@@ -106,14 +106,14 @@ void coordinateRefreshY(int newY){
     USART_Tx(msup[j]);
     }
        
-        contador_pulsosD(newY-y); //Go up Function
+        pulseCounter(newY-y); //Go up Function
     }
     y=newY;//New value is set
 }
 
 /*Command Recognition function, takes the array gotten from UART and compares it with 
  known commands.*/
-int comandos (char comando[7]){ 
+int commands (char comando[7]){ 
     if(comando[0]=='C'){
         if (comando[1]>='0' && comando[1]<='2'){
             if (comando[2]>='0' && comando[2]<='9'){
@@ -122,13 +122,13 @@ int comandos (char comando[7]){
                         if (comando[5]>='0' && comando[5]<='2'){
                             if (comando[6]>='0' && comando[6]<='9'){
                                 if (comando[7]>='0' && comando[7]<='9'){ /*ex: C024,234 (X=024 Y=234*/
-                                    Ejecutandose();//Execution Message
+                                    Executing();//Execution Message
                                     nvalorx= ((comando[1]-48)*100)+((comando[2]-48)*10)+(comando[3]-48);
                                     nvalory= ((comando[5]-48)*100)+((comando[6]-48)*10)+(comando[7]-48);
                                     //New y value Set
                                     coordinateRefreshX(nvalorx); //Function Executed with new value
                                     coordinateRefreshY(nvalory); //Function Executed with new value
-                                    Completo();
+                                    Complete();
                                 }
                                 else{
                                     invalidCoordinate(); //Error message for coordinate
@@ -167,7 +167,7 @@ int comandos (char comando[7]){
                         if (comando[5]=='O'){
                             if (comando[6]=='M'){
                                 if (comando[7]=='E'){ /*ex GOTOHOME*/
-                                    Ejecutandose();//Execution Message
+                                    Executing();//Execution Message
                                      Sentido_D=DERECHA;
                                      Sentido_I=IZQUIERDA;
                                      Enable_I=ON;
@@ -186,7 +186,7 @@ int comandos (char comando[7]){
                                      yLimit();
                                      x=0;
                                      y=0;
-                                     Completo();
+                                     Complete();
                                 }
                                 else{
                                     Error(); //Error Message
@@ -225,9 +225,9 @@ int comandos (char comando[7]){
                         if (comando[5]=='U'){
                             if (comando[6]=='C'){
                                 if (comando[7]=='H'){ /*ex STCTOUCH*/
-                                    Ejecutandose(); //Execution Message
+                                    Executing(); //Execution Message
                                     SOLENOID=1;
-                                    Completo();
+                                    Complete();
                                 }
                                 else{
                                     Error();
@@ -268,11 +268,11 @@ int comandos (char comando[7]){
                         if (comando[5]=='T'){
                             if (comando[6]=='A'){
                                 if (comando[7]=='P'){ /*ex MAKEATAP*/
-                                    Ejecutandose();
+                                    Executing();
                                     SOLENOID=1;
                                     __delay_ms(1000);
                                     SOLENOID=0;
-                                    Completo();
+                                    Complete();
                                 }
                                 
                                 else{
@@ -313,9 +313,9 @@ int comandos (char comando[7]){
                         if (comando[5]=='I'){
                             if (comando[6]=='F'){
                                 if (comando[7]=='T'){ /*ex TAKELIFT*/
-                                    Ejecutandose(); //Execution Message
+                                    Executing(); //Execution Message
                                     SOLENOID=0;
-                                    Completo();
+                                    Complete();
                                 }
                                 else{
                                     Error();

@@ -5780,7 +5780,7 @@ size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
 void *memccpy (void *restrict, const void *restrict, int, size_t);
 # 4 "./Comandos.h" 2
 
-int comandos(char comando[7]);
+int commands(char comando[7]);
 char msgwrong []=" Error 0: Invalid Command\n";
 char msgeje []="Command in Execution\n";
 char msgcomp []="Successfully Executed\n";
@@ -5793,8 +5793,8 @@ char yl[]="Limit y Reached\n";
 char CE[]=" Error 1: Invalid Coordinate\n";
 void invalidCoordinate(void);
 void Error(void);
-void Ejecutandose(void);
-void Completo(void);
+void Executing(void);
+void Complete(void);
 char reconocer_comando(void);
 uint16_t nvalorx =0;
 uint16_t nvalory =0;
@@ -5817,7 +5817,7 @@ void gpioInit();
 # 1 "./pwm.h" 1
 
 void pwm_init(void);
-void contador_pulsosD(int pulsoD);
+void pulseCounter(int pulsoD);
 void oneShot();
 void clearOneShot();
 int keepgoing;
@@ -6041,7 +6041,7 @@ void main(void) {
     yLimit();
     x=0;
     y=0;
-    Completo();
+    Complete();
 
 
     while(1){
@@ -6057,7 +6057,7 @@ void main(void) {
     USART_Tx(instruccion[i]);
     }
           RCSTAbits.CREN=0;;
-        comandos(instruccion);
+        commands(instruccion);
 
     }
 

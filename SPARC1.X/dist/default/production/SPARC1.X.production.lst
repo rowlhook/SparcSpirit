@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.10 build 88905656 
-                                                                                               Thu Dec 05 17:48:01 2019
+                                                                                               Mon Dec 09 13:19:34 2019
 
 Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1 
      1                           	processor	18F4550
@@ -610,9 +610,9 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    596                           	opt callstack 0
    597  000010                     Error@i:
    598                           	opt callstack 0
-   599  000010                     Ejecutandose@i:
+   599  000010                     Executing@i:
    600                           	opt callstack 0
-   601  000010                     Completo@i:
+   601  000010                     Complete@i:
    602                           	opt callstack 0
    603  000010                     ___wmul@product:
    604                           	opt callstack 0
@@ -621,12 +621,12 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    607                           
    608                           ; 4 bytes @ 0xF
    609  000010                     	ds	2
-   610  000012                     contador_pulsosD@pulsoD:
+   610  000012                     pulseCounter@pulsoD:
    611                           	opt callstack 0
    612                           
    613                           ; 2 bytes @ 0x11
    614  000012                     	ds	2
-   615  000014                     ??_contador_pulsosD:
+   615  000014                     ??_pulseCounter:
    616  000014                     ___aldiv@counter:
    617                           	opt callstack 0
    618                           
@@ -665,12 +665,12 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    651                           
    652                           ; 4 bytes @ 0x19
    653  00001A                     	ds	1
-   654  00001B                     comandos@comando:
+   654  00001B                     commands@comando:
    655                           	opt callstack 0
    656                           
    657                           ; 2 bytes @ 0x1A
    658  00001B                     	ds	2
-   659  00001D                     ??_comandos:
+   659  00001D                     ??_commands:
    660                           
    661                           ; 1 bytes @ 0x1C
    662  00001D                     	ds	1
@@ -723,11 +723,11 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    709 ;;Total ram usage:       11 bytes
    710 ;; Hardware stack levels required when called:    7
    711 ;; This function calls:
-   712 ;;		_Completo
+   712 ;;		_Complete
    713 ;;		_USART_Init
    714 ;;		_USART_Rx
    715 ;;		_USART_Tx
-   716 ;;		_comandos
+   716 ;;		_commands
    717 ;;		_gpioInit
    718 ;;		_interruptionsInit
    719 ;;		_pwm_init
@@ -857,8 +857,8 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    843  000854  0E00               	movlw	0
    844  000856  6E4A               	movwf	_y^0,c
    845                           
-   846                           ;MAINSPARC.c: 69:     Completo();
-   847  000858  EC3B  F007         	call	_Completo	;wreg free
+   846                           ;MAINSPARC.c: 69:     Complete();
+   847  000858  EC3B  F007         	call	_Complete	;wreg free
    848  00085C                     l2240:
    849                           
    850                           ;MAINSPARC.c: 75:          RCSTAbits.CREN=1;;
@@ -925,12 +925,12 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
    911                           ;MAINSPARC.c: 84:           RCSTAbits.CREN=0;;
    912  0008C0  98AB               	bcf	171,4,c	;volatile
    913  0008C2                     
-   914                           ;MAINSPARC.c: 85:         comandos(instruccion);
+   914                           ;MAINSPARC.c: 85:         commands(instruccion);
    915  0008C2  0E22               	movlw	low main@instruccion
-   916  0008C4  6E1B               	movwf	comandos@comando^0,c
+   916  0008C4  6E1B               	movwf	commands@comando^0,c
    917  0008C6  0E00               	movlw	high main@instruccion
-   918  0008C8  6E1C               	movwf	(comandos@comando+1)^0,c
-   919  0008CA  EC09  F000         	call	_comandos	;wreg free
+   918  0008C8  6E1C               	movwf	(commands@comando+1)^0,c
+   919  0008CA  EC09  F000         	call	_commands	;wreg free
    920  0008CE  EF2E  F004         	goto	l2240
    921  0008D2  EF07  F000         	goto	start
    922  0008D6                     __end_of_main:
@@ -1152,9 +1152,9 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1138  00101C                     __end_of_gpioInit:
   1139                           	opt callstack 0
   1140                           
-  1141 ;; *************** function _comandos *****************
+  1141 ;; *************** function _commands *****************
   1142 ;; Defined at:
-  1143 ;;		line 115 in file "Comandos.c"
+  1143 ;;		line 116 in file "Comandos.c"
   1144 ;; Parameters:    Size  Location     Type
   1145 ;;  comando         2   26[COMRAM] PTR unsigned char 
   1146 ;;		 -> main@instruccion(8), 
@@ -1177,9 +1177,9 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1163 ;; Hardware stack levels used:    1
   1164 ;; Hardware stack levels required when called:    6
   1165 ;; This function calls:
-  1166 ;;		_Completo
-  1167 ;;		_Ejecutandose
-  1168 ;;		_Error
+  1166 ;;		_Complete
+  1167 ;;		_Error
+  1168 ;;		_Executing
   1169 ;;		_coordinateRefreshX
   1170 ;;		_coordinateRefreshY
   1171 ;;		_invalidCoordinate
@@ -1193,12 +1193,12 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1179                           	psect	text4
   1180  000012                     __ptext4:
   1181                           	opt callstack 0
-  1182  000012                     _comandos:
+  1182  000012                     _commands:
   1183                           	opt callstack 24
   1184  000012                     
-  1185                           ;Comandos.c: 116:     if(comando[0]=='C'){
-  1186  000012  C01B  FFD9         	movff	comandos@comando,fsr2l
-  1187  000016  C01C  FFDA         	movff	comandos@comando+1,fsr2h
+  1185                           ;Comandos.c: 117:     if(comando[0]=='C'){
+  1186  000012  C01B  FFD9         	movff	commands@comando,fsr2l
+  1187  000016  C01C  FFDA         	movff	commands@comando+1,fsr2h
   1188  00001A  0E43               	movlw	67
   1189  00001C  18DE               	xorwf	postinc2,w,c
   1190  00001E  A4D8               	btfss	status,2,c
@@ -1208,11 +1208,11 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1194  000028  EF3F  F001         	goto	l1978
   1195  00002C                     u1170:
   1196  00002C                     
-  1197                           ;Comandos.c: 117:         if (comando[1]>='0' && comando[1]<='3'){
+  1197                           ;Comandos.c: 118:         if (comando[1]>='0' && comando[1]<='2'){
   1198  00002C  EE20 F001          	lfsr	2,1
-  1199  000030  501B               	movf	comandos@comando^0,w,c
+  1199  000030  501B               	movf	commands@comando^0,w,c
   1200  000032  26D9               	addwf	fsr2l,f,c
-  1201  000034  501C               	movf	(comandos@comando+1)^0,w,c
+  1201  000034  501C               	movf	(commands@comando+1)^0,w,c
   1202  000036  22DA               	addwfc	fsr2h,f,c
   1203  000038  0E2F               	movlw	47
   1204  00003A  64DF               	cpfsgt	indf2,c
@@ -1222,11 +1222,11 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1208  000044  EF3B  F001         	goto	l1964
   1209  000048                     u1180:
   1210  000048  EE20 F001          	lfsr	2,1
-  1211  00004C  501B               	movf	comandos@comando^0,w,c
+  1211  00004C  501B               	movf	commands@comando^0,w,c
   1212  00004E  26D9               	addwf	fsr2l,f,c
-  1213  000050  501C               	movf	(comandos@comando+1)^0,w,c
+  1213  000050  501C               	movf	(commands@comando+1)^0,w,c
   1214  000052  22DA               	addwfc	fsr2h,f,c
-  1215  000054  0E34               	movlw	52
+  1215  000054  0E33               	movlw	51
   1216  000056  60DF               	cpfslt	indf2,c
   1217  000058  EF30  F000         	goto	u1191
   1218  00005C  EF32  F000         	goto	u1190
@@ -1234,11 +1234,11 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1220  000060  EF3B  F001         	goto	l1964
   1221  000064                     u1190:
   1222  000064                     
-  1223                           ;Comandos.c: 118:             if (comando[2]>='0' && comando[2]<='9'){
+  1223                           ;Comandos.c: 119:             if (comando[2]>='0' && comando[2]<='9'){
   1224  000064  EE20 F002          	lfsr	2,2
-  1225  000068  501B               	movf	comandos@comando^0,w,c
+  1225  000068  501B               	movf	commands@comando^0,w,c
   1226  00006A  26D9               	addwf	fsr2l,f,c
-  1227  00006C  501C               	movf	(comandos@comando+1)^0,w,c
+  1227  00006C  501C               	movf	(commands@comando+1)^0,w,c
   1228  00006E  22DA               	addwfc	fsr2h,f,c
   1229  000070  0E2F               	movlw	47
   1230  000072  64DF               	cpfsgt	indf2,c
@@ -1248,9 +1248,9 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1234  00007C  EF3B  F001         	goto	l1964
   1235  000080                     u1200:
   1236  000080  EE20 F002          	lfsr	2,2
-  1237  000084  501B               	movf	comandos@comando^0,w,c
+  1237  000084  501B               	movf	commands@comando^0,w,c
   1238  000086  26D9               	addwf	fsr2l,f,c
-  1239  000088  501C               	movf	(comandos@comando+1)^0,w,c
+  1239  000088  501C               	movf	(commands@comando+1)^0,w,c
   1240  00008A  22DA               	addwfc	fsr2h,f,c
   1241  00008C  0E3A               	movlw	58
   1242  00008E  60DF               	cpfslt	indf2,c
@@ -1260,11 +1260,11 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1246  000098  EF3B  F001         	goto	l1964
   1247  00009C                     u1210:
   1248  00009C                     
-  1249                           ;Comandos.c: 119:                 if (comando[3]>='0' && comando[3]<='9'){
+  1249                           ;Comandos.c: 120:                 if (comando[3]>='0' && comando[3]<='9'){
   1250  00009C  EE20 F003          	lfsr	2,3
-  1251  0000A0  501B               	movf	comandos@comando^0,w,c
+  1251  0000A0  501B               	movf	commands@comando^0,w,c
   1252  0000A2  26D9               	addwf	fsr2l,f,c
-  1253  0000A4  501C               	movf	(comandos@comando+1)^0,w,c
+  1253  0000A4  501C               	movf	(commands@comando+1)^0,w,c
   1254  0000A6  22DA               	addwfc	fsr2h,f,c
   1255  0000A8  0E2F               	movlw	47
   1256  0000AA  64DF               	cpfsgt	indf2,c
@@ -1274,9 +1274,9 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1260  0000B4  EF3B  F001         	goto	l1964
   1261  0000B8                     u1220:
   1262  0000B8  EE20 F003          	lfsr	2,3
-  1263  0000BC  501B               	movf	comandos@comando^0,w,c
+  1263  0000BC  501B               	movf	commands@comando^0,w,c
   1264  0000BE  26D9               	addwf	fsr2l,f,c
-  1265  0000C0  501C               	movf	(comandos@comando+1)^0,w,c
+  1265  0000C0  501C               	movf	(commands@comando+1)^0,w,c
   1266  0000C2  22DA               	addwfc	fsr2h,f,c
   1267  0000C4  0E3A               	movlw	58
   1268  0000C6  60DF               	cpfslt	indf2,c
@@ -1286,11 +1286,11 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1272  0000D0  EF3B  F001         	goto	l1964
   1273  0000D4                     u1230:
   1274  0000D4                     
-  1275                           ;Comandos.c: 120:                     if (comando[4]==','){
+  1275                           ;Comandos.c: 121:                     if (comando[4]==','){
   1276  0000D4  EE20 F004          	lfsr	2,4
-  1277  0000D8  501B               	movf	comandos@comando^0,w,c
+  1277  0000D8  501B               	movf	commands@comando^0,w,c
   1278  0000DA  26D9               	addwf	fsr2l,f,c
-  1279  0000DC  501C               	movf	(comandos@comando+1)^0,w,c
+  1279  0000DC  501C               	movf	(commands@comando+1)^0,w,c
   1280  0000DE  22DA               	addwfc	fsr2h,f,c
   1281  0000E0  0E2C               	movlw	44
   1282  0000E2  18DE               	xorwf	postinc2,w,c
@@ -1301,11 +1301,11 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1287  0000EE  EF3B  F001         	goto	l1964
   1288  0000F2                     u1240:
   1289  0000F2                     
-  1290                           ;Comandos.c: 121:                         if (comando[5]>='0' && comando[5]<='3'){
+  1290                           ;Comandos.c: 122:                         if (comando[5]>='0' && comando[5]<='2'){
   1291  0000F2  EE20 F005          	lfsr	2,5
-  1292  0000F6  501B               	movf	comandos@comando^0,w,c
+  1292  0000F6  501B               	movf	commands@comando^0,w,c
   1293  0000F8  26D9               	addwf	fsr2l,f,c
-  1294  0000FA  501C               	movf	(comandos@comando+1)^0,w,c
+  1294  0000FA  501C               	movf	(commands@comando+1)^0,w,c
   1295  0000FC  22DA               	addwfc	fsr2h,f,c
   1296  0000FE  0E2F               	movlw	47
   1297  000100  64DF               	cpfsgt	indf2,c
@@ -1315,11 +1315,11 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1301  00010A  EF3B  F001         	goto	l1964
   1302  00010E                     u1250:
   1303  00010E  EE20 F005          	lfsr	2,5
-  1304  000112  501B               	movf	comandos@comando^0,w,c
+  1304  000112  501B               	movf	commands@comando^0,w,c
   1305  000114  26D9               	addwf	fsr2l,f,c
-  1306  000116  501C               	movf	(comandos@comando+1)^0,w,c
+  1306  000116  501C               	movf	(commands@comando+1)^0,w,c
   1307  000118  22DA               	addwfc	fsr2h,f,c
-  1308  00011A  0E34               	movlw	52
+  1308  00011A  0E33               	movlw	51
   1309  00011C  60DF               	cpfslt	indf2,c
   1310  00011E  EF93  F000         	goto	u1261
   1311  000122  EF95  F000         	goto	u1260
@@ -1327,11 +1327,11 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1313  000126  EF3B  F001         	goto	l1964
   1314  00012A                     u1260:
   1315  00012A                     
-  1316                           ;Comandos.c: 122:                             if (comando[6]>='0' && comando[6]<='9'){
+  1316                           ;Comandos.c: 123:                             if (comando[6]>='0' && comando[6]<='9'){
   1317  00012A  EE20 F006          	lfsr	2,6
-  1318  00012E  501B               	movf	comandos@comando^0,w,c
+  1318  00012E  501B               	movf	commands@comando^0,w,c
   1319  000130  26D9               	addwf	fsr2l,f,c
-  1320  000132  501C               	movf	(comandos@comando+1)^0,w,c
+  1320  000132  501C               	movf	(commands@comando+1)^0,w,c
   1321  000134  22DA               	addwfc	fsr2h,f,c
   1322  000136  0E2F               	movlw	47
   1323  000138  64DF               	cpfsgt	indf2,c
@@ -1341,9 +1341,9 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1327  000142  EF3B  F001         	goto	l1964
   1328  000146                     u1270:
   1329  000146  EE20 F006          	lfsr	2,6
-  1330  00014A  501B               	movf	comandos@comando^0,w,c
+  1330  00014A  501B               	movf	commands@comando^0,w,c
   1331  00014C  26D9               	addwf	fsr2l,f,c
-  1332  00014E  501C               	movf	(comandos@comando+1)^0,w,c
+  1332  00014E  501C               	movf	(commands@comando+1)^0,w,c
   1333  000150  22DA               	addwfc	fsr2h,f,c
   1334  000152  0E3A               	movlw	58
   1335  000154  60DF               	cpfslt	indf2,c
@@ -1353,12 +1353,12 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1339  00015E  EF3B  F001         	goto	l1964
   1340  000162                     u1280:
   1341  000162                     
-  1342                           ;Comandos.c: 123:                                 if (comando[7]>='0' && comando[7]<='9'
+  1342                           ;Comandos.c: 124:                                 if (comando[7]>='0' && comando[7]<='9'
       +                          ){
   1343  000162  EE20 F007          	lfsr	2,7
-  1344  000166  501B               	movf	comandos@comando^0,w,c
+  1344  000166  501B               	movf	commands@comando^0,w,c
   1345  000168  26D9               	addwf	fsr2l,f,c
-  1346  00016A  501C               	movf	(comandos@comando+1)^0,w,c
+  1346  00016A  501C               	movf	(commands@comando+1)^0,w,c
   1347  00016C  22DA               	addwfc	fsr2h,f,c
   1348  00016E  0E2F               	movlw	47
   1349  000170  64DF               	cpfsgt	indf2,c
@@ -1368,9 +1368,9 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1353  00017A  EF3B  F001         	goto	l1964
   1354  00017E                     u1290:
   1355  00017E  EE20 F007          	lfsr	2,7
-  1356  000182  501B               	movf	comandos@comando^0,w,c
+  1356  000182  501B               	movf	commands@comando^0,w,c
   1357  000184  26D9               	addwf	fsr2l,f,c
-  1358  000186  501C               	movf	(comandos@comando+1)^0,w,c
+  1358  000186  501C               	movf	(commands@comando+1)^0,w,c
   1359  000188  22DA               	addwfc	fsr2h,f,c
   1360  00018A  0E3A               	movlw	58
   1361  00018C  60DF               	cpfslt	indf2,c
@@ -1380,120 +1380,120 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1365  000196  EF3B  F001         	goto	l1964
   1366  00019A                     u1300:
   1367  00019A                     
-  1368                           ;Comandos.c: 124:                                     Ejecutandose();
-  1369  00019A  EC15  F007         	call	_Ejecutandose	;wreg free
+  1368                           ;Comandos.c: 125:                                     Executing();
+  1369  00019A  ECEF  F006         	call	_Executing	;wreg free
   1370  00019E                     
-  1371                           ;Comandos.c: 125:                                     nvalorx= ((comando[1]-48)*100)+((c
+  1371                           ;Comandos.c: 126:                                     nvalorx= ((comando[1]-48)*100)+((c
       +                          omando[2]-48)*10)+(comando[3]-48);
   1372  00019E  EE20 F001          	lfsr	2,1
-  1373  0001A2  501B               	movf	comandos@comando^0,w,c
+  1373  0001A2  501B               	movf	commands@comando^0,w,c
   1374  0001A4  26D9               	addwf	fsr2l,f,c
-  1375  0001A6  501C               	movf	(comandos@comando+1)^0,w,c
+  1375  0001A6  501C               	movf	(commands@comando+1)^0,w,c
   1376  0001A8  22DA               	addwfc	fsr2h,f,c
   1377  0001AA  50DF               	movf	indf2,w,c
-  1378  0001AC  6E1D               	movwf	??_comandos^0,c
-  1379  0001AE  501D               	movf	??_comandos^0,w,c
+  1378  0001AC  6E1D               	movwf	??_commands^0,c
+  1379  0001AE  501D               	movf	??_commands^0,w,c
   1380  0001B0  0D64               	mullw	100
-  1381  0001B2  CFF3 F01E          	movff	prodl,??_comandos+1
-  1382  0001B6  CFF4 F01F          	movff	prodh,??_comandos+2
+  1381  0001B2  CFF3 F01E          	movff	prodl,??_commands+1
+  1382  0001B6  CFF4 F01F          	movff	prodh,??_commands+2
   1383  0001BA  EE20 F002          	lfsr	2,2
-  1384  0001BE  501B               	movf	comandos@comando^0,w,c
+  1384  0001BE  501B               	movf	commands@comando^0,w,c
   1385  0001C0  26D9               	addwf	fsr2l,f,c
-  1386  0001C2  501C               	movf	(comandos@comando+1)^0,w,c
+  1386  0001C2  501C               	movf	(commands@comando+1)^0,w,c
   1387  0001C4  22DA               	addwfc	fsr2h,f,c
   1388  0001C6  50DF               	movf	indf2,w,c
-  1389  0001C8  6E20               	movwf	(??_comandos+3)^0,c
-  1390  0001CA  5020               	movf	(??_comandos+3)^0,w,c
+  1389  0001C8  6E20               	movwf	(??_commands+3)^0,c
+  1390  0001CA  5020               	movf	(??_commands+3)^0,w,c
   1391  0001CC  0D0A               	mullw	10
   1392  0001CE  50F3               	movf	243,w,c
-  1393  0001D0  261E               	addwf	(??_comandos+1)^0,f,c
+  1393  0001D0  261E               	addwf	(??_commands+1)^0,f,c
   1394  0001D2  50F4               	movf	244,w,c
-  1395  0001D4  221F               	addwfc	(??_comandos+2)^0,f,c
+  1395  0001D4  221F               	addwfc	(??_commands+2)^0,f,c
   1396  0001D6  EE20 F003          	lfsr	2,3
-  1397  0001DA  501B               	movf	comandos@comando^0,w,c
+  1397  0001DA  501B               	movf	commands@comando^0,w,c
   1398  0001DC  26D9               	addwf	fsr2l,f,c
-  1399  0001DE  501C               	movf	(comandos@comando+1)^0,w,c
+  1399  0001DE  501C               	movf	(commands@comando+1)^0,w,c
   1400  0001E0  22DA               	addwfc	fsr2h,f,c
   1401  0001E2  50DF               	movf	indf2,w,c
-  1402  0001E4  6E21               	movwf	(??_comandos+4)^0,c
-  1403  0001E6  5021               	movf	(??_comandos+4)^0,w,c
-  1404  0001E8  261E               	addwf	(??_comandos+1)^0,f,c
+  1402  0001E4  6E21               	movwf	(??_commands+4)^0,c
+  1403  0001E6  5021               	movf	(??_commands+4)^0,w,c
+  1404  0001E8  261E               	addwf	(??_commands+1)^0,f,c
   1405  0001EA  0E00               	movlw	0
-  1406  0001EC  221F               	addwfc	(??_comandos+2)^0,f,c
+  1406  0001EC  221F               	addwfc	(??_commands+2)^0,f,c
   1407  0001EE  0E30               	movlw	48
-  1408  0001F0  241E               	addwf	(??_comandos+1)^0,w,c
+  1408  0001F0  241E               	addwf	(??_commands+1)^0,w,c
   1409  0001F2  6E50               	movwf	_nvalorx^0,c
   1410  0001F4  0EEB               	movlw	235
-  1411  0001F6  201F               	addwfc	(??_comandos+2)^0,w,c
+  1411  0001F6  201F               	addwfc	(??_commands+2)^0,w,c
   1412  0001F8  6E51               	movwf	(_nvalorx+1)^0,c
   1413  0001FA                     
-  1414                           ;Comandos.c: 126:                                     nvalory= ((comando[5]-48)*100)+((c
+  1414                           ;Comandos.c: 127:                                     nvalory= ((comando[5]-48)*100)+((c
       +                          omando[6]-48)*10)+(comando[7]-48);
   1415  0001FA  EE20 F005          	lfsr	2,5
-  1416  0001FE  501B               	movf	comandos@comando^0,w,c
+  1416  0001FE  501B               	movf	commands@comando^0,w,c
   1417  000200  26D9               	addwf	fsr2l,f,c
-  1418  000202  501C               	movf	(comandos@comando+1)^0,w,c
+  1418  000202  501C               	movf	(commands@comando+1)^0,w,c
   1419  000204  22DA               	addwfc	fsr2h,f,c
   1420  000206  50DF               	movf	indf2,w,c
-  1421  000208  6E1D               	movwf	??_comandos^0,c
-  1422  00020A  501D               	movf	??_comandos^0,w,c
+  1421  000208  6E1D               	movwf	??_commands^0,c
+  1422  00020A  501D               	movf	??_commands^0,w,c
   1423  00020C  0D64               	mullw	100
-  1424  00020E  CFF3 F01E          	movff	prodl,??_comandos+1
-  1425  000212  CFF4 F01F          	movff	prodh,??_comandos+2
+  1424  00020E  CFF3 F01E          	movff	prodl,??_commands+1
+  1425  000212  CFF4 F01F          	movff	prodh,??_commands+2
   1426  000216  EE20 F006          	lfsr	2,6
-  1427  00021A  501B               	movf	comandos@comando^0,w,c
+  1427  00021A  501B               	movf	commands@comando^0,w,c
   1428  00021C  26D9               	addwf	fsr2l,f,c
-  1429  00021E  501C               	movf	(comandos@comando+1)^0,w,c
+  1429  00021E  501C               	movf	(commands@comando+1)^0,w,c
   1430  000220  22DA               	addwfc	fsr2h,f,c
   1431  000222  50DF               	movf	indf2,w,c
-  1432  000224  6E20               	movwf	(??_comandos+3)^0,c
-  1433  000226  5020               	movf	(??_comandos+3)^0,w,c
+  1432  000224  6E20               	movwf	(??_commands+3)^0,c
+  1433  000226  5020               	movf	(??_commands+3)^0,w,c
   1434  000228  0D0A               	mullw	10
   1435  00022A  50F3               	movf	243,w,c
-  1436  00022C  261E               	addwf	(??_comandos+1)^0,f,c
+  1436  00022C  261E               	addwf	(??_commands+1)^0,f,c
   1437  00022E  50F4               	movf	244,w,c
-  1438  000230  221F               	addwfc	(??_comandos+2)^0,f,c
+  1438  000230  221F               	addwfc	(??_commands+2)^0,f,c
   1439  000232  EE20 F007          	lfsr	2,7
-  1440  000236  501B               	movf	comandos@comando^0,w,c
+  1440  000236  501B               	movf	commands@comando^0,w,c
   1441  000238  26D9               	addwf	fsr2l,f,c
-  1442  00023A  501C               	movf	(comandos@comando+1)^0,w,c
+  1442  00023A  501C               	movf	(commands@comando+1)^0,w,c
   1443  00023C  22DA               	addwfc	fsr2h,f,c
   1444  00023E  50DF               	movf	indf2,w,c
-  1445  000240  6E21               	movwf	(??_comandos+4)^0,c
-  1446  000242  5021               	movf	(??_comandos+4)^0,w,c
-  1447  000244  261E               	addwf	(??_comandos+1)^0,f,c
+  1445  000240  6E21               	movwf	(??_commands+4)^0,c
+  1446  000242  5021               	movf	(??_commands+4)^0,w,c
+  1447  000244  261E               	addwf	(??_commands+1)^0,f,c
   1448  000246  0E00               	movlw	0
-  1449  000248  221F               	addwfc	(??_comandos+2)^0,f,c
+  1449  000248  221F               	addwfc	(??_commands+2)^0,f,c
   1450  00024A  0E30               	movlw	48
-  1451  00024C  241E               	addwf	(??_comandos+1)^0,w,c
+  1451  00024C  241E               	addwf	(??_commands+1)^0,w,c
   1452  00024E  6E4E               	movwf	_nvalory^0,c
   1453  000250  0EEB               	movlw	235
-  1454  000252  201F               	addwfc	(??_comandos+2)^0,w,c
+  1454  000252  201F               	addwfc	(??_commands+2)^0,w,c
   1455  000254  6E4F               	movwf	(_nvalory+1)^0,c
   1456  000256                     
-  1457                           ;Comandos.c: 128:                                     coordinateRefreshX(nvalorx);
+  1457                           ;Comandos.c: 129:                                     coordinateRefreshX(nvalorx);
   1458  000256  C050  F015         	movff	_nvalorx,coordinateRefreshX@newX
   1459  00025A  C051  F016         	movff	_nvalorx+1,coordinateRefreshX@newX+1
   1460  00025E  ECDE  F004         	call	_coordinateRefreshX	;wreg free
   1461  000262                     
-  1462                           ;Comandos.c: 129:                                     coordinateRefreshY(nvalory);
+  1462                           ;Comandos.c: 130:                                     coordinateRefreshY(nvalory);
   1463  000262  C04E  F015         	movff	_nvalory,coordinateRefreshY@newY
   1464  000266  C04F  F016         	movff	_nvalory+1,coordinateRefreshY@newY+1
   1465  00026A  EC6B  F004         	call	_coordinateRefreshY	;wreg free
   1466                           
-  1467                           ;Comandos.c: 130:                                     Completo();
-  1468  00026E  EC3B  F007         	call	_Completo	;wreg free
+  1467                           ;Comandos.c: 131:                                     Complete();
+  1468  00026E  EC3B  F007         	call	_Complete	;wreg free
   1469                           
-  1470                           ;Comandos.c: 131:                                 }
+  1470                           ;Comandos.c: 132:                                 }
   1471  000272  EF66  F003         	goto	l189
   1472  000276                     l1964:
   1473                           
-  1474                           ;Comandos.c: 133:                                     invalidCoordinate();
+  1474                           ;Comandos.c: 134:                                     invalidCoordinate();
   1475  000276  ECC9  F006         	call	_invalidCoordinate	;wreg free
   1476  00027A  EF66  F003         	goto	l189
   1477  00027E                     l1978:
-  1478  00027E  C01B  FFD9         	movff	comandos@comando,fsr2l
-  1479  000282  C01C  FFDA         	movff	comandos@comando+1,fsr2h
+  1478  00027E  C01B  FFD9         	movff	commands@comando,fsr2l
+  1479  000282  C01C  FFDA         	movff	commands@comando+1,fsr2h
   1480  000286  0E47               	movlw	71
   1481  000288  18DE               	xorwf	postinc2,w,c
   1482  00028A  A4D8               	btfss	status,2,c
@@ -1503,11 +1503,11 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1486  000294  EFE5  F001         	goto	l2034
   1487  000298                     u1310:
   1488  000298                     
-  1489                           ;Comandos.c: 162:         if (comando[1]=='O'){
+  1489                           ;Comandos.c: 163:         if (comando[1]=='O'){
   1490  000298  EE20 F001          	lfsr	2,1
-  1491  00029C  501B               	movf	comandos@comando^0,w,c
+  1491  00029C  501B               	movf	commands@comando^0,w,c
   1492  00029E  26D9               	addwf	fsr2l,f,c
-  1493  0002A0  501C               	movf	(comandos@comando+1)^0,w,c
+  1493  0002A0  501C               	movf	(commands@comando+1)^0,w,c
   1494  0002A2  22DA               	addwfc	fsr2h,f,c
   1495  0002A4  0E4F               	movlw	79
   1496  0002A6  18DE               	xorwf	postinc2,w,c
@@ -1518,11 +1518,11 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1501  0002B2  EFE1  F001         	goto	l2020
   1502  0002B6                     u1320:
   1503  0002B6                     
-  1504                           ;Comandos.c: 163:             if (comando[2]=='T'){
+  1504                           ;Comandos.c: 164:             if (comando[2]=='T'){
   1505  0002B6  EE20 F002          	lfsr	2,2
-  1506  0002BA  501B               	movf	comandos@comando^0,w,c
+  1506  0002BA  501B               	movf	commands@comando^0,w,c
   1507  0002BC  26D9               	addwf	fsr2l,f,c
-  1508  0002BE  501C               	movf	(comandos@comando+1)^0,w,c
+  1508  0002BE  501C               	movf	(commands@comando+1)^0,w,c
   1509  0002C0  22DA               	addwfc	fsr2h,f,c
   1510  0002C2  0E54               	movlw	84
   1511  0002C4  18DE               	xorwf	postinc2,w,c
@@ -1533,11 +1533,11 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1516  0002D0  EFE1  F001         	goto	l2020
   1517  0002D4                     u1330:
   1518  0002D4                     
-  1519                           ;Comandos.c: 164:                 if (comando[3]=='O'){
+  1519                           ;Comandos.c: 165:                 if (comando[3]=='O'){
   1520  0002D4  EE20 F003          	lfsr	2,3
-  1521  0002D8  501B               	movf	comandos@comando^0,w,c
+  1521  0002D8  501B               	movf	commands@comando^0,w,c
   1522  0002DA  26D9               	addwf	fsr2l,f,c
-  1523  0002DC  501C               	movf	(comandos@comando+1)^0,w,c
+  1523  0002DC  501C               	movf	(commands@comando+1)^0,w,c
   1524  0002DE  22DA               	addwfc	fsr2h,f,c
   1525  0002E0  0E4F               	movlw	79
   1526  0002E2  18DE               	xorwf	postinc2,w,c
@@ -1548,11 +1548,11 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1531  0002EE  EFE1  F001         	goto	l2020
   1532  0002F2                     u1340:
   1533  0002F2                     
-  1534                           ;Comandos.c: 165:                     if (comando[4]=='H'){
+  1534                           ;Comandos.c: 166:                     if (comando[4]=='H'){
   1535  0002F2  EE20 F004          	lfsr	2,4
-  1536  0002F6  501B               	movf	comandos@comando^0,w,c
+  1536  0002F6  501B               	movf	commands@comando^0,w,c
   1537  0002F8  26D9               	addwf	fsr2l,f,c
-  1538  0002FA  501C               	movf	(comandos@comando+1)^0,w,c
+  1538  0002FA  501C               	movf	(commands@comando+1)^0,w,c
   1539  0002FC  22DA               	addwfc	fsr2h,f,c
   1540  0002FE  0E48               	movlw	72
   1541  000300  18DE               	xorwf	postinc2,w,c
@@ -1563,11 +1563,11 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1546  00030C  EFE1  F001         	goto	l2020
   1547  000310                     u1350:
   1548  000310                     
-  1549                           ;Comandos.c: 166:                         if (comando[5]=='O'){
+  1549                           ;Comandos.c: 167:                         if (comando[5]=='O'){
   1550  000310  EE20 F005          	lfsr	2,5
-  1551  000314  501B               	movf	comandos@comando^0,w,c
+  1551  000314  501B               	movf	commands@comando^0,w,c
   1552  000316  26D9               	addwf	fsr2l,f,c
-  1553  000318  501C               	movf	(comandos@comando+1)^0,w,c
+  1553  000318  501C               	movf	(commands@comando+1)^0,w,c
   1554  00031A  22DA               	addwfc	fsr2h,f,c
   1555  00031C  0E4F               	movlw	79
   1556  00031E  18DE               	xorwf	postinc2,w,c
@@ -1578,11 +1578,11 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1561  00032A  EFE1  F001         	goto	l2020
   1562  00032E                     u1360:
   1563  00032E                     
-  1564                           ;Comandos.c: 167:                             if (comando[6]=='M'){
+  1564                           ;Comandos.c: 168:                             if (comando[6]=='M'){
   1565  00032E  EE20 F006          	lfsr	2,6
-  1566  000332  501B               	movf	comandos@comando^0,w,c
+  1566  000332  501B               	movf	commands@comando^0,w,c
   1567  000334  26D9               	addwf	fsr2l,f,c
-  1568  000336  501C               	movf	(comandos@comando+1)^0,w,c
+  1568  000336  501C               	movf	(commands@comando+1)^0,w,c
   1569  000338  22DA               	addwfc	fsr2h,f,c
   1570  00033A  0E4D               	movlw	77
   1571  00033C  18DE               	xorwf	postinc2,w,c
@@ -1593,11 +1593,11 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1576  000348  EFE1  F001         	goto	l2020
   1577  00034C                     u1370:
   1578  00034C                     
-  1579                           ;Comandos.c: 168:                                 if (comando[7]=='E'){
+  1579                           ;Comandos.c: 169:                                 if (comando[7]=='E'){
   1580  00034C  EE20 F007          	lfsr	2,7
-  1581  000350  501B               	movf	comandos@comando^0,w,c
+  1581  000350  501B               	movf	commands@comando^0,w,c
   1582  000352  26D9               	addwf	fsr2l,f,c
-  1583  000354  501C               	movf	(comandos@comando+1)^0,w,c
+  1583  000354  501C               	movf	(commands@comando+1)^0,w,c
   1584  000356  22DA               	addwfc	fsr2h,f,c
   1585  000358  0E45               	movlw	69
   1586  00035A  18DE               	xorwf	postinc2,w,c
@@ -1608,19 +1608,19 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1591  000366  EFE1  F001         	goto	l2020
   1592  00036A                     u1380:
   1593  00036A                     
-  1594                           ;Comandos.c: 169:                                     Ejecutandose();
-  1595  00036A  EC15  F007         	call	_Ejecutandose	;wreg free
+  1594                           ;Comandos.c: 170:                                     Executing();
+  1595  00036A  ECEF  F006         	call	_Executing	;wreg free
   1596  00036E                     
-  1597                           ;Comandos.c: 170:                                      PORTDbits.RD0=1;
+  1597                           ;Comandos.c: 171:                                      PORTDbits.RD0=1;
   1598  00036E  8083               	bsf	131,0,c	;volatile
   1599  000370                     
-  1600                           ;Comandos.c: 171:                                      PORTDbits.RD1=0;
+  1600                           ;Comandos.c: 172:                                      PORTDbits.RD1=0;
   1601  000370  9283               	bcf	131,1,c	;volatile
   1602  000372                     
-  1603                           ;Comandos.c: 172:                                      PORTDbits.RD3=0;
+  1603                           ;Comandos.c: 173:                                      PORTDbits.RD3=0;
   1604  000372  9683               	bcf	131,3,c	;volatile
   1605  000374                     
-  1606                           ;Comandos.c: 173:                                      PORTDbits.RD2=0;
+  1606                           ;Comandos.c: 174:                                      PORTDbits.RD2=0;
   1607  000374  9483               	bcf	131,2,c	;volatile
   1608  000376                     l127:
   1609  000376  A281               	btfss	129,1,c	;volatile
@@ -1630,25 +1630,25 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1613  000380  EFBB  F001         	goto	l127
   1614  000384                     u1390:
   1615  000384                     
-  1616                           ;Comandos.c: 175:                                      PORTDbits.RD3=1;
+  1616                           ;Comandos.c: 176:                                      PORTDbits.RD3=1;
   1617  000384  8683               	bsf	131,3,c	;volatile
   1618                           
-  1619                           ;Comandos.c: 176:                                      PORTDbits.RD2=1;
+  1619                           ;Comandos.c: 177:                                      PORTDbits.RD2=1;
   1620  000386  8483               	bsf	131,2,c	;volatile
   1621  000388                     
-  1622                           ;Comandos.c: 177:                                      xLimit();
+  1622                           ;Comandos.c: 178:                                      xLimit();
   1623  000388  EC84  F007         	call	_xLimit	;wreg free
   1624  00038C                     
-  1625                           ;Comandos.c: 178:                                      PORTDbits.RD0=1;
+  1625                           ;Comandos.c: 179:                                      PORTDbits.RD0=1;
   1626  00038C  8083               	bsf	131,0,c	;volatile
   1627  00038E                     
-  1628                           ;Comandos.c: 179:                                      PORTDbits.RD1=1;
+  1628                           ;Comandos.c: 180:                                      PORTDbits.RD1=1;
   1629  00038E  8283               	bsf	131,1,c	;volatile
   1630  000390                     
-  1631                           ;Comandos.c: 180:                                      PORTDbits.RD3=0;
+  1631                           ;Comandos.c: 181:                                      PORTDbits.RD3=0;
   1632  000390  9683               	bcf	131,3,c	;volatile
   1633  000392                     
-  1634                           ;Comandos.c: 181:                                      PORTDbits.RD2=0;
+  1634                           ;Comandos.c: 182:                                      PORTDbits.RD2=0;
   1635  000392  9483               	bcf	131,2,c	;volatile
   1636  000394                     l130:
   1637  000394  A081               	btfss	129,0,c	;volatile
@@ -1658,40 +1658,40 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1641  00039E  EFCA  F001         	goto	l130
   1642  0003A2                     u1400:
   1643  0003A2                     
-  1644                           ;Comandos.c: 183:                                      PORTDbits.RD3=1;
+  1644                           ;Comandos.c: 184:                                      PORTDbits.RD3=1;
   1645  0003A2  8683               	bsf	131,3,c	;volatile
   1646                           
-  1647                           ;Comandos.c: 184:                                      PORTDbits.RD2=1;
+  1647                           ;Comandos.c: 185:                                      PORTDbits.RD2=1;
   1648  0003A4  8483               	bsf	131,2,c	;volatile
   1649  0003A6                     
-  1650                           ;Comandos.c: 185:                                      yLimit();
+  1650                           ;Comandos.c: 186:                                      yLimit();
   1651  0003A6  EC61  F007         	call	_yLimit	;wreg free
   1652  0003AA                     
-  1653                           ;Comandos.c: 186:                                      x=0;
+  1653                           ;Comandos.c: 187:                                      x=0;
   1654  0003AA  0E00               	movlw	0
   1655  0003AC  6E4D               	movwf	(_x+1)^0,c
   1656  0003AE  0E00               	movlw	0
   1657  0003B0  6E4C               	movwf	_x^0,c
   1658  0003B2                     
-  1659                           ;Comandos.c: 187:                                      y=0;
+  1659                           ;Comandos.c: 188:                                      y=0;
   1660  0003B2  0E00               	movlw	0
   1661  0003B4  6E4B               	movwf	(_y+1)^0,c
   1662  0003B6  0E00               	movlw	0
   1663  0003B8  6E4A               	movwf	_y^0,c
   1664                           
-  1665                           ;Comandos.c: 188:                                      Completo();
-  1666  0003BA  EC3B  F007         	call	_Completo	;wreg free
+  1665                           ;Comandos.c: 189:                                      Complete();
+  1666  0003BA  EC3B  F007         	call	_Complete	;wreg free
   1667                           
-  1668                           ;Comandos.c: 189:                                 }
+  1668                           ;Comandos.c: 190:                                 }
   1669  0003BE  EF66  F003         	goto	l189
   1670  0003C2                     l2020:
   1671                           
-  1672                           ;Comandos.c: 191:                                     Error();
-  1673  0003C2  ECEF  F006         	call	_Error	;wreg free
+  1672                           ;Comandos.c: 192:                                     Error();
+  1673  0003C2  EC15  F007         	call	_Error	;wreg free
   1674  0003C6  EF66  F003         	goto	l189
   1675  0003CA                     l2034:
-  1676  0003CA  C01B  FFD9         	movff	comandos@comando,fsr2l
-  1677  0003CE  C01C  FFDA         	movff	comandos@comando+1,fsr2h
+  1676  0003CA  C01B  FFD9         	movff	commands@comando,fsr2l
+  1677  0003CE  C01C  FFDA         	movff	commands@comando+1,fsr2h
   1678  0003D2  0E53               	movlw	83
   1679  0003D4  18DE               	xorwf	postinc2,w,c
   1680  0003D6  A4D8               	btfss	status,2,c
@@ -1701,11 +1701,11 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1684  0003E0  EF62  F002         	goto	l2068
   1685  0003E4                     u1410:
   1686  0003E4                     
-  1687                           ;Comandos.c: 220:         if (comando[1]=='T'){
+  1687                           ;Comandos.c: 221:         if (comando[1]=='T'){
   1688  0003E4  EE20 F001          	lfsr	2,1
-  1689  0003E8  501B               	movf	comandos@comando^0,w,c
+  1689  0003E8  501B               	movf	commands@comando^0,w,c
   1690  0003EA  26D9               	addwf	fsr2l,f,c
-  1691  0003EC  501C               	movf	(comandos@comando+1)^0,w,c
+  1691  0003EC  501C               	movf	(commands@comando+1)^0,w,c
   1692  0003EE  22DA               	addwfc	fsr2h,f,c
   1693  0003F0  0E54               	movlw	84
   1694  0003F2  18DE               	xorwf	postinc2,w,c
@@ -1716,11 +1716,11 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1699  0003FE  EFE1  F001         	goto	l2020
   1700  000402                     u1420:
   1701  000402                     
-  1702                           ;Comandos.c: 221:             if (comando[2]=='C'){
+  1702                           ;Comandos.c: 222:             if (comando[2]=='C'){
   1703  000402  EE20 F002          	lfsr	2,2
-  1704  000406  501B               	movf	comandos@comando^0,w,c
+  1704  000406  501B               	movf	commands@comando^0,w,c
   1705  000408  26D9               	addwf	fsr2l,f,c
-  1706  00040A  501C               	movf	(comandos@comando+1)^0,w,c
+  1706  00040A  501C               	movf	(commands@comando+1)^0,w,c
   1707  00040C  22DA               	addwfc	fsr2h,f,c
   1708  00040E  0E43               	movlw	67
   1709  000410  18DE               	xorwf	postinc2,w,c
@@ -1731,11 +1731,11 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1714  00041C  EFE1  F001         	goto	l2020
   1715  000420                     u1430:
   1716  000420                     
-  1717                           ;Comandos.c: 222:                 if (comando[3]=='T'){
+  1717                           ;Comandos.c: 223:                 if (comando[3]=='T'){
   1718  000420  EE20 F003          	lfsr	2,3
-  1719  000424  501B               	movf	comandos@comando^0,w,c
+  1719  000424  501B               	movf	commands@comando^0,w,c
   1720  000426  26D9               	addwf	fsr2l,f,c
-  1721  000428  501C               	movf	(comandos@comando+1)^0,w,c
+  1721  000428  501C               	movf	(commands@comando+1)^0,w,c
   1722  00042A  22DA               	addwfc	fsr2h,f,c
   1723  00042C  0E54               	movlw	84
   1724  00042E  18DE               	xorwf	postinc2,w,c
@@ -1746,11 +1746,11 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1729  00043A  EFE1  F001         	goto	l2020
   1730  00043E                     u1440:
   1731  00043E                     
-  1732                           ;Comandos.c: 223:                     if (comando[4]=='O'){
+  1732                           ;Comandos.c: 224:                     if (comando[4]=='O'){
   1733  00043E  EE20 F004          	lfsr	2,4
-  1734  000442  501B               	movf	comandos@comando^0,w,c
+  1734  000442  501B               	movf	commands@comando^0,w,c
   1735  000444  26D9               	addwf	fsr2l,f,c
-  1736  000446  501C               	movf	(comandos@comando+1)^0,w,c
+  1736  000446  501C               	movf	(commands@comando+1)^0,w,c
   1737  000448  22DA               	addwfc	fsr2h,f,c
   1738  00044A  0E4F               	movlw	79
   1739  00044C  18DE               	xorwf	postinc2,w,c
@@ -1761,11 +1761,11 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1744  000458  EFE1  F001         	goto	l2020
   1745  00045C                     u1450:
   1746  00045C                     
-  1747                           ;Comandos.c: 224:                         if (comando[5]=='U'){
+  1747                           ;Comandos.c: 225:                         if (comando[5]=='U'){
   1748  00045C  EE20 F005          	lfsr	2,5
-  1749  000460  501B               	movf	comandos@comando^0,w,c
+  1749  000460  501B               	movf	commands@comando^0,w,c
   1750  000462  26D9               	addwf	fsr2l,f,c
-  1751  000464  501C               	movf	(comandos@comando+1)^0,w,c
+  1751  000464  501C               	movf	(commands@comando+1)^0,w,c
   1752  000466  22DA               	addwfc	fsr2h,f,c
   1753  000468  0E55               	movlw	85
   1754  00046A  18DE               	xorwf	postinc2,w,c
@@ -1776,11 +1776,11 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1759  000476  EFE1  F001         	goto	l2020
   1760  00047A                     u1460:
   1761  00047A                     
-  1762                           ;Comandos.c: 225:                             if (comando[6]=='C'){
+  1762                           ;Comandos.c: 226:                             if (comando[6]=='C'){
   1763  00047A  EE20 F006          	lfsr	2,6
-  1764  00047E  501B               	movf	comandos@comando^0,w,c
+  1764  00047E  501B               	movf	commands@comando^0,w,c
   1765  000480  26D9               	addwf	fsr2l,f,c
-  1766  000482  501C               	movf	(comandos@comando+1)^0,w,c
+  1766  000482  501C               	movf	(commands@comando+1)^0,w,c
   1767  000484  22DA               	addwfc	fsr2h,f,c
   1768  000486  0E43               	movlw	67
   1769  000488  18DE               	xorwf	postinc2,w,c
@@ -1791,11 +1791,11 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1774  000494  EFE1  F001         	goto	l2020
   1775  000498                     u1470:
   1776  000498                     
-  1777                           ;Comandos.c: 226:                                 if (comando[7]=='H'){
+  1777                           ;Comandos.c: 227:                                 if (comando[7]=='H'){
   1778  000498  EE20 F007          	lfsr	2,7
-  1779  00049C  501B               	movf	comandos@comando^0,w,c
+  1779  00049C  501B               	movf	commands@comando^0,w,c
   1780  00049E  26D9               	addwf	fsr2l,f,c
-  1781  0004A0  501C               	movf	(comandos@comando+1)^0,w,c
+  1781  0004A0  501C               	movf	(commands@comando+1)^0,w,c
   1782  0004A2  22DA               	addwfc	fsr2h,f,c
   1783  0004A4  0E48               	movlw	72
   1784  0004A6  18DE               	xorwf	postinc2,w,c
@@ -1806,20 +1806,20 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1789  0004B2  EFE1  F001         	goto	l2020
   1790  0004B6                     u1480:
   1791  0004B6                     
-  1792                           ;Comandos.c: 227:                                     Ejecutandose();
-  1793  0004B6  EC15  F007         	call	_Ejecutandose	;wreg free
+  1792                           ;Comandos.c: 228:                                     Executing();
+  1793  0004B6  ECEF  F006         	call	_Executing	;wreg free
   1794  0004BA                     
-  1795                           ;Comandos.c: 228:                                     PORTDbits.RD7=1;
+  1795                           ;Comandos.c: 229:                                     PORTDbits.RD7=1;
   1796  0004BA  8E83               	bsf	131,7,c	;volatile
   1797                           
-  1798                           ;Comandos.c: 229:                                     Completo();
-  1799  0004BC  EC3B  F007         	call	_Completo	;wreg free
+  1798                           ;Comandos.c: 230:                                     Complete();
+  1799  0004BC  EC3B  F007         	call	_Complete	;wreg free
   1800                           
-  1801                           ;Comandos.c: 230:                                 }
+  1801                           ;Comandos.c: 231:                                 }
   1802  0004C0  EF66  F003         	goto	l189
   1803  0004C4                     l2068:
-  1804  0004C4  C01B  FFD9         	movff	comandos@comando,fsr2l
-  1805  0004C8  C01C  FFDA         	movff	comandos@comando+1,fsr2h
+  1804  0004C4  C01B  FFD9         	movff	commands@comando,fsr2l
+  1805  0004C8  C01C  FFDA         	movff	commands@comando+1,fsr2h
   1806  0004CC  0E4D               	movlw	77
   1807  0004CE  18DE               	xorwf	postinc2,w,c
   1808  0004D0  A4D8               	btfss	status,2,c
@@ -1829,11 +1829,11 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1812  0004DA  EFEB  F002         	goto	l2108
   1813  0004DE                     u1490:
   1814  0004DE                     
-  1815                           ;Comandos.c: 263:         if (comando[1]=='A'){
+  1815                           ;Comandos.c: 264:         if (comando[1]=='A'){
   1816  0004DE  EE20 F001          	lfsr	2,1
-  1817  0004E2  501B               	movf	comandos@comando^0,w,c
+  1817  0004E2  501B               	movf	commands@comando^0,w,c
   1818  0004E4  26D9               	addwf	fsr2l,f,c
-  1819  0004E6  501C               	movf	(comandos@comando+1)^0,w,c
+  1819  0004E6  501C               	movf	(commands@comando+1)^0,w,c
   1820  0004E8  22DA               	addwfc	fsr2h,f,c
   1821  0004EA  0E41               	movlw	65
   1822  0004EC  18DE               	xorwf	postinc2,w,c
@@ -1844,11 +1844,11 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1827  0004F8  EFE1  F001         	goto	l2020
   1828  0004FC                     u1500:
   1829  0004FC                     
-  1830                           ;Comandos.c: 264:             if (comando[2]=='K'){
+  1830                           ;Comandos.c: 265:             if (comando[2]=='K'){
   1831  0004FC  EE20 F002          	lfsr	2,2
-  1832  000500  501B               	movf	comandos@comando^0,w,c
+  1832  000500  501B               	movf	commands@comando^0,w,c
   1833  000502  26D9               	addwf	fsr2l,f,c
-  1834  000504  501C               	movf	(comandos@comando+1)^0,w,c
+  1834  000504  501C               	movf	(commands@comando+1)^0,w,c
   1835  000506  22DA               	addwfc	fsr2h,f,c
   1836  000508  0E4B               	movlw	75
   1837  00050A  18DE               	xorwf	postinc2,w,c
@@ -1859,11 +1859,11 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1842  000516  EFE1  F001         	goto	l2020
   1843  00051A                     u1510:
   1844  00051A                     
-  1845                           ;Comandos.c: 265:                 if (comando[3]=='E'){
+  1845                           ;Comandos.c: 266:                 if (comando[3]=='E'){
   1846  00051A  EE20 F003          	lfsr	2,3
-  1847  00051E  501B               	movf	comandos@comando^0,w,c
+  1847  00051E  501B               	movf	commands@comando^0,w,c
   1848  000520  26D9               	addwf	fsr2l,f,c
-  1849  000522  501C               	movf	(comandos@comando+1)^0,w,c
+  1849  000522  501C               	movf	(commands@comando+1)^0,w,c
   1850  000524  22DA               	addwfc	fsr2h,f,c
   1851  000526  0E45               	movlw	69
   1852  000528  18DE               	xorwf	postinc2,w,c
@@ -1874,11 +1874,11 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1857  000534  EFE1  F001         	goto	l2020
   1858  000538                     u1520:
   1859  000538                     
-  1860                           ;Comandos.c: 266:                     if (comando[4]=='A'){
+  1860                           ;Comandos.c: 267:                     if (comando[4]=='A'){
   1861  000538  EE20 F004          	lfsr	2,4
-  1862  00053C  501B               	movf	comandos@comando^0,w,c
+  1862  00053C  501B               	movf	commands@comando^0,w,c
   1863  00053E  26D9               	addwf	fsr2l,f,c
-  1864  000540  501C               	movf	(comandos@comando+1)^0,w,c
+  1864  000540  501C               	movf	(commands@comando+1)^0,w,c
   1865  000542  22DA               	addwfc	fsr2h,f,c
   1866  000544  0E41               	movlw	65
   1867  000546  18DE               	xorwf	postinc2,w,c
@@ -1889,11 +1889,11 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1872  000552  EFE1  F001         	goto	l2020
   1873  000556                     u1530:
   1874  000556                     
-  1875                           ;Comandos.c: 267:                         if (comando[5]=='T'){
+  1875                           ;Comandos.c: 268:                         if (comando[5]=='T'){
   1876  000556  EE20 F005          	lfsr	2,5
-  1877  00055A  501B               	movf	comandos@comando^0,w,c
+  1877  00055A  501B               	movf	commands@comando^0,w,c
   1878  00055C  26D9               	addwf	fsr2l,f,c
-  1879  00055E  501C               	movf	(comandos@comando+1)^0,w,c
+  1879  00055E  501C               	movf	(commands@comando+1)^0,w,c
   1880  000560  22DA               	addwfc	fsr2h,f,c
   1881  000562  0E54               	movlw	84
   1882  000564  18DE               	xorwf	postinc2,w,c
@@ -1904,11 +1904,11 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1887  000570  EFE1  F001         	goto	l2020
   1888  000574                     u1540:
   1889  000574                     
-  1890                           ;Comandos.c: 268:                             if (comando[6]=='A'){
+  1890                           ;Comandos.c: 269:                             if (comando[6]=='A'){
   1891  000574  EE20 F006          	lfsr	2,6
-  1892  000578  501B               	movf	comandos@comando^0,w,c
+  1892  000578  501B               	movf	commands@comando^0,w,c
   1893  00057A  26D9               	addwf	fsr2l,f,c
-  1894  00057C  501C               	movf	(comandos@comando+1)^0,w,c
+  1894  00057C  501C               	movf	(commands@comando+1)^0,w,c
   1895  00057E  22DA               	addwfc	fsr2h,f,c
   1896  000580  0E41               	movlw	65
   1897  000582  18DE               	xorwf	postinc2,w,c
@@ -1919,11 +1919,11 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1902  00058E  EFE1  F001         	goto	l2020
   1903  000592                     u1550:
   1904  000592                     
-  1905                           ;Comandos.c: 269:                                 if (comando[7]=='P'){
+  1905                           ;Comandos.c: 270:                                 if (comando[7]=='P'){
   1906  000592  EE20 F007          	lfsr	2,7
-  1907  000596  501B               	movf	comandos@comando^0,w,c
+  1907  000596  501B               	movf	commands@comando^0,w,c
   1908  000598  26D9               	addwf	fsr2l,f,c
-  1909  00059A  501C               	movf	(comandos@comando+1)^0,w,c
+  1909  00059A  501C               	movf	(commands@comando+1)^0,w,c
   1910  00059C  22DA               	addwfc	fsr2h,f,c
   1911  00059E  0E50               	movlw	80
   1912  0005A0  18DE               	xorwf	postinc2,w,c
@@ -1934,38 +1934,38 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1917  0005AC  EFE1  F001         	goto	l2020
   1918  0005B0                     u1560:
   1919  0005B0                     
-  1920                           ;Comandos.c: 270:                                     Ejecutandose();
-  1921  0005B0  EC15  F007         	call	_Ejecutandose	;wreg free
+  1920                           ;Comandos.c: 271:                                     Executing();
+  1921  0005B0  ECEF  F006         	call	_Executing	;wreg free
   1922  0005B4                     
-  1923                           ;Comandos.c: 271:                                     PORTDbits.RD7=1;
+  1923                           ;Comandos.c: 272:                                     PORTDbits.RD7=1;
   1924  0005B4  8E83               	bsf	131,7,c	;volatile
   1925  0005B6                     
-  1926                           ;Comandos.c: 272:                                     _delay((unsigned long)((1000)*(800
+  1926                           ;Comandos.c: 273:                                     _delay((unsigned long)((1000)*(800
       +                          0000L/4000.0)));
   1927  0005B6  0E0B               	movlw	11
-  1928  0005B8  6E1E               	movwf	(??_comandos+1)^0,c
+  1928  0005B8  6E1E               	movwf	(??_commands+1)^0,c
   1929  0005BA  0E26               	movlw	38
-  1930  0005BC  6E1D               	movwf	??_comandos^0,c
+  1930  0005BC  6E1D               	movwf	??_commands^0,c
   1931  0005BE  0E5E               	movlw	94
   1932  0005C0                     u1747:
   1933  0005C0  2EE8               	decfsz	wreg,f,c
   1934  0005C2  D7FE               	bra	u1747
-  1935  0005C4  2E1D               	decfsz	??_comandos^0,f,c
+  1935  0005C4  2E1D               	decfsz	??_commands^0,f,c
   1936  0005C6  D7FC               	bra	u1747
-  1937  0005C8  2E1E               	decfsz	(??_comandos+1)^0,f,c
+  1937  0005C8  2E1E               	decfsz	(??_commands+1)^0,f,c
   1938  0005CA  D7FA               	bra	u1747
   1939  0005CC                     
-  1940                           ;Comandos.c: 273:                                     PORTDbits.RD7=0;
+  1940                           ;Comandos.c: 274:                                     PORTDbits.RD7=0;
   1941  0005CC  9E83               	bcf	131,7,c	;volatile
   1942  0005CE                     
-  1943                           ;Comandos.c: 275:                                     Completo();
-  1944  0005CE  EC3B  F007         	call	_Completo	;wreg free
+  1943                           ;Comandos.c: 275:                                     Complete();
+  1944  0005CE  EC3B  F007         	call	_Complete	;wreg free
   1945                           
   1946                           ;Comandos.c: 276:                                 }
   1947  0005D2  EF66  F003         	goto	l189
   1948  0005D6                     l2108:
-  1949  0005D6  C01B  FFD9         	movff	comandos@comando,fsr2l
-  1950  0005DA  C01C  FFDA         	movff	comandos@comando+1,fsr2h
+  1949  0005D6  C01B  FFD9         	movff	commands@comando,fsr2l
+  1950  0005DA  C01C  FFDA         	movff	commands@comando+1,fsr2h
   1951  0005DE  0E54               	movlw	84
   1952  0005E0  18DE               	xorwf	postinc2,w,c
   1953  0005E2  A4D8               	btfss	status,2,c
@@ -1977,9 +1977,9 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1959  0005F0                     
   1960                           ;Comandos.c: 309:         if (comando[1]=='A'){
   1961  0005F0  EE20 F001          	lfsr	2,1
-  1962  0005F4  501B               	movf	comandos@comando^0,w,c
+  1962  0005F4  501B               	movf	commands@comando^0,w,c
   1963  0005F6  26D9               	addwf	fsr2l,f,c
-  1964  0005F8  501C               	movf	(comandos@comando+1)^0,w,c
+  1964  0005F8  501C               	movf	(commands@comando+1)^0,w,c
   1965  0005FA  22DA               	addwfc	fsr2h,f,c
   1966  0005FC  0E41               	movlw	65
   1967  0005FE  18DE               	xorwf	postinc2,w,c
@@ -1992,9 +1992,9 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1974  00060E                     
   1975                           ;Comandos.c: 310:             if (comando[2]=='K'){
   1976  00060E  EE20 F002          	lfsr	2,2
-  1977  000612  501B               	movf	comandos@comando^0,w,c
+  1977  000612  501B               	movf	commands@comando^0,w,c
   1978  000614  26D9               	addwf	fsr2l,f,c
-  1979  000616  501C               	movf	(comandos@comando+1)^0,w,c
+  1979  000616  501C               	movf	(commands@comando+1)^0,w,c
   1980  000618  22DA               	addwfc	fsr2h,f,c
   1981  00061A  0E4B               	movlw	75
   1982  00061C  18DE               	xorwf	postinc2,w,c
@@ -2007,9 +2007,9 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1989  00062C                     
   1990                           ;Comandos.c: 311:                 if (comando[3]=='E'){
   1991  00062C  EE20 F003          	lfsr	2,3
-  1992  000630  501B               	movf	comandos@comando^0,w,c
+  1992  000630  501B               	movf	commands@comando^0,w,c
   1993  000632  26D9               	addwf	fsr2l,f,c
-  1994  000634  501C               	movf	(comandos@comando+1)^0,w,c
+  1994  000634  501C               	movf	(commands@comando+1)^0,w,c
   1995  000636  22DA               	addwfc	fsr2h,f,c
   1996  000638  0E45               	movlw	69
   1997  00063A  18DE               	xorwf	postinc2,w,c
@@ -2022,9 +2022,9 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2004  00064A                     
   2005                           ;Comandos.c: 312:                     if (comando[4]=='L'){
   2006  00064A  EE20 F004          	lfsr	2,4
-  2007  00064E  501B               	movf	comandos@comando^0,w,c
+  2007  00064E  501B               	movf	commands@comando^0,w,c
   2008  000650  26D9               	addwf	fsr2l,f,c
-  2009  000652  501C               	movf	(comandos@comando+1)^0,w,c
+  2009  000652  501C               	movf	(commands@comando+1)^0,w,c
   2010  000654  22DA               	addwfc	fsr2h,f,c
   2011  000656  0E4C               	movlw	76
   2012  000658  18DE               	xorwf	postinc2,w,c
@@ -2037,9 +2037,9 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2019  000668                     
   2020                           ;Comandos.c: 313:                         if (comando[5]=='I'){
   2021  000668  EE20 F005          	lfsr	2,5
-  2022  00066C  501B               	movf	comandos@comando^0,w,c
+  2022  00066C  501B               	movf	commands@comando^0,w,c
   2023  00066E  26D9               	addwf	fsr2l,f,c
-  2024  000670  501C               	movf	(comandos@comando+1)^0,w,c
+  2024  000670  501C               	movf	(commands@comando+1)^0,w,c
   2025  000672  22DA               	addwfc	fsr2h,f,c
   2026  000674  0E49               	movlw	73
   2027  000676  18DE               	xorwf	postinc2,w,c
@@ -2052,9 +2052,9 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2034  000686                     
   2035                           ;Comandos.c: 314:                             if (comando[6]=='F'){
   2036  000686  EE20 F006          	lfsr	2,6
-  2037  00068A  501B               	movf	comandos@comando^0,w,c
+  2037  00068A  501B               	movf	commands@comando^0,w,c
   2038  00068C  26D9               	addwf	fsr2l,f,c
-  2039  00068E  501C               	movf	(comandos@comando+1)^0,w,c
+  2039  00068E  501C               	movf	(commands@comando+1)^0,w,c
   2040  000690  22DA               	addwfc	fsr2h,f,c
   2041  000692  0E46               	movlw	70
   2042  000694  18DE               	xorwf	postinc2,w,c
@@ -2067,9 +2067,9 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2049  0006A4                     
   2050                           ;Comandos.c: 315:                                 if (comando[7]=='T'){
   2051  0006A4  EE20 F007          	lfsr	2,7
-  2052  0006A8  501B               	movf	comandos@comando^0,w,c
+  2052  0006A8  501B               	movf	commands@comando^0,w,c
   2053  0006AA  26D9               	addwf	fsr2l,f,c
-  2054  0006AC  501C               	movf	(comandos@comando+1)^0,w,c
+  2054  0006AC  501C               	movf	(commands@comando+1)^0,w,c
   2055  0006AE  22DA               	addwfc	fsr2h,f,c
   2056  0006B0  0E54               	movlw	84
   2057  0006B2  18DE               	xorwf	postinc2,w,c
@@ -2080,17 +2080,17 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2062  0006BE  EFE1  F001         	goto	l2020
   2063  0006C2                     u1640:
   2064  0006C2                     
-  2065                           ;Comandos.c: 316:                                     Ejecutandose();
-  2066  0006C2  EC15  F007         	call	_Ejecutandose	;wreg free
+  2065                           ;Comandos.c: 316:                                     Executing();
+  2066  0006C2  ECEF  F006         	call	_Executing	;wreg free
   2067  0006C6                     
   2068                           ;Comandos.c: 317:                                     PORTDbits.RD7=0;
   2069  0006C6  9E83               	bcf	131,7,c	;volatile
   2070                           
-  2071                           ;Comandos.c: 318:                                     Completo();
-  2072  0006C8  EC3B  F007         	call	_Completo	;wreg free
+  2071                           ;Comandos.c: 318:                                     Complete();
+  2072  0006C8  EC3B  F007         	call	_Complete	;wreg free
   2073  0006CC                     l189:
   2074  0006CC  0012               	return		;funcret
-  2075  0006CE                     __end_of_comandos:
+  2075  0006CE                     __end_of_commands:
   2076                           	opt callstack 0
   2077                           
   2078 ;; *************** function _yLimit *****************
@@ -2120,7 +2120,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2102 ;;		_USART_Tx
   2103 ;;		_strlen
   2104 ;; This function is called by:
-  2105 ;;		_comandos
+  2105 ;;		_commands
   2106 ;;		_main
   2107 ;; This function uses a non-reentrant model
   2108 ;;
@@ -2199,7 +2199,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2181 ;;		_USART_Tx
   2182 ;;		_strlen
   2183 ;; This function is called by:
-  2184 ;;		_comandos
+  2184 ;;		_commands
   2185 ;;		_main
   2186 ;; This function uses a non-reentrant model
   2187 ;;
@@ -2278,7 +2278,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2260 ;;		_USART_Tx
   2261 ;;		_strlen
   2262 ;; This function is called by:
-  2263 ;;		_comandos
+  2263 ;;		_commands
   2264 ;; This function uses a non-reentrant model
   2265 ;;
   2266                           
@@ -2340,7 +2340,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2322                           
   2323 ;; *************** function _coordinateRefreshY *****************
   2324 ;; Defined at:
-  2325 ;;		line 90 in file "Comandos.c"
+  2325 ;;		line 91 in file "Comandos.c"
   2326 ;; Parameters:    Size  Location     Type
   2327 ;;  newY            2   20[COMRAM] int 
   2328 ;; Auto vars:     Size  Location     Type
@@ -2364,10 +2364,10 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2346 ;; Hardware stack levels required when called:    5
   2347 ;; This function calls:
   2348 ;;		_USART_Tx
-  2349 ;;		_contador_pulsosD
+  2349 ;;		_pulseCounter
   2350 ;;		_strlen
   2351 ;; This function is called by:
-  2352 ;;		_comandos
+  2352 ;;		_commands
   2353 ;; This function uses a non-reentrant model
   2354 ;;
   2355                           
@@ -2377,7 +2377,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2359  0008D6                     _coordinateRefreshY:
   2360                           	opt callstack 24
   2361  0008D6                     
-  2362                           ;Comandos.c: 91:     if(newY<y){
+  2362                           ;Comandos.c: 92:     if(newY<y){
   2363  0008D6  504A               	movf	_y^0,w,c
   2364  0008D8  5C15               	subwf	coordinateRefreshY@newY^0,w,c
   2365  0008DA  504B               	movf	(_y+1)^0,w,c
@@ -2389,13 +2389,13 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2371  0008E8  EFA2  F004         	goto	l1852
   2372  0008EC                     u1050:
   2373  0008EC                     
-  2374                           ;Comandos.c: 92:     PORTDbits.RD0=1;
+  2374                           ;Comandos.c: 93:     PORTDbits.RD0=1;
   2375  0008EC  8083               	bsf	131,0,c	;volatile
   2376                           
-  2377                           ;Comandos.c: 93:        PORTDbits.RD1=0;
+  2377                           ;Comandos.c: 94:        PORTDbits.RD1=0;
   2378  0008EE  9283               	bcf	131,1,c	;volatile
   2379  0008F0                     
-  2380                           ;Comandos.c: 95:        for(int i=0; i < strlen(msdown); i++){
+  2380                           ;Comandos.c: 96:        for(int i=0; i < strlen(msdown); i++){
   2381  0008F0  0E00               	movlw	0
   2382  0008F2  6E18               	movwf	(coordinateRefreshY@i+1)^0,c
   2383  0008F4  0E00               	movlw	0
@@ -2403,7 +2403,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2385  0008F8  EF89  F004         	goto	l1848
   2386  0008FC                     l1844:
   2387                           
-  2388                           ;Comandos.c: 96:     USART_Tx(msdown[i]);
+  2388                           ;Comandos.c: 97:     USART_Tx(msdown[i]);
   2389  0008FC  0EED               	movlw	low _msdown
   2390  0008FE  2417               	addwf	coordinateRefreshY@i^0,w,c
   2391  000900  6ED9               	movwf	fsr2l,c
@@ -2413,7 +2413,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2395  000908  50DF               	movf	indf2,w,c
   2396  00090A  EC4E  F008         	call	_USART_Tx
   2397  00090E                     
-  2398                           ;Comandos.c: 97:     }
+  2398                           ;Comandos.c: 98:     }
   2399  00090E  4A17               	infsnz	coordinateRefreshY@i^0,f,c
   2400  000910  2A18               	incf	(coordinateRefreshY@i+1)^0,f,c
   2401  000912                     l1848:
@@ -2433,17 +2433,17 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2415  000930  EF7E  F004         	goto	l1844
   2416  000934                     u1060:
   2417  000934                     
-  2418                           ;Comandos.c: 98:     contador_pulsosD(y-newY);
+  2418                           ;Comandos.c: 99:     pulseCounter(y-newY);
   2419  000934  5015               	movf	coordinateRefreshY@newY^0,w,c
   2420  000936  5C4A               	subwf	_y^0,w,c
-  2421  000938  6E12               	movwf	contador_pulsosD@pulsoD^0,c
+  2421  000938  6E12               	movwf	pulseCounter@pulsoD^0,c
   2422  00093A  5016               	movf	(coordinateRefreshY@newY+1)^0,w,c
   2423  00093C  584B               	subwfb	(_y+1)^0,w,c
-  2424  00093E  6E13               	movwf	(contador_pulsosD@pulsoD+1)^0,c
-  2425  000940  EC9E  F005         	call	_contador_pulsosD	;wreg free
+  2424  00093E  6E13               	movwf	(pulseCounter@pulsoD+1)^0,c
+  2425  000940  EC9E  F005         	call	_pulseCounter	;wreg free
   2426  000944                     l1852:
   2427                           
-  2428                           ;Comandos.c: 100:     if(newY>y){
+  2428                           ;Comandos.c: 101:     if(newY>y){
   2429  000944  5015               	movf	coordinateRefreshY@newY^0,w,c
   2430  000946  5C4A               	subwf	_y^0,w,c
   2431  000948  5016               	movf	(coordinateRefreshY@newY+1)^0,w,c
@@ -2455,13 +2455,13 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2437  000956  EFD9  F004         	goto	l1866
   2438  00095A                     u1070:
   2439  00095A                     
-  2440                           ;Comandos.c: 101:         PORTDbits.RD0=0;
+  2440                           ;Comandos.c: 102:         PORTDbits.RD0=0;
   2441  00095A  9083               	bcf	131,0,c	;volatile
   2442                           
-  2443                           ;Comandos.c: 102:         PORTDbits.RD1=1;
+  2443                           ;Comandos.c: 103:         PORTDbits.RD1=1;
   2444  00095C  8283               	bsf	131,1,c	;volatile
   2445  00095E                     
-  2446                           ;Comandos.c: 104:     for(int j=0; j < strlen(msup); j++){
+  2446                           ;Comandos.c: 105:     for(int j=0; j < strlen(msup); j++){
   2447  00095E  0E00               	movlw	0
   2448  000960  6E1A               	movwf	(coordinateRefreshY@j+1)^0,c
   2449  000962  0E00               	movlw	0
@@ -2469,7 +2469,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2451  000966  EFC0  F004         	goto	l1862
   2452  00096A                     l1858:
   2453                           
-  2454                           ;Comandos.c: 105:     USART_Tx(msup[j]);
+  2454                           ;Comandos.c: 106:     USART_Tx(msup[j]);
   2455  00096A  0E39               	movlw	low _msup
   2456  00096C  2419               	addwf	coordinateRefreshY@j^0,w,c
   2457  00096E  6ED9               	movwf	fsr2l,c
@@ -2479,7 +2479,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2461  000976  50DF               	movf	indf2,w,c
   2462  000978  EC4E  F008         	call	_USART_Tx
   2463  00097C                     
-  2464                           ;Comandos.c: 106:     }
+  2464                           ;Comandos.c: 107:     }
   2465  00097C  4A19               	infsnz	coordinateRefreshY@j^0,f,c
   2466  00097E  2A1A               	incf	(coordinateRefreshY@j+1)^0,f,c
   2467  000980                     l1862:
@@ -2499,17 +2499,17 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2481  00099E  EFB5  F004         	goto	l1858
   2482  0009A2                     u1080:
   2483  0009A2                     
-  2484                           ;Comandos.c: 108:         contador_pulsosD(newY-y);
+  2484                           ;Comandos.c: 109:         pulseCounter(newY-y);
   2485  0009A2  504A               	movf	_y^0,w,c
   2486  0009A4  5C15               	subwf	coordinateRefreshY@newY^0,w,c
-  2487  0009A6  6E12               	movwf	contador_pulsosD@pulsoD^0,c
+  2487  0009A6  6E12               	movwf	pulseCounter@pulsoD^0,c
   2488  0009A8  504B               	movf	(_y+1)^0,w,c
   2489  0009AA  5816               	subwfb	(coordinateRefreshY@newY+1)^0,w,c
-  2490  0009AC  6E13               	movwf	(contador_pulsosD@pulsoD+1)^0,c
-  2491  0009AE  EC9E  F005         	call	_contador_pulsosD	;wreg free
+  2490  0009AC  6E13               	movwf	(pulseCounter@pulsoD+1)^0,c
+  2491  0009AE  EC9E  F005         	call	_pulseCounter	;wreg free
   2492  0009B2                     l1866:
   2493                           
-  2494                           ;Comandos.c: 110:     y=newY;
+  2494                           ;Comandos.c: 111:     y=newY;
   2495  0009B2  C015  F04A         	movff	coordinateRefreshY@newY,_y
   2496  0009B6  C016  F04B         	movff	coordinateRefreshY@newY+1,_y+1
   2497  0009BA  0012               	return		;funcret
@@ -2542,10 +2542,10 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2524 ;; Hardware stack levels required when called:    5
   2525 ;; This function calls:
   2526 ;;		_USART_Tx
-  2527 ;;		_contador_pulsosD
+  2527 ;;		_pulseCounter
   2528 ;;		_strlen
   2529 ;; This function is called by:
-  2530 ;;		_comandos
+  2530 ;;		_commands
   2531 ;; This function uses a non-reentrant model
   2532 ;;
   2533                           
@@ -2611,14 +2611,14 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2593  000A16  EFF1  F004         	goto	l1814
   2594  000A1A                     u1020:
   2595  000A1A                     
-  2596                           ;Comandos.c: 72:        contador_pulsosD(x-newX);
+  2596                           ;Comandos.c: 72:        pulseCounter(x-newX);
   2597  000A1A  5015               	movf	coordinateRefreshX@newX^0,w,c
   2598  000A1C  5C4C               	subwf	_x^0,w,c
-  2599  000A1E  6E12               	movwf	contador_pulsosD@pulsoD^0,c
+  2599  000A1E  6E12               	movwf	pulseCounter@pulsoD^0,c
   2600  000A20  5016               	movf	(coordinateRefreshX@newX+1)^0,w,c
   2601  000A22  584D               	subwfb	(_x+1)^0,w,c
-  2602  000A24  6E13               	movwf	(contador_pulsosD@pulsoD+1)^0,c
-  2603  000A26  EC9E  F005         	call	_contador_pulsosD	;wreg free
+  2602  000A24  6E13               	movwf	(pulseCounter@pulsoD+1)^0,c
+  2603  000A26  EC9E  F005         	call	_pulseCounter	;wreg free
   2604  000A2A                     l1822:
   2605                           
   2606                           ;Comandos.c: 75:     if(newX>x){
@@ -2677,14 +2677,14 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2659  000A84  EF28  F005         	goto	l1828
   2660  000A88                     u1040:
   2661  000A88                     
-  2662                           ;Comandos.c: 84:         contador_pulsosD(newX-x);
+  2662                           ;Comandos.c: 84:         pulseCounter(newX-x);
   2663  000A88  504C               	movf	_x^0,w,c
   2664  000A8A  5C15               	subwf	coordinateRefreshX@newX^0,w,c
-  2665  000A8C  6E12               	movwf	contador_pulsosD@pulsoD^0,c
+  2665  000A8C  6E12               	movwf	pulseCounter@pulsoD^0,c
   2666  000A8E  504D               	movf	(_x+1)^0,w,c
   2667  000A90  5816               	subwfb	(coordinateRefreshX@newX+1)^0,w,c
-  2668  000A92  6E13               	movwf	(contador_pulsosD@pulsoD+1)^0,c
-  2669  000A94  EC9E  F005         	call	_contador_pulsosD	;wreg free
+  2668  000A92  6E13               	movwf	(pulseCounter@pulsoD+1)^0,c
+  2669  000A94  EC9E  F005         	call	_pulseCounter	;wreg free
   2670  000A98                     l1836:
   2671                           
   2672                           ;Comandos.c: 86:     x=newX;
@@ -2694,7 +2694,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2676  000AA2                     __end_of_coordinateRefreshX:
   2677                           	opt callstack 0
   2678                           
-  2679 ;; *************** function _contador_pulsosD *****************
+  2679 ;; *************** function _pulseCounter *****************
   2680 ;; Defined at:
   2681 ;;		line 38 in file "pwm.c"
   2682 ;; Parameters:    Size  Location     Type
@@ -2730,7 +2730,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2712                           	psect	text10
   2713  000B3C                     __ptext10:
   2714                           	opt callstack 0
-  2715  000B3C                     _contador_pulsosD:
+  2715  000B3C                     _pulseCounter:
   2716                           	opt callstack 24
   2717  000B3C                     
   2718                           ;pwm.c: 39:     ons=0;
@@ -2783,8 +2783,8 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2765  000B7E                     l1756:
   2766                           
   2767                           ;pwm.c: 45:     while(cnt<pulsoD*5){
-  2768  000B7E  C012  F00C         	movff	contador_pulsosD@pulsoD,___wmul@multiplier
-  2769  000B82  C013  F00D         	movff	contador_pulsosD@pulsoD+1,___wmul@multiplier+1
+  2768  000B7E  C012  F00C         	movff	pulseCounter@pulsoD,___wmul@multiplier
+  2769  000B82  C013  F00D         	movff	pulseCounter@pulsoD+1,___wmul@multiplier+1
   2770  000B86  0E00               	movlw	0
   2771  000B88  6E0F               	movwf	(___wmul@multiplicand+1)^0,c
   2772  000B8A  0E05               	movlw	5
@@ -2794,10 +2794,10 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2776  000B94  5C44               	subwf	_cnt^0,w,c
   2777  000B96  5045               	movf	(_cnt+1)^0,w,c
   2778  000B98  0A80               	xorlw	128
-  2779  000B9A  6E14               	movwf	??_contador_pulsosD^0,c
+  2779  000B9A  6E14               	movwf	??_pulseCounter^0,c
   2780  000B9C  500D               	movf	(?___wmul+1)^0,w,c
   2781  000B9E  0A80               	xorlw	128
-  2782  000BA0  5814               	subwfb	??_contador_pulsosD^0,w,c
+  2782  000BA0  5814               	subwfb	??_pulseCounter^0,w,c
   2783  000BA2  A0D8               	btfss	status,0,c
   2784  000BA4  EFD6  F005         	goto	u941
   2785  000BA8  EFD8  F005         	goto	u940
@@ -2817,7 +2817,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2799  000BB8  0E00               	movlw	0
   2800  000BBA  6E48               	movwf	_keepgoing^0,c
   2801  000BBC  0012               	return		;funcret
-  2802  000BBE                     __end_of_contador_pulsosD:
+  2802  000BBE                     __end_of_pulseCounter:
   2803                           	opt callstack 0
   2804                           
   2805 ;; *************** function _oneShot *****************
@@ -2846,7 +2846,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2828 ;; This function calls:
   2829 ;;		Nothing
   2830 ;; This function is called by:
-  2831 ;;		_contador_pulsosD
+  2831 ;;		_pulseCounter
   2832 ;; This function uses a non-reentrant model
   2833 ;;
   2834                           
@@ -2905,7 +2905,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2887 ;; This function calls:
   2888 ;;		Nothing
   2889 ;; This function is called by:
-  2890 ;;		_contador_pulsosD
+  2890 ;;		_pulseCounter
   2891 ;; This function uses a non-reentrant model
   2892 ;;
   2893                           
@@ -2956,7 +2956,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2938 ;; This function calls:
   2939 ;;		Nothing
   2940 ;; This function is called by:
-  2941 ;;		_contador_pulsosD
+  2941 ;;		_pulseCounter
   2942 ;; This function uses a non-reentrant model
   2943 ;;
   2944                           
@@ -2983,9 +2983,9 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2965  001042                     __end_of___wmul:
   2966                           	opt callstack 0
   2967                           
-  2968 ;; *************** function _Error *****************
+  2968 ;; *************** function _Executing *****************
   2969 ;; Defined at:
-  2970 ;;		line 32 in file "Comandos.c"
+  2970 ;;		line 42 in file "Comandos.c"
   2971 ;; Parameters:    Size  Location     Type
   2972 ;;		None
   2973 ;; Auto vars:     Size  Location     Type
@@ -3010,69 +3010,69 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2992 ;;		_USART_Tx
   2993 ;;		_strlen
   2994 ;; This function is called by:
-  2995 ;;		_comandos
+  2995 ;;		_commands
   2996 ;; This function uses a non-reentrant model
   2997 ;;
   2998                           
   2999                           	psect	text14
   3000  000DDE                     __ptext14:
   3001                           	opt callstack 0
-  3002  000DDE                     _Error:
+  3002  000DDE                     _Executing:
   3003                           	opt callstack 25
   3004  000DDE                     
-  3005                           ;Comandos.c: 33:     for(int i=0; i< strlen(msgwrong); i++){
+  3005                           ;Comandos.c: 43:     for(int i=0; i < strlen(msgeje); i++){
   3006  000DDE  0E00               	movlw	0
-  3007  000DE0  6E11               	movwf	(Error@i+1)^0,c
+  3007  000DE0  6E11               	movwf	(Executing@i+1)^0,c
   3008  000DE2  0E00               	movlw	0
-  3009  000DE4  6E10               	movwf	Error@i^0,c
-  3010  000DE6  EF00  F007         	goto	l1790
-  3011  000DEA                     l1786:
+  3009  000DE4  6E10               	movwf	Executing@i^0,c
+  3010  000DE6  EF00  F007         	goto	l1798
+  3011  000DEA                     l1794:
   3012                           
-  3013                           ;Comandos.c: 34:     USART_Tx(msgwrong[i]);
-  3014  000DEA  0E1E               	movlw	low _msgwrong
-  3015  000DEC  2410               	addwf	Error@i^0,w,c
+  3013                           ;Comandos.c: 44:     USART_Tx(msgeje[i]);
+  3014  000DEA  0EA8               	movlw	low _msgeje
+  3015  000DEC  2410               	addwf	Executing@i^0,w,c
   3016  000DEE  6ED9               	movwf	fsr2l,c
-  3017  000DF0  0E01               	movlw	high _msgwrong
-  3018  000DF2  2011               	addwfc	(Error@i+1)^0,w,c
+  3017  000DF0  0E00               	movlw	high _msgeje
+  3018  000DF2  2011               	addwfc	(Executing@i+1)^0,w,c
   3019  000DF4  6EDA               	movwf	fsr2h,c
   3020  000DF6  50DF               	movf	indf2,w,c
   3021  000DF8  EC4E  F008         	call	_USART_Tx
   3022  000DFC                     
-  3023                           ;Comandos.c: 35:     }
-  3024  000DFC  4A10               	infsnz	Error@i^0,f,c
-  3025  000DFE  2A11               	incf	(Error@i+1)^0,f,c
-  3026  000E00                     l1790:
-  3027  000E00  0E1E               	movlw	low _msgwrong
+  3023                           ;Comandos.c: 45:     }
+  3024  000DFC  4A10               	infsnz	Executing@i^0,f,c
+  3025  000DFE  2A11               	incf	(Executing@i+1)^0,f,c
+  3026  000E00                     l1798:
+  3027  000E00  0EA8               	movlw	low _msgeje
   3028  000E02  6E0C               	movwf	strlen@s^0,c
-  3029  000E04  0E01               	movlw	high _msgwrong
+  3029  000E04  0E00               	movlw	high _msgeje
   3030  000E06  6E0D               	movwf	(strlen@s+1)^0,c
   3031  000E08  ECC4  F007         	call	_strlen	;wreg free
   3032  000E0C  500C               	movf	?_strlen^0,w,c
-  3033  000E0E  5C10               	subwf	Error@i^0,w,c
+  3033  000E0E  5C10               	subwf	Executing@i^0,w,c
   3034  000E10  500D               	movf	(?_strlen+1)^0,w,c
-  3035  000E12  5811               	subwfb	(Error@i+1)^0,w,c
+  3035  000E12  5811               	subwfb	(Executing@i+1)^0,w,c
   3036  000E14  A0D8               	btfss	status,0,c
-  3037  000E16  EF0F  F007         	goto	u981
-  3038  000E1A  EF11  F007         	goto	u980
-  3039  000E1E                     u981:
-  3040  000E1E  EFF5  F006         	goto	l1786
-  3041  000E22                     u980:
+  3037  000E16  EF0F  F007         	goto	u991
+  3038  000E1A  EF11  F007         	goto	u990
+  3039  000E1E                     u991:
+  3040  000E1E  EFF5  F006         	goto	l1794
+  3041  000E22                     u990:
   3042  000E22                     
-  3043                           ;Comandos.c: 36:     PORTDbits.RD4=1;
-  3044  000E22  8883               	bsf	131,4,c	;volatile
+  3043                           ;Comandos.c: 46:       PORTDbits.RD4=0;
+  3044  000E22  9883               	bcf	131,4,c	;volatile
   3045                           
-  3046                           ;Comandos.c: 37:     PORTDbits.RD5=0;
+  3046                           ;Comandos.c: 47:     PORTDbits.RD5=0;
   3047  000E24  9A83               	bcf	131,5,c	;volatile
   3048                           
-  3049                           ;Comandos.c: 38:     PORTDbits.RD6=0;
-  3050  000E26  9C83               	bcf	131,6,c	;volatile
+  3049                           ;Comandos.c: 48:     PORTDbits.RD6=1;
+  3050  000E26  8C83               	bsf	131,6,c	;volatile
   3051  000E28  0012               	return		;funcret
-  3052  000E2A                     __end_of_Error:
+  3052  000E2A                     __end_of_Executing:
   3053                           	opt callstack 0
   3054                           
-  3055 ;; *************** function _Ejecutandose *****************
+  3055 ;; *************** function _Error *****************
   3056 ;; Defined at:
-  3057 ;;		line 42 in file "Comandos.c"
+  3057 ;;		line 32 in file "Comandos.c"
   3058 ;; Parameters:    Size  Location     Type
   3059 ;;		None
   3060 ;; Auto vars:     Size  Location     Type
@@ -3097,67 +3097,67 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   3079 ;;		_USART_Tx
   3080 ;;		_strlen
   3081 ;; This function is called by:
-  3082 ;;		_comandos
+  3082 ;;		_commands
   3083 ;; This function uses a non-reentrant model
   3084 ;;
   3085                           
   3086                           	psect	text15
   3087  000E2A                     __ptext15:
   3088                           	opt callstack 0
-  3089  000E2A                     _Ejecutandose:
+  3089  000E2A                     _Error:
   3090                           	opt callstack 25
   3091  000E2A                     
-  3092                           ;Comandos.c: 43:     for(int i=0; i < strlen(msgeje); i++){
+  3092                           ;Comandos.c: 33:     for(int i=0; i< strlen(msgwrong); i++){
   3093  000E2A  0E00               	movlw	0
-  3094  000E2C  6E11               	movwf	(Ejecutandose@i+1)^0,c
+  3094  000E2C  6E11               	movwf	(Error@i+1)^0,c
   3095  000E2E  0E00               	movlw	0
-  3096  000E30  6E10               	movwf	Ejecutandose@i^0,c
-  3097  000E32  EF26  F007         	goto	l1798
-  3098  000E36                     l1794:
+  3096  000E30  6E10               	movwf	Error@i^0,c
+  3097  000E32  EF26  F007         	goto	l1790
+  3098  000E36                     l1786:
   3099                           
-  3100                           ;Comandos.c: 44:     USART_Tx(msgeje[i]);
-  3101  000E36  0EA8               	movlw	low _msgeje
-  3102  000E38  2410               	addwf	Ejecutandose@i^0,w,c
+  3100                           ;Comandos.c: 34:     USART_Tx(msgwrong[i]);
+  3101  000E36  0E1E               	movlw	low _msgwrong
+  3102  000E38  2410               	addwf	Error@i^0,w,c
   3103  000E3A  6ED9               	movwf	fsr2l,c
-  3104  000E3C  0E00               	movlw	high _msgeje
-  3105  000E3E  2011               	addwfc	(Ejecutandose@i+1)^0,w,c
+  3104  000E3C  0E01               	movlw	high _msgwrong
+  3105  000E3E  2011               	addwfc	(Error@i+1)^0,w,c
   3106  000E40  6EDA               	movwf	fsr2h,c
   3107  000E42  50DF               	movf	indf2,w,c
   3108  000E44  EC4E  F008         	call	_USART_Tx
   3109  000E48                     
-  3110                           ;Comandos.c: 45:     }
-  3111  000E48  4A10               	infsnz	Ejecutandose@i^0,f,c
-  3112  000E4A  2A11               	incf	(Ejecutandose@i+1)^0,f,c
-  3113  000E4C                     l1798:
-  3114  000E4C  0EA8               	movlw	low _msgeje
+  3110                           ;Comandos.c: 35:     }
+  3111  000E48  4A10               	infsnz	Error@i^0,f,c
+  3112  000E4A  2A11               	incf	(Error@i+1)^0,f,c
+  3113  000E4C                     l1790:
+  3114  000E4C  0E1E               	movlw	low _msgwrong
   3115  000E4E  6E0C               	movwf	strlen@s^0,c
-  3116  000E50  0E00               	movlw	high _msgeje
+  3116  000E50  0E01               	movlw	high _msgwrong
   3117  000E52  6E0D               	movwf	(strlen@s+1)^0,c
   3118  000E54  ECC4  F007         	call	_strlen	;wreg free
   3119  000E58  500C               	movf	?_strlen^0,w,c
-  3120  000E5A  5C10               	subwf	Ejecutandose@i^0,w,c
+  3120  000E5A  5C10               	subwf	Error@i^0,w,c
   3121  000E5C  500D               	movf	(?_strlen+1)^0,w,c
-  3122  000E5E  5811               	subwfb	(Ejecutandose@i+1)^0,w,c
+  3122  000E5E  5811               	subwfb	(Error@i+1)^0,w,c
   3123  000E60  A0D8               	btfss	status,0,c
-  3124  000E62  EF35  F007         	goto	u991
-  3125  000E66  EF37  F007         	goto	u990
-  3126  000E6A                     u991:
-  3127  000E6A  EF1B  F007         	goto	l1794
-  3128  000E6E                     u990:
+  3124  000E62  EF35  F007         	goto	u981
+  3125  000E66  EF37  F007         	goto	u980
+  3126  000E6A                     u981:
+  3127  000E6A  EF1B  F007         	goto	l1786
+  3128  000E6E                     u980:
   3129  000E6E                     
-  3130                           ;Comandos.c: 46:       PORTDbits.RD4=0;
-  3131  000E6E  9883               	bcf	131,4,c	;volatile
+  3130                           ;Comandos.c: 36:     PORTDbits.RD4=1;
+  3131  000E6E  8883               	bsf	131,4,c	;volatile
   3132                           
-  3133                           ;Comandos.c: 47:     PORTDbits.RD5=0;
+  3133                           ;Comandos.c: 37:     PORTDbits.RD5=0;
   3134  000E70  9A83               	bcf	131,5,c	;volatile
   3135                           
-  3136                           ;Comandos.c: 48:     PORTDbits.RD6=1;
-  3137  000E72  8C83               	bsf	131,6,c	;volatile
+  3136                           ;Comandos.c: 38:     PORTDbits.RD6=0;
+  3137  000E72  9C83               	bcf	131,6,c	;volatile
   3138  000E74  0012               	return		;funcret
-  3139  000E76                     __end_of_Ejecutandose:
+  3139  000E76                     __end_of_Error:
   3140                           	opt callstack 0
   3141                           
-  3142 ;; *************** function _Completo *****************
+  3142 ;; *************** function _Complete *****************
   3143 ;; Defined at:
   3144 ;;		line 52 in file "Comandos.c"
   3145 ;; Parameters:    Size  Location     Type
@@ -3184,7 +3184,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   3166 ;;		_USART_Tx
   3167 ;;		_strlen
   3168 ;; This function is called by:
-  3169 ;;		_comandos
+  3169 ;;		_commands
   3170 ;;		_main
   3171 ;; This function uses a non-reentrant model
   3172 ;;
@@ -3192,30 +3192,30 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   3174                           	psect	text16
   3175  000E76                     __ptext16:
   3176                           	opt callstack 0
-  3177  000E76                     _Completo:
+  3177  000E76                     _Complete:
   3178                           	opt callstack 25
   3179  000E76                     
   3180                           ;Comandos.c: 53:     for(int i=0; i < strlen(msgcomp); i++){
   3181  000E76  0E00               	movlw	0
-  3182  000E78  6E11               	movwf	(Completo@i+1)^0,c
+  3182  000E78  6E11               	movwf	(Complete@i+1)^0,c
   3183  000E7A  0E00               	movlw	0
-  3184  000E7C  6E10               	movwf	Completo@i^0,c
+  3184  000E7C  6E10               	movwf	Complete@i^0,c
   3185  000E7E  EF4C  F007         	goto	l1806
   3186  000E82                     l1802:
   3187                           
   3188                           ;Comandos.c: 54:     USART_Tx(msgcomp[i]);
   3189  000E82  0E91               	movlw	low _msgcomp
-  3190  000E84  2410               	addwf	Completo@i^0,w,c
+  3190  000E84  2410               	addwf	Complete@i^0,w,c
   3191  000E86  6ED9               	movwf	fsr2l,c
   3192  000E88  0E00               	movlw	high _msgcomp
-  3193  000E8A  2011               	addwfc	(Completo@i+1)^0,w,c
+  3193  000E8A  2011               	addwfc	(Complete@i+1)^0,w,c
   3194  000E8C  6EDA               	movwf	fsr2h,c
   3195  000E8E  50DF               	movf	indf2,w,c
   3196  000E90  EC4E  F008         	call	_USART_Tx
   3197  000E94                     
   3198                           ;Comandos.c: 55:     }
-  3199  000E94  4A10               	infsnz	Completo@i^0,f,c
-  3200  000E96  2A11               	incf	(Completo@i+1)^0,f,c
+  3199  000E94  4A10               	infsnz	Complete@i^0,f,c
+  3200  000E96  2A11               	incf	(Complete@i+1)^0,f,c
   3201  000E98                     l1806:
   3202  000E98  0E91               	movlw	low _msgcomp
   3203  000E9A  6E0C               	movwf	strlen@s^0,c
@@ -3223,9 +3223,9 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   3205  000E9E  6E0D               	movwf	(strlen@s+1)^0,c
   3206  000EA0  ECC4  F007         	call	_strlen	;wreg free
   3207  000EA4  500C               	movf	?_strlen^0,w,c
-  3208  000EA6  5C10               	subwf	Completo@i^0,w,c
+  3208  000EA6  5C10               	subwf	Complete@i^0,w,c
   3209  000EA8  500D               	movf	(?_strlen+1)^0,w,c
-  3210  000EAA  5811               	subwfb	(Completo@i+1)^0,w,c
+  3210  000EAA  5811               	subwfb	(Complete@i+1)^0,w,c
   3211  000EAC  A0D8               	btfss	status,0,c
   3212  000EAE  EF5B  F007         	goto	u1001
   3213  000EB2  EF5D  F007         	goto	u1000
@@ -3242,7 +3242,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   3224                           ;Comandos.c: 58:     PORTDbits.RD6=0;
   3225  000EBE  9C83               	bcf	131,6,c	;volatile
   3226  000EC0  0012               	return		;funcret
-  3227  000EC2                     __end_of_Completo:
+  3227  000EC2                     __end_of_Complete:
   3228                           	opt callstack 0
   3229                           
   3230 ;; *************** function _strlen *****************
@@ -3281,8 +3281,8 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   3263 ;;		_xLimit
   3264 ;;		_yLimit
   3265 ;;		_Error
-  3266 ;;		_Ejecutandose
-  3267 ;;		_Completo
+  3266 ;;		_Executing
+  3267 ;;		_Complete
   3268 ;;		_coordinateRefreshX
   3269 ;;		_coordinateRefreshY
   3270 ;; This function uses a non-reentrant model
@@ -3349,8 +3349,8 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   3331 ;;		_xLimit
   3332 ;;		_yLimit
   3333 ;;		_Error
-  3334 ;;		_Ejecutandose
-  3335 ;;		_Completo
+  3334 ;;		_Executing
+  3335 ;;		_Complete
   3336 ;;		_coordinateRefreshX
   3337 ;;		_coordinateRefreshY
   3338 ;;		_main
@@ -4138,25 +4138,25 @@ Pointer List with Targets:
 		 -> msright(BANK0[13]), msleft(COMRAM[12]), msgcomp(BANK0[23]), msgeje(BANK0[22]), 
 		 -> msgwrong(BANK1[27]), yl(BANK0[17]), xl(BANK0[17]), CE(BANK1[30]), 
 
-    comandos@comando	PTR unsigned char  size(2) Largest target is 8
+    commands@comando	PTR unsigned char  size(2) Largest target is 8
 		 -> main@instruccion(COMRAM[8]), 
 
 
 Critical Paths under _main in COMRAM
 
     _main->_USART_Init
-    _main->_comandos
-    _comandos->_coordinateRefreshX
-    _comandos->_coordinateRefreshY
+    _main->_commands
+    _commands->_coordinateRefreshX
+    _commands->_coordinateRefreshY
     _yLimit->_strlen
     _xLimit->_strlen
     _invalidCoordinate->_strlen
-    _coordinateRefreshY->_contador_pulsosD
-    _coordinateRefreshX->_contador_pulsosD
-    _contador_pulsosD->___wmul
+    _coordinateRefreshY->_pulseCounter
+    _coordinateRefreshX->_pulseCounter
+    _pulseCounter->___wmul
+    _Executing->_strlen
     _Error->_strlen
-    _Ejecutandose->_strlen
-    _Completo->_strlen
+    _Complete->_strlen
     _USART_Init->___aldiv
 
 Critical Paths under _INT_isr in COMRAM
@@ -4235,11 +4235,11 @@ Call Graph Tables:
  ---------------------------------------------------------------------------------
  (0) _main                                                11    11      0   15160
                                              33 COMRAM    11    11      0
-                           _Completo
+                           _Complete
                          _USART_Init
                            _USART_Rx
                            _USART_Tx
-                           _comandos
+                           _commands
                            _gpioInit
                   _interruptionsInit
                            _pwm_init
@@ -4252,11 +4252,11 @@ Call Graph Tables:
  ---------------------------------------------------------------------------------
  (1) _gpioInit                                             0     0      0       0
  ---------------------------------------------------------------------------------
- (1) _comandos                                             7     5      2   11102
+ (1) _commands                                             7     5      2   11102
                                              26 COMRAM     7     5      2
-                           _Completo
-                       _Ejecutandose
+                           _Complete
                               _Error
+                          _Executing
                  _coordinateRefreshX
                  _coordinateRefreshY
                   _invalidCoordinate
@@ -4281,16 +4281,16 @@ Call Graph Tables:
  (2) _coordinateRefreshY                                   6     4      2    1887
                                              20 COMRAM     6     4      2
                            _USART_Tx
-                   _contador_pulsosD
+                       _pulseCounter
                              _strlen
  ---------------------------------------------------------------------------------
  (2) _coordinateRefreshX                                   6     4      2    1887
                                              20 COMRAM     6     4      2
                            _USART_Tx
-                   _contador_pulsosD
+                       _pulseCounter
                              _strlen
  ---------------------------------------------------------------------------------
- (3) _contador_pulsosD                                     3     1      2     637
+ (3) _pulseCounter                                         3     1      2     637
                                              17 COMRAM     3     1      2
                              ___wmul
                        _clearOneShot
@@ -4303,17 +4303,17 @@ Call Graph Tables:
  (4) ___wmul                                               6     2      4     311
                                              11 COMRAM     6     2      4
  ---------------------------------------------------------------------------------
+ (2) _Executing                                            2     2      0    1018
+                                             15 COMRAM     2     2      0
+                           _USART_Tx
+                             _strlen
+ ---------------------------------------------------------------------------------
  (2) _Error                                                2     2      0    1018
                                              15 COMRAM     2     2      0
                            _USART_Tx
                              _strlen
  ---------------------------------------------------------------------------------
- (2) _Ejecutandose                                         2     2      0    1018
-                                             15 COMRAM     2     2      0
-                           _USART_Tx
-                             _strlen
- ---------------------------------------------------------------------------------
- (2) _Completo                                             2     2      0    1018
+ (2) _Complete                                             2     2      0    1018
                                              15 COMRAM     2     2      0
                            _USART_Tx
                              _strlen
@@ -4360,33 +4360,33 @@ Call Graph Tables:
  Call Graph Graphs:
 
  _main (ROOT)
-   _Completo
+   _Complete
      _USART_Tx
      _strlen
    _USART_Init
      ___aldiv
    _USART_Rx
    _USART_Tx
-   _comandos
-     _Completo
-       _USART_Tx
-       _strlen
-     _Ejecutandose
+   _commands
+     _Complete
        _USART_Tx
        _strlen
      _Error
        _USART_Tx
        _strlen
+     _Executing
+       _USART_Tx
+       _strlen
      _coordinateRefreshX
        _USART_Tx
-       _contador_pulsosD
+       _pulseCounter
          ___wmul
          _clearOneShot
          _oneShot
        _strlen
      _coordinateRefreshY
        _USART_Tx
-       _contador_pulsosD
+       _pulseCounter
          ___wmul
          _clearOneShot
          _oneShot
@@ -4449,261 +4449,261 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.10 build 88905656 
-Symbol Table                                                                                   Thu Dec 05 17:48:01 2019
+Symbol Table                                                                                   Mon Dec 09 13:19:34 2019
 
-                          _x 004C                            _y 004A                           _CE 0100  
-                         l60 0F06                           l54 0F4C                           l71 0E6E  
-                         l47 0DD6                           l72 0E74                           l48 0DDC  
-                         l65 0E22                           l66 0E28                           l77 0EBA  
-                         l78 0EC0                           l89 0AA0                           _xl 00CF  
-                         _yl 00BE          ___wmul@multiplicand 000E                          l100 09BA  
-                        l130 0394                          l132 03A2                          l212 101A  
-                        l127 0376                          l400 10DC                          l129 0384  
-                        l403 10EC                          l262 0BB0                          l271 10DA  
-                        l263 0BBC                          l255 1064                          l432 10FC  
-                        l361 0822                          l362 0832                          l267 1082  
-                        l259 0B58                          l524 07D8                          l364 0840  
-                        l445 1040                          l189 06CC                          l391 0D22  
-                        l359 0814                          l369 08C0                          l394 109E  
-                        l397 10B0                          _PR2 000FCB                          u810 10EA  
-                        u811 10E6                          u900 10AC             ?_emergencyButton 0001  
-                        u901 10A8                          u910 0FB0                          u911 0FAC  
-                        u920 0B66                          u921 0B62                          u930 0B7A  
-                        u931 0B76                          u940 0BB0                          u941 0BAC  
-                        u950 0DD6                          u951 0DD2                          u880 1076  
-                        u960 0F4C                          u881 1072                          u961 0F48  
-                        u890 10D6                          u970 0F06                          u891 10D2  
-                        u971 0F02                          u980 0E22                          u981 0E1E  
-                        u990 0E6E                          u991 0E6A                          _cnt 0044  
-                        _ons 0052                          wreg 000FE8                 __CFG_LVP$OFF 000000  
-               __CFG_WDT$OFF 000000                         l2000 0372                         l1122 0FBC  
-                       l2010 0390                         l2002 0374                         l2012 0392  
-                       l2004 0388                         l2020 03C2                         l2110 05F0  
-                       l2014 03A6                         l2006 038C                         l2120 0686  
-                       l2112 060E                         l2040 0420                         l2016 03AA  
-                       l2008 038E                         l2200 07F8                         l2122 06A4  
-                       l2114 062C                         l2050 04B6                         l2042 043E  
-                       l2018 03B2                         l2034 03CA                         l2210 0806  
-                       l2202 07FC                         l2124 06C2                         l2116 064A  
-                       l2108 05D6                         l2052 04BA                         l2044 045C  
-                       l2036 03E4                         l2220 0810                         l2212 0808  
-                       l2204 0800                         l2126 06C6                         l2118 0668  
-                       l2070 04DE                         l2046 047A                         l2038 0402  
-                       l2230 082E                         l2222 0812                         l2214 080A  
-                       l2206 0802                         l2160 0D14                         l2080 0574  
-                       l2072 04FC                         l2048 0498                         l2240 085C  
-                       l2232 0830                         l2224 0826                         l2216 080C  
-                       l2208 0804                         l2170 0D1E                         l2162 0D16  
-                       l1610 10EA                         l2090 05CC                         l2082 0592  
-                       l2074 051A                         l2250 0874                         l2242 085E  
-                       l2234 0844                         l2226 082A                         l2218 080E  
-                       l2172 0D20                         l2164 0D18                         l2156 0CB4  
-                       l2092 05CE                         l2084 05B0                         l2076 0538  
-                       l2068 04C4                         l2260 088E                         l2252 0876  
-                       l2236 0848                         l2228 082C                         l2166 0D1A  
-                       l2158 0CB8                         l2086 05B4                         l2078 0556  
-                       l1606 10EE                         l2262 08A0                         l2254 0886  
-                       l2238 0850                         l2168 0D1C                         l1608 10DC  
-                       l1800 0E76                         l1720 10D6                         l1712 107A  
-                       l2088 05B6                         l1560 0FF4                         l2264 08A4  
-                       l2248 0862                         l2192 07DA                         l1730 109E  
-                       l1802 0E82                         l1714 107E                         l1810 09D2  
-                       l1562 1014                         l1570 104E                         l2266 08C2  
-                       l2194 07DE                         l1900 0798                         l1732 10AC  
-                       l1740 0FB0                         l1804 0E94                         l1724 101C  
-                       l1708 1066                         l1820 0A1A                         l1812 09D6  
-                       l1564 1016                         l1572 1050                         l2196 07F2  
-                       l1902 07A2                         l1734 0F88                         l1806 0E98  
-                       l1726 1038                         l1718 10C8                         l1750 0B66  
-                       l1830 0A62                         l1814 09E2                         l1822 0A2A  
-                       l1566 1018                         l1574 1062                         l2198 07F4  
-                       l1904 07A8                         l1736 0F94                         l1752 0B6A  
-                       l1744 0B3C                         l1832 0A66                         l1824 0A40  
-                       l1816 09F4                         l1808 09BC                         l1840 08EC  
-                       l1760 0D92                         l1568 1042                         l1906 07B8  
-                       l1738 0F98                         l1754 0B7A                         l1746 0B48  
-                       l1834 0A88                         l1826 0A44                         l1818 09F8  
-                       l1850 0934                         l1842 08F0                         l1762 0D9E  
-                       l1770 0F14                         l1930 0048                         l1908 07C8  
-                       l1756 0B7E                         l1748 0B4A                         l1828 0A50  
-                       l1836 0A98                         l1860 097C                         l1844 08FC  
-                       l1852 0944                         l1764 0DB0                         l1772 0F26  
-                       l1780 0EE0                         l1940 00D4                         l1932 0064  
-                       l1870 06D2                         l1790 0E00                         l1758 0BB4  
-                       l1862 0980                         l1854 095A                         l1846 090E  
-                       l1838 08D6                         l1766 0DB4                         l1774 0F2A  
-                       l1782 0EE4                         l1950 0162                         l1942 00F2  
-                       l1934 0080                         l1926 0012                         l1880 0712  
-                       l1872 06E0                         l1792 0E2A                         l1784 0DDE  
-                       l1864 09A2                         l1856 095E                         l1848 0912  
-                       l1768 0F08                         l1776 0EC2                         l1960 0256  
-                       l1952 017E                         l1944 010E                         l1936 009C  
-                       l1928 002C                         l1890 0750                         l1882 0716  
-                       l1874 06F0                         l1794 0E36                         l1786 0DEA  
-                       l1858 096A                         l1866 09B2                         l1778 0ECE  
-                       l1962 0262                         l1954 019A                         l1946 012A  
-                       l1938 00B8                         l1892 075E                         l1884 0726  
-                       l1876 06F4                         l1868 06CE                         l1796 0E48  
-                       l1788 0DFC                         l1980 0298                         l1956 019E  
-                       l1948 0146                         l1964 0276                         l1894 0768  
-                       l1886 073C                         l1878 0702                         l1798 0E4C  
-                       l1990 032E                         l1982 02B6                         l1958 01FA  
-                       l1896 0786                         l1888 0744                         l1992 034C  
-                       l1984 02D4                         l1898 0796                         l1994 036A  
-                       l1986 02F2                         l1978 027E                         l1996 036E  
-                       l1988 0310                         l1998 0370                         u1000 0EBA  
-                       u1001 0EB6                         u1010 09D2                         u1011 09CE  
-                       u1100 0702                         u1020 0A1A                         u1101 06FE  
-                       u1021 0A16                         u1110 073C                         u1030 0A40  
-                       u1111 0738                         u1031 0A3C                         u1120 075E  
-                       u1040 0A88                         u1200 0080                         u1121 075A  
-                       u1041 0A84                         u1201 007C                         u1130 0786  
-                       u1050 08EC                         u1210 009C                         u1131 0782  
-                       u1051 08E8                         u1211 0098                         u1140 07B8  
-                       u1060 0934                         u1300 019A                         u1220 00B8  
-                       u1141 07B4                         u1061 0930                         u1301 0196  
-                       u1221 00B4                         u1070 095A                         u1310 0298  
-                       u1230 00D4                         u1071 0956                         u1311 0294  
-                       u1231 00D0                         u1080 09A2                         u1400 03A2  
-                       u1320 02B6                         u1240 00F2                         u1081 099E  
-                       u1401 039E                         u1321 02B2                         u1241 00EE  
-                       u1090 06E0                         u1410 03E4                         u1330 02D4  
-                       u1250 010E                         u1170 002C                         u1091 06DC  
-                       u1411 03E0                         u1331 02D0                         u1251 010A  
-                       u1171 0028                         u1500 04FC                         u1420 0402  
-                       u1340 02F2                         u1260 012A                         u1180 0048  
-                       u1501 04F8                         u1421 03FE                         u1341 02EE  
-                       u1261 0126                         u1181 0044                         u1510 051A  
-                       u1430 0420                         u1350 0310                         u1270 0146  
-                       u1190 0064                         _LATB 000F8A                         u1511 0516  
-                       u1431 041C                         u1351 030C                         u1271 0142  
-                       u1191 0060                         _LATC 000F8B                         u1600 064A  
-                       u1520 0538                         u1440 043E                         u1360 032E  
-                       u1280 0162                         _LATD 000F8C                         u1601 0646  
-                       u1521 0534                         u1441 043A                         u1361 032A  
-                       u1281 015E                         u1610 0668                         u1530 0556  
-                       u1450 045C                         u1370 034C                         u1290 017E  
-                       u1611 0664                         u1531 0552                         u1451 0458  
-                       u1371 0348                         u1291 017A                         u1620 0686  
-                       u1540 0574                         u1460 047A                         u1380 036A  
-                       u1700 0822                         u1621 0682                         u1541 0570  
-                       u1461 0476                         u1381 0366                         u1701 081E  
-                       u1630 06A4                         u1550 0592                         u1470 0498  
-                       u1390 0384                         u1710 0840                         u1631 06A0  
-                       u1551 058E                         u1471 0494                         u1391 0380  
-                       u1711 083C                         u1640 06C2                         u1560 05B0  
-                       u1480 04B6                         u1720 0886                         u1641 06BE  
-                       u1561 05AC                         u1481 04B2                         u1721 0882  
-                       u1570 05F0                         u1490 04DE                         u1730 08C0  
-                       u1571 05EC                         u1491 04DA                         u1731 08BC  
-                       u1580 060E                         u1581 060A                         u1590 062C  
-                       u1591 0628                         u1747 05C0                         _RCIF 007CF5  
-                       _TMR2 000FCC              __end_of_INT_isr 0C3E                         _main 07DA  
-                       _msup 0039                         fsr2h 000FDA                         indf2 000FDF  
-                       fsr1l 000FE1                         fsr2l 000FD9                         btemp 0053  
-                       prodh 000FF4                         prodl 000FF3                         start 000E  
-               ___param_bank 000000         __end_of_clearOneShot 10DC         __end_of_Ejecutandose 0E76  
-                ?i2_USART_Tx 0001              __end_of___aldiv 07DA                 main@contador 002C  
-                      ?_main 0001                        _CMCON 000FB4                        _T2CON 000FCA  
-                      i2l442 0D90                        i2l354 0C32                        i2l437 0D68  
-                      i2l438 0D6C                        i2l394 10B4                        i2l397 10C6  
-                      _RCREG 000FAE                        _SPBRG 000FAF                        _PORTB 000F81  
-                      _PORTC 000F82                        _PORTD 000F83                        _TRISB 000F93  
-                      _TRISD 000F95                        _TXREG 000FAD                        _Error 0DDE  
-                      _check 007A              __end_of_oneShot 1084             __end_of_USART_Rx 10EE  
-           __end_of_USART_Tx 10B2                        main@i 002A                 USART_Tx@data 000C  
-                      tablat 000FF5                        ttemp5 0054                        ttemp6 0057  
-                      ttemp7 005B                        status 000FD8                        wtemp8 0054  
-                ?_USART_Init 001A             __end_ofi2_strlen 0FF4               __CFG_MCLRE$OFF 000000  
-            __initialization 0C3E             __end_of_Completo 0EC2                 __end_of_main 08D6  
-                     ??_main 0022                __activetblptr 000000                       ?_Error 0001  
-                  ??_INT_isr 0007                       _CCPR1L 000FBE                       _CCPR2L 000FBB  
-                     i2l1122 0FF2                       i2l2150 0D46                       i2l2152 0D7A  
-                     i2l2144 0D24                       i2l2154 0D8C                       i2l2146 0D30  
-                     i2l2148 0D42                       i2l2180 0BEA                       i2l2190 0C10  
-                     i2l2182 0BEC                       i2l2174 0BC8                       i2l2184 0BEE  
-                     i2l2176 0BD8                       i2l2186 0BFA                       i2l2178 0BE6  
-                     i2l2188 0C0C                       i2l1912 10B4                       i2l1920 0FCE  
-                     i2l1914 10C2                       i2l1922 0FE6                       i2l1916 0FBE  
-                     i2l1918 0FCA                       _OSCCON 000FD3          __size_ofi2_USART_Tx 0016  
-                     Error@i 0010             _contador_pulsosD 0B3C             __end_of_comandos 06CE  
-                  ??___aldiv 0014                       ___wmul 101C             __end_of_gpioInit 101C  
-                     _xLimit 0F08                       _yLimit 0EC2                       clear_0 0CA4  
-                     _msgeje 00A8              comandos@comando 001B                       _msleft 002D  
+                          _x 004C                            _y 004A                 _pulseCounter 0B3C  
+                         _CE 0100                           l60 0F06                           l54 0F4C  
+                         l71 0E22                           l47 0DD6                           l72 0E28  
+                         l48 0DDC                           l65 0E6E                           l66 0E74  
+                         l77 0EBA                           l78 0EC0                           l89 0AA0  
+                         _xl 00CF                           _yl 00BE          ___wmul@multiplicand 000E  
+                        l100 09BA                          l130 0394                          l132 03A2  
+                        l212 101A                          l127 0376                          l400 10DC  
+                        l129 0384                          l403 10EC                          l262 0BB0  
+                        l271 10DA                          l263 0BBC                          l255 1064  
+                        l432 10FC                          l361 0822                          l362 0832  
+                        l267 1082                          l259 0B58                          l524 07D8  
+                        l364 0840                          l445 1040                          l189 06CC  
+                        l391 0D22                          l359 0814                          l369 08C0  
+                        l394 109E                          l397 10B0                          _PR2 000FCB  
+                        u810 10EA                          u811 10E6                          u900 10AC  
+           ?_emergencyButton 0001                          u901 10A8                          u910 0FB0  
+                        u911 0FAC                          u920 0B66                          u921 0B62  
+                        u930 0B7A                          u931 0B76                          u940 0BB0  
+                        u941 0BAC                          u950 0DD6                          u951 0DD2  
+                        u880 1076                          u960 0F4C                          u881 1072  
+                        u961 0F48                          u890 10D6                          u970 0F06  
+                        u891 10D2                          u971 0F02                          u980 0E6E  
+                        u981 0E6A                          u990 0E22                          u991 0E1E  
+                        _cnt 0044                          _ons 0052                          wreg 000FE8  
+               __CFG_LVP$OFF 000000                 __CFG_WDT$OFF 000000                         l2000 0372  
+                       l1122 0FBC                         l2010 0390                         l2002 0374  
+                       l2012 0392                         l2004 0388                         l2020 03C2  
+                       l2110 05F0                         l2014 03A6                         l2006 038C  
+                       l2120 0686                         l2112 060E                         l2040 0420  
+                       l2016 03AA                         l2008 038E                         l2200 07F8  
+                       l2122 06A4                         l2114 062C                         l2050 04B6  
+                       l2042 043E                         l2018 03B2                         l2034 03CA  
+                       l2210 0806                         l2202 07FC                         l2124 06C2  
+                       l2116 064A                         l2108 05D6                         l2052 04BA  
+                       l2044 045C                         l2036 03E4                         l2220 0810  
+                       l2212 0808                         l2204 0800                         l2126 06C6  
+                       l2118 0668                         l2070 04DE                         l2046 047A  
+                       l2038 0402                         l2230 082E                         l2222 0812  
+                       l2214 080A                         l2206 0802                         l2160 0D14  
+                       l2080 0574                         l2072 04FC                         l2048 0498  
+                       l2240 085C                         l2232 0830                         l2224 0826  
+                       l2216 080C                         l2208 0804                         l2170 0D1E  
+                       l2162 0D16                         l1610 10EA                         l2090 05CC  
+                       l2082 0592                         l2074 051A                         l2250 0874  
+                       l2242 085E                         l2234 0844                         l2226 082A  
+                       l2218 080E                         l2172 0D20                         l2164 0D18  
+                       l2156 0CB4                         l2092 05CE                         l2084 05B0  
+                       l2076 0538                         l2068 04C4                         l2260 088E  
+                       l2252 0876                         l2236 0848                         l2228 082C  
+                       l2166 0D1A                         l2158 0CB8                         l2086 05B4  
+                       l2078 0556                         l1606 10EE                         l2262 08A0  
+                       l2254 0886                         l2238 0850                         l2168 0D1C  
+                       l1608 10DC                         l1800 0E76                         l1720 10D6  
+                       l1712 107A                         l2088 05B6                         l1560 0FF4  
+                       l2264 08A4                         l2248 0862                         l2192 07DA  
+                       l1730 109E                         l1802 0E82                         l1714 107E  
+                       l1810 09D2                         l1562 1014                         l1570 104E  
+                       l2266 08C2                         l2194 07DE                         l1900 0798  
+                       l1732 10AC                         l1740 0FB0                         l1804 0E94  
+                       l1724 101C                         l1708 1066                         l1820 0A1A  
+                       l1812 09D6                         l1564 1016                         l1572 1050  
+                       l2196 07F2                         l1902 07A2                         l1734 0F88  
+                       l1806 0E98                         l1726 1038                         l1718 10C8  
+                       l1750 0B66                         l1830 0A62                         l1814 09E2  
+                       l1822 0A2A                         l1566 1018                         l1574 1062  
+                       l2198 07F4                         l1904 07A8                         l1736 0F94  
+                       l1752 0B6A                         l1744 0B3C                         l1832 0A66  
+                       l1824 0A40                         l1816 09F4                         l1808 09BC  
+                       l1840 08EC                         l1760 0D92                         l1568 1042  
+                       l1906 07B8                         l1738 0F98                         l1754 0B7A  
+                       l1746 0B48                         l1834 0A88                         l1826 0A44  
+                       l1818 09F8                         l1850 0934                         l1842 08F0  
+                       l1762 0D9E                         l1770 0F14                         l1930 0048  
+                       l1908 07C8                         l1756 0B7E                         l1748 0B4A  
+                       l1828 0A50                         l1836 0A98                         l1860 097C  
+                       l1844 08FC                         l1852 0944                         l1764 0DB0  
+                       l1772 0F26                         l1780 0EE0                         l1940 00D4  
+                       l1932 0064                         l1870 06D2                         l1790 0E4C  
+                       l1758 0BB4                         l1862 0980                         l1854 095A  
+                       l1846 090E                         l1838 08D6                         l1766 0DB4  
+                       l1774 0F2A                         l1782 0EE4                         l1950 0162  
+                       l1942 00F2                         l1934 0080                         l1926 0012  
+                       l1880 0712                         l1872 06E0                         l1784 0E2A  
+                       l1792 0DDE                         l1864 09A2                         l1856 095E  
+                       l1848 0912                         l1768 0F08                         l1776 0EC2  
+                       l1960 0256                         l1952 017E                         l1944 010E  
+                       l1936 009C                         l1928 002C                         l1890 0750  
+                       l1882 0716                         l1874 06F0                         l1786 0E36  
+                       l1794 0DEA                         l1858 096A                         l1866 09B2  
+                       l1778 0ECE                         l1962 0262                         l1954 019A  
+                       l1946 012A                         l1938 00B8                         l1892 075E  
+                       l1884 0726                         l1876 06F4                         l1868 06CE  
+                       l1788 0E48                         l1796 0DFC                         l1980 0298  
+                       l1956 019E                         l1948 0146                         l1964 0276  
+                       l1894 0768                         l1886 073C                         l1878 0702  
+                       l1798 0E00                         l1990 032E                         l1982 02B6  
+                       l1958 01FA                         l1896 0786                         l1888 0744  
+                       l1992 034C                         l1984 02D4                         l1898 0796  
+                       l1994 036A                         l1986 02F2                         l1978 027E  
+                       l1996 036E                         l1988 0310                         l1998 0370  
+                       u1000 0EBA                         u1001 0EB6                         u1010 09D2  
+                       u1011 09CE                         u1100 0702                         u1020 0A1A  
+                       u1101 06FE                         u1021 0A16                         u1110 073C  
+                       u1030 0A40                         u1111 0738                         u1031 0A3C  
+                       u1120 075E                         u1040 0A88                         u1200 0080  
+                       u1121 075A                         u1041 0A84                         u1201 007C  
+                       u1130 0786                         u1050 08EC                         u1210 009C  
+                       u1131 0782                         u1051 08E8                         u1211 0098  
+                       u1140 07B8                         u1060 0934                         u1300 019A  
+                       u1220 00B8                         u1141 07B4                         u1061 0930  
+                       u1301 0196                         u1221 00B4                         u1070 095A  
+                       u1310 0298                         u1230 00D4                         u1071 0956  
+                       u1311 0294                         u1231 00D0                         u1080 09A2  
+                       u1400 03A2                         u1320 02B6                         u1240 00F2  
+                       u1081 099E                         u1401 039E                         u1321 02B2  
+                       u1241 00EE                         u1090 06E0                         u1410 03E4  
+                       u1330 02D4                         u1250 010E                         u1170 002C  
+                       u1091 06DC                         u1411 03E0                         u1331 02D0  
+                       u1251 010A                         u1171 0028                         u1500 04FC  
+                       u1420 0402                         u1340 02F2                         u1260 012A  
+                       u1180 0048                         u1501 04F8                         u1421 03FE  
+                       u1341 02EE                         u1261 0126                         u1181 0044  
+                       u1510 051A                         u1430 0420                         u1350 0310  
+                       u1270 0146                         u1190 0064                         _LATB 000F8A  
+                       u1511 0516                         u1431 041C                         u1351 030C  
+                       u1271 0142                         u1191 0060                         _LATC 000F8B  
+                       u1600 064A                         u1520 0538                         u1440 043E  
+                       u1360 032E                         u1280 0162                         _LATD 000F8C  
+                       u1601 0646                         u1521 0534                         u1441 043A  
+                       u1361 032A                         u1281 015E                         u1610 0668  
+                       u1530 0556                         u1450 045C                         u1370 034C  
+                       u1290 017E                         u1611 0664                         u1531 0552  
+                       u1451 0458                         u1371 0348                         u1291 017A  
+                       u1620 0686                         u1540 0574                         u1460 047A  
+                       u1380 036A                         u1700 0822                         u1621 0682  
+                       u1541 0570                         u1461 0476                         u1381 0366  
+                       u1701 081E                         u1630 06A4                         u1550 0592  
+                       u1470 0498                         u1390 0384                         u1710 0840  
+                       u1631 06A0                         u1551 058E                         u1471 0494  
+                       u1391 0380                         u1711 083C                         u1640 06C2  
+                       u1560 05B0                         u1480 04B6                         u1720 0886  
+                       u1641 06BE                         u1561 05AC                         u1481 04B2  
+                       u1721 0882                         u1570 05F0                         u1490 04DE  
+                       u1730 08C0                         u1571 05EC                         u1491 04DA  
+                       u1731 08BC                         u1580 060E                         u1581 060A  
+                       u1590 062C                         u1591 0628                         u1747 05C0  
+                       _RCIF 007CF5                         _TMR2 000FCC              __end_of_INT_isr 0C3E  
+                       _main 07DA                         _msup 0039                         fsr2h 000FDA  
+                       indf2 000FDF                         fsr1l 000FE1                         fsr2l 000FD9  
+                       btemp 0053                         prodh 000FF4                         prodl 000FF3  
+                       start 000E                   Executing@i 0010                 ___param_bank 000000  
+       __end_of_clearOneShot 10DC                  ?i2_USART_Tx 0001              __end_of___aldiv 07DA  
+               main@contador 002C                        ?_main 0001                        _CMCON 000FB4  
+                      _T2CON 000FCA                        i2l442 0D90                        i2l354 0C32  
+                      i2l437 0D68                        i2l438 0D6C                        i2l394 10B4  
+                      i2l397 10C6                        _RCREG 000FAE                        _SPBRG 000FAF  
+                      _PORTB 000F81                        _PORTC 000F82                        _PORTD 000F83  
+                      _TRISB 000F93                        _TRISD 000F95                        _TXREG 000FAD  
+                      _Error 0E2A                        _check 007A              __end_of_oneShot 1084  
+           __end_of_USART_Rx 10EE             __end_of_USART_Tx 10B2                        main@i 002A  
+               USART_Tx@data 000C                        tablat 000FF5                        ttemp5 0054  
+                      ttemp6 0057                        ttemp7 005B                        status 000FD8  
+                      wtemp8 0054                  ?_USART_Init 001A             __end_ofi2_strlen 0FF4  
+             __CFG_MCLRE$OFF 000000              __initialization 0C3E             __end_of_Complete 0EC2  
+               __end_of_main 08D6                       ??_main 0022                __activetblptr 000000  
+                     ?_Error 0001                    ??_INT_isr 0007                       _CCPR1L 000FBE  
+                     _CCPR2L 000FBB                       i2l1122 0FF2                       i2l2150 0D46  
+                     i2l2152 0D7A                       i2l2144 0D24                       i2l2154 0D8C  
+                     i2l2146 0D30                       i2l2148 0D42                       i2l2180 0BEA  
+                     i2l2190 0C10                       i2l2182 0BEC                       i2l2174 0BC8  
+                     i2l2184 0BEE                       i2l2176 0BD8                       i2l2186 0BFA  
+                     i2l2178 0BE6                       i2l2188 0C0C                       i2l1912 10B4  
+                     i2l1920 0FCE                       i2l1914 10C2                       i2l1922 0FE6  
+                     i2l1916 0FBE                       i2l1918 0FCA                       _OSCCON 000FD3  
+        __size_ofi2_USART_Tx 0016           __size_of_Executing 004C                       Error@i 0010  
+           __end_of_commands 06CE                    ??___aldiv 0014                       ___wmul 101C  
+           __end_of_gpioInit 101C                       _xLimit 0F08                       _yLimit 0EC2  
+                     clear_0 0CA4                       _msgeje 00A8                       _msleft 002D  
                      _msdown 00ED                       _strlen 0F88                 __pdataCOMRAM 002D  
                   ??_oneShot 000C                       tblptrh 000FF7                       tblptrl 000FF6  
                      tblptru 000FF8          __size_of_USART_Init 0070             __end_of_pwm_init 1066  
            emergencyButton@i 0005                   __accesstop 0060      __end_of__initialization 0CAA  
             __CFG_PBADEN$OFF 000000                ___rparam_used 000001           _coordinateRefreshX 09BC  
-         _coordinateRefreshY 08D6        __size_of_clearOneShot 0014        __size_of_Ejecutandose 004C  
-              __end_of_Error 0E2A               __pcstackCOMRAM 0001                 __pidataBANK0 0AA2  
-               __pidataBANK1 0F4E          ?_coordinateRefreshX 0015          ?_coordinateRefreshY 0015  
-                  ?_USART_Rx 0001                    ?_USART_Tx 0001                      ??_Error 0010  
+         _coordinateRefreshY 08D6        __size_of_clearOneShot 0014                __end_of_Error 0E76  
+             __pcstackCOMRAM 0001                 __pidataBANK0 0AA2                 __pidataBANK1 0F4E  
+        ?_coordinateRefreshX 0015          ?_coordinateRefreshY 0015                    ?_USART_Rx 0001  
+                  ?_USART_Tx 0001            __end_of_Executing 0E2A                      ??_Error 0010  
                   ?i2_strlen 0001         ??_coordinateRefreshX 0017         ??_coordinateRefreshY 0017  
-                  ?_Completo 0001                 _clearOneShot 10C8                 _Ejecutandose 0E2A  
-             i2USART_Tx@data 0001          coordinateRefreshX@i 0017          coordinateRefreshX@j 0019  
-        coordinateRefreshY@i 0017          coordinateRefreshY@j 0019            _invalidCoordinate 0D92  
-                    ?___wmul 000C           ?_invalidCoordinate 0001                      _CCP1CON 000FBD  
-                    _CCP2CON 000FBA                      ?_xLimit 0001                      ?_yLimit 0001  
-               ??i2_USART_Tx 0001                   ??_USART_Rx 000C                   ??_USART_Tx 000C  
-                    ?_strlen 000C          ??_invalidCoordinate 0010                      _INT_isr 0008  
-                 ??i2_strlen 0003                    ?_comandos 001B                   ??_Completo 0010  
-   __size_of_emergencyButton 006E                    ?_gpioInit 0001           __end_ofi2_USART_Tx 10C8  
-  __end_of_invalidCoordinate 0DDE                 ??_USART_Init 001E                      __Hparam 0000  
-                    __Lparam 0000                      ___aldiv 06CE              __size_of___wmul 0026  
-                  ?_pwm_init 0001               USART_Init@BAUD 001A              __size_of_xLimit 0046  
-            __size_of_yLimit 0046                      __pcinit 0C3E                      __ramtop 0800  
-                    __ptext0 07DA                      __ptext1 1042                      __ptext2 10EE  
-                    __ptext3 0FF4                      __ptext4 0012                      __ptext5 0EC2  
-                    __ptext6 0F08                      __ptext7 0D92                      __ptext8 08D6  
-                    __ptext9 09BC              __size_of_strlen 0036                    _T2CONbits 000FCA  
-                    _oneShot 1066             ___aldiv@dividend 000C                      _msgcomp 0091  
-   __end_of_contador_pulsosD 0BBE                      _nvalorx 0050                      _nvalory 004E  
-                    _msright 00E0           __end_of_USART_Init 0D24                   ??_comandos 001D  
-             __pintcode_body 0BBE         end_of_initialization 0CAA                      xLimit@i 0010  
-                 ??_gpioInit 000C                      yLimit@i 0010                      int_func 0BBE  
-                  _RCSTAbits 000FAB             ___aldiv@quotient 0016                      postdec1 000FE5  
-                    postinc0 000FEE                      postinc2 000FDE                   ??_pwm_init 000C  
-                    strlen@a 000E                      strlen@s 000C                    _PORTBbits 000F81  
-                  _PORTCbits 000F82                    _PORTDbits 000F83                    Completo@i 0010  
-                  _TRISCbits 000F94                    _TXSTAbits 000FAC   __size_of_invalidCoordinate 004C  
-          ??_emergencyButton 0005                Ejecutandose@i 0010               __end_of___wmul 1042  
-              __pidataCOMRAM 1084               __end_of_xLimit 0F4E               __end_of_yLimit 0F08  
-          __size_of_USART_Rx 0012            __size_of_USART_Tx 0016               __end_of_strlen 0FBE  
-        start_initialization 0C3E            __size_ofi2_strlen 0036                    i2strlen@a 0003  
-                  i2strlen@s 0001            __size_of_Completo 004C       coordinateRefreshX@newX 0015  
-     coordinateRefreshY@newY 0015       contador_pulsosD@pulsoD 0012                     ??___wmul 0010  
-                __pdataBANK0 0060                  __pdataBANK1 0100                     ??_xLimit 0010  
-                   ??_yLimit 0010                     ??_strlen 000E                  __pbssCOMRAM 0044  
-                   ?_INT_isr 0001  __size_of_coordinateRefreshX 00E6  __size_of_coordinateRefreshY 00E6  
-          __size_of_comandos 06BC            __size_of_gpioInit 0028                     INT_isr@i 000A  
-                  __pintcode 0008                     ?___aldiv 000C                    _emergency 0060  
-          __size_of_pwm_init 0024                    _keepgoing 0048                     ?_oneShot 0001  
-             __size_of_Error 004C            ?_contador_pulsosD 0012           ??_contador_pulsosD 0014  
-            ___aldiv@divisor 0010              ___aldiv@counter 0014               ___wmul@product 0010  
-          _interruptionsInit 10EE                     i2u115_40 10C2                     i2u115_41 10BE  
-                   i2u116_40 0FE6                     i2u116_41 0FE2           ?_interruptionsInit 0001  
-                   i2u165_40 0D68                     i2u165_41 0D64                     i2u166_40 0D7A  
-                   i2u166_41 0D76                     i2u167_40 0D8C                     i2u167_41 0D88  
-                   i2u175_47 0BCE                     i2u168_40 0BE6                     i2u168_41 0BE2  
-                   i2u169_40 0C32                     i2u169_41 0C2E                     _PIR1bits 000F9E  
-                   _RCONbits 000FD0          ??_interruptionsInit 000C                     _USART_Rx 10DC  
-                   _USART_Tx 109C            ___wmul@multiplier 000C                     i2_strlen 0FBE  
-            _emergencyButton 0D24             __size_of_INT_isr 0C36                  _INTCON2bits 000FF1  
-                _INTCON3bits 000FF0                    copy_data0 0C52                    copy_data1 0C72  
-                  copy_data2 0C92                     _Completo 0E76              _emergencySwitch 0046  
-  __end_of_interruptionsInit 10FE                     __Hrparam 0000                     __Lrparam 0000  
-           __size_of___aldiv 010C              main@instruccion 0022             __size_of_oneShot 001E  
-                   __ptext10 0B3C                     __ptext11 1066                     __ptext20 0CB4  
-                   __ptext12 10C8                     __ptext21 06CE                     __ptext13 101C  
-                   __ptext14 0DDE                     __ptext23 0D24                     __ptext15 0E2A  
-                   __ptext24 0FBE                     __ptext16 0E76                     __ptext25 10B2  
-                   __ptext17 0F88                     __ptext18 109C                     __ptext19 10DC  
-                   _comandos 0012                ?_clearOneShot 0001                ?_Ejecutandose 0001  
-                   _gpioInit 0FF4                __size_of_main 00FC              _USART_Init$1769 001E  
-                   _msgwrong 011E                     int$flags 0053                     _pwm_init 1042  
-    __end_of_emergencyButton 0D92                   _INTCONbits 000FF2               ??_clearOneShot 000C  
-             ??_Ejecutandose 0010                     intlevel2 0000   __size_of_interruptionsInit 0010  
-                 i2_USART_Tx 10B2          __CFG_FOSC$INTOSC_HS 000000                 ___aldiv@sign 0015  
- __end_of_coordinateRefreshX 0AA2   __end_of_coordinateRefreshY 09BC           invalidCoordinate@i 0010  
-                 _USART_Init 0CB4    __size_of_contador_pulsosD 0082  
+                  ?_Complete 0001                 _clearOneShot 10C8               i2USART_Tx@data 0001  
+        coordinateRefreshX@i 0017          coordinateRefreshX@j 0019          coordinateRefreshY@i 0017  
+        coordinateRefreshY@j 0019            _invalidCoordinate 0D92                      ?___wmul 000C  
+         ?_invalidCoordinate 0001                      _CCP1CON 000FBD                      _CCP2CON 000FBA  
+                    ?_xLimit 0001                      ?_yLimit 0001                 ??i2_USART_Tx 0001  
+                 ??_USART_Rx 000C                   ??_USART_Tx 000C                      ?_strlen 000C  
+        ??_invalidCoordinate 0010                      _INT_isr 0008                   ??i2_strlen 0003  
+                  ?_commands 001B                   ??_Complete 0010     __size_of_emergencyButton 006E  
+                  ?_gpioInit 0001           __end_ofi2_USART_Tx 10C8    __end_of_invalidCoordinate 0DDE  
+               ??_USART_Init 001E                      __Hparam 0000                      __Lparam 0000  
+                    ___aldiv 06CE              __size_of___wmul 0026                    ?_pwm_init 0001  
+             USART_Init@BAUD 001A              __size_of_xLimit 0046              __size_of_yLimit 0046  
+                    __pcinit 0C3E                      __ramtop 0800                      __ptext0 07DA  
+                    __ptext1 1042                      __ptext2 10EE                      __ptext3 0FF4  
+                    __ptext4 0012                      __ptext5 0EC2                      __ptext6 0F08  
+                    __ptext7 0D92                      __ptext8 08D6                      __ptext9 09BC  
+            __size_of_strlen 0036                    _T2CONbits 000FCA                      _oneShot 1066  
+           ___aldiv@dividend 000C                      _msgcomp 0091                      _nvalorx 0050  
+                    _nvalory 004E                      _msright 00E0           __end_of_USART_Init 0D24  
+                 ??_commands 001D               __pintcode_body 0BBE         end_of_initialization 0CAA  
+                    xLimit@i 0010                   ??_gpioInit 000C                      yLimit@i 0010  
+                    int_func 0BBE                    _RCSTAbits 000FAB             ___aldiv@quotient 0016  
+                    postdec1 000FE5                      postinc0 000FEE                      postinc2 000FDE  
+                 ??_pwm_init 000C                      strlen@a 000E                      strlen@s 000C  
+                  _PORTBbits 000F81                    _PORTCbits 000F82                    _PORTDbits 000F83  
+                  Complete@i 0010                    _TRISCbits 000F94                    _TXSTAbits 000FAC  
+ __size_of_invalidCoordinate 004C            ??_emergencyButton 0005                ?_pulseCounter 0012  
+             __end_of___wmul 1042                __pidataCOMRAM 1084               __end_of_xLimit 0F4E  
+             __end_of_yLimit 0F08            __size_of_USART_Rx 0012            __size_of_USART_Tx 0016  
+             __end_of_strlen 0FBE          start_initialization 0C3E                    _Executing 0DDE  
+          __size_ofi2_strlen 0036                    i2strlen@a 0003                    i2strlen@s 0001  
+          __size_of_Complete 004C       coordinateRefreshX@newX 0015       coordinateRefreshY@newY 0015  
+             ??_pulseCounter 0014                     ??___wmul 0010                  __pdataBANK0 0060  
+                __pdataBANK1 0100                     ??_xLimit 0010                     ??_yLimit 0010  
+                   ??_strlen 000E                  __pbssCOMRAM 0044                     ?_INT_isr 0001  
+                 ?_Executing 0001  __size_of_coordinateRefreshX 00E6  __size_of_coordinateRefreshY 00E6  
+          __size_of_commands 06BC            __size_of_gpioInit 0028              commands@comando 001B  
+                   INT_isr@i 000A                    __pintcode 0008                     ?___aldiv 000C  
+                  _emergency 0060            __size_of_pwm_init 0024                    _keepgoing 0048  
+                   ?_oneShot 0001               __size_of_Error 004C              ___aldiv@divisor 0010  
+            ___aldiv@counter 0014               ___wmul@product 0010            _interruptionsInit 10EE  
+                   i2u115_40 10C2                     i2u115_41 10BE                     i2u116_40 0FE6  
+                   i2u116_41 0FE2           ?_interruptionsInit 0001                     i2u165_40 0D68  
+                   i2u165_41 0D64                     i2u166_40 0D7A                     i2u166_41 0D76  
+                   i2u167_40 0D8C                     i2u167_41 0D88                     i2u175_47 0BCE  
+                   i2u168_40 0BE6                     i2u168_41 0BE2                     i2u169_40 0C32  
+                   i2u169_41 0C2E                     _PIR1bits 000F9E                     _RCONbits 000FD0  
+        ??_interruptionsInit 000C                     _USART_Rx 10DC                     _USART_Tx 109C  
+          ___wmul@multiplier 000C           pulseCounter@pulsoD 0012                  ??_Executing 0010  
+                   i2_strlen 0FBE              _emergencyButton 0D24             __size_of_INT_isr 0C36  
+       __end_of_pulseCounter 0BBE                  _INTCON2bits 000FF1                  _INTCON3bits 000FF0  
+                  copy_data0 0C52                    copy_data1 0C72                    copy_data2 0C92  
+                   _Complete 0E76              _emergencySwitch 0046    __end_of_interruptionsInit 10FE  
+                   __Hrparam 0000                     __Lrparam 0000             __size_of___aldiv 010C  
+            main@instruccion 0022             __size_of_oneShot 001E                     __ptext10 0B3C  
+                   __ptext11 1066                     __ptext20 0CB4                     __ptext12 10C8  
+                   __ptext21 06CE                     __ptext13 101C                     __ptext14 0DDE  
+                   __ptext23 0D24                     __ptext15 0E2A                     __ptext24 0FBE  
+                   __ptext16 0E76                     __ptext25 10B2                     __ptext17 0F88  
+                   __ptext18 109C                     __ptext19 10DC                     _commands 0012  
+              ?_clearOneShot 0001                     _gpioInit 0FF4                __size_of_main 00FC  
+            _USART_Init$1769 001E                     _msgwrong 011E                     int$flags 0053  
+                   _pwm_init 1042      __end_of_emergencyButton 0D92                   _INTCONbits 000FF2  
+             ??_clearOneShot 000C                     intlevel2 0000   __size_of_interruptionsInit 0010  
+                 i2_USART_Tx 10B2          __CFG_FOSC$INTOSC_HS 000000        __size_of_pulseCounter 0082  
+               ___aldiv@sign 0015   __end_of_coordinateRefreshX 0AA2   __end_of_coordinateRefreshY 09BC  
+         invalidCoordinate@i 0010                   _USART_Init 0CB4  

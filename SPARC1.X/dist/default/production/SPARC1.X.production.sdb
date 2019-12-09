@@ -43,15 +43,15 @@
 "32
 [v _Error Error `(v  1 e 1 0 ]
 "42
-[v _Ejecutandose Ejecutandose `(v  1 e 1 0 ]
+[v _Executing Executing `(v  1 e 1 0 ]
 "52
-[v _Completo Completo `(v  1 e 1 0 ]
+[v _Complete Complete `(v  1 e 1 0 ]
 "62
 [v _coordinateRefreshX coordinateRefreshX `(v  1 e 1 0 ]
-"90
+"91
 [v _coordinateRefreshY coordinateRefreshY `(v  1 e 1 0 ]
-"115
-[v _comandos comandos `(i  1 e 2 0 ]
+"116
+[v _commands commands `(i  1 e 2 0 ]
 "2 C:\Users\Rulo\Desktop\School Crap\Industrial Programing\Semestre i\SparkSpirit\trunk\SPARC1.X\GPIO.c
 [v _gpioInit gpioInit `(v  1 e 1 0 ]
 "10 C:\Users\Rulo\Desktop\School Crap\Industrial Programing\Semestre i\SparkSpirit\trunk\SPARC1.X\Interruptions.c
@@ -65,7 +65,7 @@
 "23 C:\Users\Rulo\Desktop\School Crap\Industrial Programing\Semestre i\SparkSpirit\trunk\SPARC1.X\pwm.c
 [v _pwm_init pwm_init `(v  1 e 1 0 ]
 "38
-[v _contador_pulsosD contador_pulsosD `(v  1 e 1 0 ]
+[v _pulseCounter pulseCounter `(v  1 e 1 0 ]
 "58
 [v _oneShot oneShot `(v  1 e 1 0 ]
 "65
@@ -474,10 +474,10 @@
 {
 "16
 } 0
-"115 C:\Users\Rulo\Desktop\School Crap\Industrial Programing\Semestre i\SparkSpirit\trunk\SPARC1.X\Comandos.c
-[v _comandos comandos `(i  1 e 2 0 ]
+"116 C:\Users\Rulo\Desktop\School Crap\Industrial Programing\Semestre i\SparkSpirit\trunk\SPARC1.X\Comandos.c
+[v _commands commands `(i  1 e 2 0 ]
 {
-[v comandos@comando comando `*.39uc  1 p 2 26 ]
+[v commands@comando comando `*.39uc  1 p 2 26 ]
 "350
 } 0
 "26
@@ -501,16 +501,16 @@
 [v invalidCoordinate@i i `i  1 a 2 15 ]
 "18
 } 0
-"90
+"91
 [v _coordinateRefreshY coordinateRefreshY `(v  1 e 1 0 ]
 {
-"104
+"105
 [v coordinateRefreshY@j j `i  1 a 2 24 ]
-"95
+"96
 [v coordinateRefreshY@i i `i  1 a 2 22 ]
-"90
+"91
 [v coordinateRefreshY@newY newY `i  1 p 2 20 ]
-"111
+"112
 } 0
 "62
 [v _coordinateRefreshX coordinateRefreshX `(v  1 e 1 0 ]
@@ -524,9 +524,9 @@
 "87
 } 0
 "38 C:\Users\Rulo\Desktop\School Crap\Industrial Programing\Semestre i\SparkSpirit\trunk\SPARC1.X\pwm.c
-[v _contador_pulsosD contador_pulsosD `(v  1 e 1 0 ]
+[v _pulseCounter pulseCounter `(v  1 e 1 0 ]
 {
-[v contador_pulsosD@pulsoD pulsoD `i  1 p 2 17 ]
+[v pulseCounter@pulsoD pulsoD `i  1 p 2 17 ]
 "57
 } 0
 "58
@@ -549,25 +549,25 @@
 [v ___wmul@multiplicand multiplicand `ui  1 p 2 13 ]
 "53
 } 0
-"32 C:\Users\Rulo\Desktop\School Crap\Industrial Programing\Semestre i\SparkSpirit\trunk\SPARC1.X\Comandos.c
+"42 C:\Users\Rulo\Desktop\School Crap\Industrial Programing\Semestre i\SparkSpirit\trunk\SPARC1.X\Comandos.c
+[v _Executing Executing `(v  1 e 1 0 ]
+{
+"43
+[v Executing@i i `i  1 a 2 15 ]
+"49
+} 0
+"32
 [v _Error Error `(v  1 e 1 0 ]
 {
 "33
 [v Error@i i `i  1 a 2 15 ]
 "39
 } 0
-"42
-[v _Ejecutandose Ejecutandose `(v  1 e 1 0 ]
-{
-"43
-[v Ejecutandose@i i `i  1 a 2 15 ]
-"49
-} 0
 "52
-[v _Completo Completo `(v  1 e 1 0 ]
+[v _Complete Complete `(v  1 e 1 0 ]
 {
 "53
-[v Completo@i i `i  1 a 2 15 ]
+[v Complete@i i `i  1 a 2 15 ]
 "59
 } 0
 "5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\strlen.c

@@ -66,7 +66,7 @@ void main(void) {
     yLimit();
     x=0;
     y=0;
-    Completo();
+    Complete();
                          
     
     while(1){
@@ -82,7 +82,7 @@ void main(void) {
     USART_Tx(instruccion[i]);
     } 
           DisableRx;  
-        comandos(instruccion);
+        commands(instruccion);
         
     }
     

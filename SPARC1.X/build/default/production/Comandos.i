@@ -5779,7 +5779,7 @@ size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
 void *memccpy (void *restrict, const void *restrict, int, size_t);
 # 4 "./Comandos.h" 2
 
-int comandos(char comando[7]);
+int commands(char comando[7]);
 char msgwrong []=" Error 0: Invalid Command\n";
 char msgeje []="Command in Execution\n";
 char msgcomp []="Successfully Executed\n";
@@ -5792,8 +5792,8 @@ char yl[]="Limit y Reached\n";
 char CE[]=" Error 1: Invalid Coordinate\n";
 void invalidCoordinate(void);
 void Error(void);
-void Ejecutandose(void);
-void Completo(void);
+void Executing(void);
+void Complete(void);
 char reconocer_comando(void);
 uint16_t nvalorx =0;
 uint16_t nvalory =0;
@@ -5816,7 +5816,7 @@ void gpioInit();
 # 1 "./pwm.h" 1
 
 void pwm_init(void);
-void contador_pulsosD(int pulsoD);
+void pulseCounter(int pulsoD);
 void oneShot();
 void clearOneShot();
 int keepgoing;
@@ -5859,7 +5859,7 @@ void Error(){
 }
 
 
-void Ejecutandose(){
+void Executing(){
     for(int i=0; i < strlen(msgeje); i++){
     USART_Tx(msgeje[i]);
     }
@@ -5869,7 +5869,7 @@ void Ejecutandose(){
 }
 
 
-void Completo(){
+void Complete(){
     for(int i=0; i < strlen(msgcomp); i++){
     USART_Tx(msgcomp[i]);
     }
@@ -5889,7 +5889,7 @@ void coordinateRefreshX(int newX){
        for(int i=0; i < strlen(msleft); i++){
     USART_Tx(msleft[i]);
     }
-       contador_pulsosD(x-newX);
+       pulseCounter(x-newX);
 
     }
     if(newX>x){
@@ -5901,7 +5901,7 @@ void coordinateRefreshX(int newX){
        for(int j=0; j < strlen(msright); j++){
     USART_Tx(msright[j]);
     }
-        contador_pulsosD(newX-x);
+        pulseCounter(newX-x);
     }
     x=newX;
 }
@@ -5916,7 +5916,7 @@ void coordinateRefreshY(int newY){
        for(int i=0; i < strlen(msdown); i++){
     USART_Tx(msdown[i]);
     }
-    contador_pulsosD(y-newY);
+    pulseCounter(y-newY);
     }
     if(newY>y){
         PORTDbits.RD0=0;
@@ -5926,14 +5926,14 @@ void coordinateRefreshY(int newY){
     USART_Tx(msup[j]);
     }
 
-        contador_pulsosD(newY-y);
+        pulseCounter(newY-y);
     }
     y=newY;
 }
 
 
 
-int comandos (char comando[7]){
+int commands (char comando[7]){
     if(comando[0]=='C'){
         if (comando[1]>='0' && comando[1]<='2'){
             if (comando[2]>='0' && comando[2]<='9'){
@@ -5942,13 +5942,13 @@ int comandos (char comando[7]){
                         if (comando[5]>='0' && comando[5]<='2'){
                             if (comando[6]>='0' && comando[6]<='9'){
                                 if (comando[7]>='0' && comando[7]<='9'){
-                                    Ejecutandose();
+                                    Executing();
                                     nvalorx= ((comando[1]-48)*100)+((comando[2]-48)*10)+(comando[3]-48);
                                     nvalory= ((comando[5]-48)*100)+((comando[6]-48)*10)+(comando[7]-48);
 
                                     coordinateRefreshX(nvalorx);
                                     coordinateRefreshY(nvalory);
-                                    Completo();
+                                    Complete();
                                 }
                                 else{
                                     invalidCoordinate();
@@ -5987,7 +5987,7 @@ int comandos (char comando[7]){
                         if (comando[5]=='O'){
                             if (comando[6]=='M'){
                                 if (comando[7]=='E'){
-                                    Ejecutandose();
+                                    Executing();
                                      PORTDbits.RD0=1;
                                      PORTDbits.RD1=0;
                                      PORTDbits.RD3=0;
@@ -6006,7 +6006,7 @@ int comandos (char comando[7]){
                                      yLimit();
                                      x=0;
                                      y=0;
-                                     Completo();
+                                     Complete();
                                 }
                                 else{
                                     Error();
@@ -6045,9 +6045,9 @@ int comandos (char comando[7]){
                         if (comando[5]=='U'){
                             if (comando[6]=='C'){
                                 if (comando[7]=='H'){
-                                    Ejecutandose();
+                                    Executing();
                                     PORTDbits.RD7=1;
-                                    Completo();
+                                    Complete();
                                 }
                                 else{
                                     Error();
@@ -6088,11 +6088,11 @@ int comandos (char comando[7]){
                         if (comando[5]=='T'){
                             if (comando[6]=='A'){
                                 if (comando[7]=='P'){
-                                    Ejecutandose();
+                                    Executing();
                                     PORTDbits.RD7=1;
                                     _delay((unsigned long)((1000)*(8000000L/4000.0)));
                                     PORTDbits.RD7=0;
-                                    Completo();
+                                    Complete();
                                 }
 
                                 else{
@@ -6133,9 +6133,9 @@ int comandos (char comando[7]){
                         if (comando[5]=='I'){
                             if (comando[6]=='F'){
                                 if (comando[7]=='T'){
-                                    Ejecutandose();
+                                    Executing();
                                     PORTDbits.RD7=0;
-                                    Completo();
+                                    Complete();
                                 }
                                 else{
                                     Error();

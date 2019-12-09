@@ -35,7 +35,7 @@ void pwm_init(void) {
 }
 
 /*One shot for counting PWM rises*/
-void contador_pulsosD(int pulsoD){
+void pulseCounter(int pulsoD){
     ons=0;
     cnt=0;
    
