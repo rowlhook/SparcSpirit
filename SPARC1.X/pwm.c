@@ -21,20 +21,20 @@ int keepgoing;
 //500 -> 50% 
 
 void pwm_init(void) {
-    /*Asignación de valores para PWM con periodo de 4ms y 50% DC*/
-    PR2 = 249; //Periodo PWM
-    CCPR1L= (500>>2 & (0x3FF)); //6 bits para tu PWM
+    /*Assign PWM values of 4ms and 50% DC*/
+    PR2 = 249; //PWM Period
+    CCPR1L= (500>>2 & (0x3FF)); //6 bit PWM
     CCPR2L= (500>>2 & (0x3FF));
     TRISCbits.RC1=0;
     TRISCbits.RC2=0;       
     T2CON = 0x03; //Prescaler 16 Timer 2 OFF
-    CCP1CON = 0x0C; //Control (2LSB PWM y Modo PWM)
+    CCP1CON = 0x0C; //Control (2LSB PWM and Mode PWM)
     CCP2CON=0x0C;
-    TMR2=0; //Inicia en 0
+    TMR2=0; //Begins at 0
     T2CONbits.TMR2ON =1; //Timer 2 on
 }
 
-/*One shot para contar subidas en el pwm*/
+/*One shot for counting PWM rises*/
 void contador_pulsosD(int pulsoD){
     ons=0;
     cnt=0;
@@ -44,8 +44,8 @@ void contador_pulsosD(int pulsoD){
     keepgoing=1;
     while(cnt<pulsoD*5){
         
-        if (PORTCbits.CCP1==1){ //Si el registro es 1
-            oneShot(); }//Checa si la bandera ons está prendida
+        if (PORTCbits.CCP1==1){ //If register is 1
+            oneShot(); }//Check if ons is on
             if(ons==1){ clearOneShot();}
         
         

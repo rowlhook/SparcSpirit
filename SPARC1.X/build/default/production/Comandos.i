@@ -5907,6 +5907,7 @@ void coordinateRefreshX(int newX){
 }
 
 
+
 void coordinateRefreshY(int newY){
     if(newY<y){
     PORTDbits.RD0=1;
@@ -5934,11 +5935,11 @@ void coordinateRefreshY(int newY){
 
 int comandos (char comando[7]){
     if(comando[0]=='C'){
-        if (comando[1]>='0' && comando[1]<='3'){
+        if (comando[1]>='0' && comando[1]<='2'){
             if (comando[2]>='0' && comando[2]<='9'){
                 if (comando[3]>='0' && comando[3]<='9'){
                     if (comando[4]==','){
-                        if (comando[5]>='0' && comando[5]<='3'){
+                        if (comando[5]>='0' && comando[5]<='2'){
                             if (comando[6]>='0' && comando[6]<='9'){
                                 if (comando[7]>='0' && comando[7]<='9'){
                                     Ejecutandose();
@@ -6091,7 +6092,6 @@ int comandos (char comando[7]){
                                     PORTDbits.RD7=1;
                                     _delay((unsigned long)((1000)*(8000000L/4000.0)));
                                     PORTDbits.RD7=0;
-
                                     Completo();
                                 }
 

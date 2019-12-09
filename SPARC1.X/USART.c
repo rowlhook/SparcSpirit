@@ -10,16 +10,16 @@ void USART_Init(long BAUD){
   
     SPBRG = (unsigned char)((_XTAL_FREQ/BAUD)/64)-1;
     TXSTAbits.BRGH = 0; //Low speed
-    TXSTAbits.SYNC = 0; //Asincrono
-    RCSTAbits.SPEN = 1; //Habilitar Tx y Rx
+    TXSTAbits.SYNC = 0; //Asincronous
+    RCSTAbits.SPEN = 1; //Enable Tx y Rx
     
-    //Transmisión
+    //Transmition
     TXSTAbits.TX9 = 0; //8 bits 
-    TXSTAbits.TXEN = 1; //Activar transmisión
+    TXSTAbits.TXEN = 1; //Enable transmition
     
-    //Recepción
+    //Reception
     RCSTAbits.RC9 = 0; //8 bits
-   RCSTAbits.CREN = 1; //Activamos recepción  
+   RCSTAbits.CREN = 1; //Enable reception  
    
    
 }

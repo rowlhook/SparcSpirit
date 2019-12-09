@@ -5,7 +5,7 @@
 #include <xc.h>
 #include "pwm.h"
 #include "CONFIGURACION1.h"
-/*La función imprime el mensaje de error por UART*/
+/*function prints error message unto UART*/
 
 void invalidCoordinate(){
 for(int i=0; i < strlen(CE); i++){
@@ -30,15 +30,15 @@ void yLimit(){
 }
 
 void Error(){
-    for(int i=0; i< strlen(msgwrong); i++){ //para imprimir todas las letras del mensaje
-    USART_Tx(msgwrong[i]); //Imprime caracter por caracter
+    for(int i=0; i< strlen(msgwrong); i++){ //Prints all letters in a message
+    USART_Tx(msgwrong[i]); //Prints Character by character
     } 
     LED_R=1;
     LED_V=0;
     LED_A=0;
 }
 
-/*La función imprime el mensaje de ejecutandose por UART*/
+/*Function Prints execution message unto UART*/
 void Ejecutandose(){
     for(int i=0; i < strlen(msgeje); i++){
     USART_Tx(msgeje[i]);
@@ -48,7 +48,7 @@ void Ejecutandose(){
     LED_A=1;
 }
 
-/*La función imprime el mensaje de completo por UART*/
+/*Function Types Complete message unto UART*/
 void Completo(){
     for(int i=0; i < strlen(msgcomp); i++){
     USART_Tx(msgcomp[i]);
@@ -58,9 +58,9 @@ void Completo(){
     LED_A=0;
 }
 
-/*Función para saber cómo moverse en X de acuerdo al valor nuevo y anterior*/
+/*Function tells whether Sparc should move Left or Right*/
 void coordinateRefreshX(int newX){
-    if(newX<x){ //Si el valor nuevo es menor al anterior
+    if(newX<x){ //If new value is less than previous
        Sentido_D=DERECHA;
        //Sentido_I=IZQUIERDA;
        //Sentido_D= DERECHA;
@@ -70,9 +70,9 @@ void coordinateRefreshX(int newX){
     USART_Tx(msleft[i]);
     }
        contador_pulsosD(x-newX);
-       //función de ir a la izquierda
+       //Go left function
     }
-    if(newX>x){ //Si el valor nuevo es mayor al anterior
+    if(newX>x){ //If new  value is larger than previous
        Sentido_D=IZQUIERDA;
        Sentido_I=IZQUIERDA;
        //Sentido_D=IZQUIERDA;
@@ -81,14 +81,15 @@ void coordinateRefreshX(int newX){
        for(int j=0; j < strlen(msright); j++){
     USART_Tx(msright[j]);
     }
-        contador_pulsosD(newX-x);//función de ir a la derecha
+        contador_pulsosD(newX-x);//Go right function
     }
-    x=newX;  //Se asigna el nuevo valor al registro del anterior
+    x=newX;  //New coordinate value is set
 }
 
-/*Función para saber cómo moverse en Y de acuerdo al valor nuevo y anterior*/
+/*Function tells whether Sparc should move Up or Down*/
+
 void coordinateRefreshY(int newY){
-    if(newY<y){ //si el nuevo valor es menor al anterior
+    if(newY<y){ //If new value is less than previous
     Sentido_D=DERECHA;
        Sentido_I=IZQUIERDA;
        
@@ -97,7 +98,7 @@ void coordinateRefreshY(int newY){
     }
     contador_pulsosD(y-newY);   
     }
-    if(newY>y){ //si el nuevo valor es mayor al anterior
+    if(newY>y){ //If new value is larger thatn previous
         Sentido_D=IZQUIERDA;
         Sentido_I=DERECHA;
       
@@ -105,32 +106,32 @@ void coordinateRefreshY(int newY){
     USART_Tx(msup[j]);
     }
        
-        contador_pulsosD(newY-y); //función de ir hacia arriba
+        contador_pulsosD(newY-y); //Go up Function
     }
-    y=newY; //Se asigna el nuevo valor al registro del anterior
+    y=newY;//New value is set
 }
 
-/*Función que reconocer los comandos de entrada, 
- el arreglo "comando" será el que entre desde el UART*/
+/*Command Recognition function, takes the array gotten from UART and compares it with 
+ known commands.*/
 int comandos (char comando[7]){ 
     if(comando[0]=='C'){
-        if (comando[1]>='0' && comando[1]<='3'){
+        if (comando[1]>='0' && comando[1]<='2'){
             if (comando[2]>='0' && comando[2]<='9'){
                 if (comando[3]>='0' && comando[3]<='9'){
                     if (comando[4]==','){
-                        if (comando[5]>='0' && comando[5]<='3'){
+                        if (comando[5]>='0' && comando[5]<='2'){
                             if (comando[6]>='0' && comando[6]<='9'){
-                                if (comando[7]>='0' && comando[7]<='9'){ /*ej: C024,234 (X=024 Y=234*/
-                                    Ejecutandose();//Muestra mensaje de ejecutandose
+                                if (comando[7]>='0' && comando[7]<='9'){ /*ex: C024,234 (X=024 Y=234*/
+                                    Ejecutandose();//Execution Message
                                     nvalorx= ((comando[1]-48)*100)+((comando[2]-48)*10)+(comando[3]-48);
                                     nvalory= ((comando[5]-48)*100)+((comando[6]-48)*10)+(comando[7]-48);
-                                    //Se asigna el nuevo valor de y
-                                    coordinateRefreshX(nvalorx); //La función se ejecuta con el nuevo valor
-                                    coordinateRefreshY(nvalory); //La función se ejecuta con el nuevo valor
+                                    //New y value Set
+                                    coordinateRefreshX(nvalorx); //Function Executed with new value
+                                    coordinateRefreshY(nvalory); //Function Executed with new value
                                     Completo();
                                 }
                                 else{
-                                    invalidCoordinate(); //Muestra mensaje de error
+                                    invalidCoordinate(); //Error message for coordinate
                                 }
                             }
                             else{
@@ -165,8 +166,8 @@ int comandos (char comando[7]){
                     if (comando[4]=='H'){
                         if (comando[5]=='O'){
                             if (comando[6]=='M'){
-                                if (comando[7]=='E'){ /*ej GOTOHOME*/
-                                    Ejecutandose();//Mensaje de ejecutandose
+                                if (comando[7]=='E'){ /*ex GOTOHOME*/
+                                    Ejecutandose();//Execution Message
                                      Sentido_D=DERECHA;
                                      Sentido_I=IZQUIERDA;
                                      Enable_I=ON;
@@ -188,7 +189,7 @@ int comandos (char comando[7]){
                                      Completo();
                                 }
                                 else{
-                                    Error(); //mensaje de error
+                                    Error(); //Error Message
                                 }
                             }
                             else{
@@ -223,8 +224,8 @@ int comandos (char comando[7]){
                     if (comando[4]=='O'){
                         if (comando[5]=='U'){
                             if (comando[6]=='C'){
-                                if (comando[7]=='H'){ /*ej STCTOUCH*/
-                                    Ejecutandose(); //mensaje de ejecutandose
+                                if (comando[7]=='H'){ /*ex STCTOUCH*/
+                                    Ejecutandose(); //Execution Message
                                     SOLENOID=1;
                                     Completo();
                                 }
@@ -266,12 +267,11 @@ int comandos (char comando[7]){
                     if (comando[4]=='A'){
                         if (comando[5]=='T'){
                             if (comando[6]=='A'){
-                                if (comando[7]=='P'){ /*ej MAKEATAP*/
+                                if (comando[7]=='P'){ /*ex MAKEATAP*/
                                     Ejecutandose();
                                     SOLENOID=1;
                                     __delay_ms(1000);
                                     SOLENOID=0;
-                                    //Mensaje de ejecutandose
                                     Completo();
                                 }
                                 
@@ -312,8 +312,8 @@ int comandos (char comando[7]){
                     if (comando[4]=='L'){
                         if (comando[5]=='I'){
                             if (comando[6]=='F'){
-                                if (comando[7]=='T'){ /*ej MAKELIFT*/
-                                    Ejecutandose(); //mensaje ejecutandose
+                                if (comando[7]=='T'){ /*ex TAKELIFT*/
+                                    Ejecutandose(); //Execution Message
                                     SOLENOID=0;
                                     Completo();
                                 }
