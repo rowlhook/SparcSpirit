@@ -90,8 +90,8 @@ void coordinateRefreshX(int newX){
 
 void coordinateRefreshY(int newY){
     if(newY<y){ //If new value is less than previous
-    Sentido_D=DERECHA;
-       Sentido_I=IZQUIERDA;
+    Sentido_D=IZQUIERDA;
+       Sentido_I=DERECHA;
        
        for(int i=0; i < strlen(msdown); i++){
     USART_Tx(msdown[i]);
@@ -99,8 +99,8 @@ void coordinateRefreshY(int newY){
     pulseCounter(y-newY);   
     }
     if(newY>y){ //If new value is larger thatn previous
-        Sentido_D=IZQUIERDA;
-        Sentido_I=DERECHA;
+        Sentido_D=DERECHA;
+        Sentido_I=IZQUIERDA;
       
     for(int j=0; j < strlen(msup); j++){
     USART_Tx(msup[j]);
@@ -168,11 +168,11 @@ int commands (char comando[7]){
                             if (comando[6]=='M'){
                                 if (comando[7]=='E'){ /*ex GOTOHOME*/
                                     Executing();//Execution Message
-                                     Sentido_D=DERECHA;
-                                     Sentido_I=IZQUIERDA;
+                                     Sentido_D=IZQUIERDA;
+                                     Sentido_I=DERECHA;
                                      Enable_I=ON;
                                      Enable_D=ON;
-                                     while(SWITCHY==0){}
+                                     while(SWITCHX==0){}
                                      Enable_I=OFF;
                                      Enable_D=OFF;
                                      xLimit();
@@ -180,7 +180,7 @@ int commands (char comando[7]){
                                      Sentido_I=DERECHA;
                                      Enable_I=ON;
                                      Enable_D=ON;
-                                     while(SWITCHX==0){}
+                                     while(SWITCHY==0){}
                                      Enable_I=OFF;
                                      Enable_D=OFF;
                                      yLimit();

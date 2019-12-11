@@ -36,7 +36,7 @@ void main(void) {
     OSCCON=0x72;
     
     USART_Init(9600);
-    INTCON2bits.RBPU=1;
+    //INTCON2bits.RBPU=1;
     gpioInit();
    pwm_init();
    interruptionsInit();
@@ -48,11 +48,11 @@ void main(void) {
     LED_R=1;
     LED_V=0;
     LED_A=0;
-    Sentido_D=DERECHA;
-    Sentido_I=IZQUIERDA;
+    Sentido_D=IZQUIERDA;
+    Sentido_I=DERECHA;
     Enable_I=ON;
     Enable_D=ON;
-    while(SWITCHY==0){}
+    while(SWITCHX==0){}
     Enable_I=OFF;
     Enable_D=OFF;
     xLimit();
@@ -60,7 +60,7 @@ void main(void) {
     Sentido_I=DERECHA;
     Enable_I=ON;
     Enable_D=ON;
-    while(SWITCHX==0){}
+    while(SWITCHY==0){}
     Enable_I=OFF;
     Enable_D=OFF;
     yLimit();

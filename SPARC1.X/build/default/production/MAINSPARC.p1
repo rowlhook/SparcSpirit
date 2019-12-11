@@ -38,25 +38,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./USARTLIBRERIA.h: 4: void USART_Init(long BAUD);
 [; ;./USARTLIBRERIA.h: 4: void USART_Init(long BAUD);
 [v _USART_Init `(v ~T0 @X0 0 ef1`l ]
-"8511 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 8511:     struct {
-[s S351 :7 `uc 1 :1 `uc 1 ]
-[n S351 . . NOT_RBPU ]
-"8515
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 8515:     struct {
-[s S352 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S352 . RBIP . TMR0IP . INTEDG2 INTEDG1 INTEDG0 nRBPU ]
-"8525
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 8525:     struct {
-[s S353 :2 `uc 1 :1 `uc 1 :4 `uc 1 :1 `uc 1 ]
-[n S353 . . T0IP . RBPU ]
-"8510
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 8510: typedef union {
-[u S350 `S351 1 `S352 1 `S353 1 ]
-[n S350 . . . . ]
-"8532
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f4550.h: 8532: extern volatile INTCON2bits_t INTCON2bits __attribute__((address(0xFF1)));
-[v _INTCON2bits `VS350 ~T0 @X0 0 e@4081 ]
 "3 ./GPIO.h
 [; ;./GPIO.h: 3: void gpioInit();
 [v _gpioInit `(v ~T0 @X0 0 e? ]
@@ -1072,9 +1053,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "38
 [; ;MAINSPARC.c: 38:     USART_Init(9600);
 [e ( _USART_Init (1 -> -> 9600 `i `l ]
-"39
-[; ;MAINSPARC.c: 39:     INTCON2bits.RBPU=1;
-[e = . . _INTCON2bits 2 3 -> -> 1 `i `uc ]
 "40
 [; ;MAINSPARC.c: 40:     gpioInit();
 [e ( _gpioInit ..  ]
@@ -1106,11 +1084,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;MAINSPARC.c: 50:     PORTDbits.RD6=0;
 [e = . . _PORTDbits 0 6 -> -> 0 `i `uc ]
 "51
-[; ;MAINSPARC.c: 51:     PORTDbits.RD0=1;
-[e = . . _PORTDbits 0 0 -> -> 1 `i `uc ]
+[; ;MAINSPARC.c: 51:     PORTDbits.RD0=0;
+[e = . . _PORTDbits 0 0 -> -> 0 `i `uc ]
 "52
-[; ;MAINSPARC.c: 52:     PORTDbits.RD1=0;
-[e = . . _PORTDbits 0 1 -> -> 0 `i `uc ]
+[; ;MAINSPARC.c: 52:     PORTDbits.RD1=1;
+[e = . . _PORTDbits 0 1 -> -> 1 `i `uc ]
 "53
 [; ;MAINSPARC.c: 53:     PORTDbits.RD3=0;
 [e = . . _PORTDbits 0 3 -> -> 0 `i `uc ]
@@ -1118,13 +1096,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;MAINSPARC.c: 54:     PORTDbits.RD2=0;
 [e = . . _PORTDbits 0 2 -> -> 0 `i `uc ]
 "55
-[; ;MAINSPARC.c: 55:     while(PORTBbits.RB1==0){}
+[; ;MAINSPARC.c: 55:     while(PORTBbits.RB0==0){}
 [e $U 377  ]
 [e :U 378 ]
 {
 }
 [e :U 377 ]
-[e $ == -> . . _PORTBbits 0 1 `i -> 0 `i 378  ]
+[e $ == -> . . _PORTBbits 0 0 `i -> 0 `i 378  ]
 [e :U 379 ]
 "56
 [; ;MAINSPARC.c: 56:     PORTDbits.RD3=1;
@@ -1148,13 +1126,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;MAINSPARC.c: 62:     PORTDbits.RD2=0;
 [e = . . _PORTDbits 0 2 -> -> 0 `i `uc ]
 "63
-[; ;MAINSPARC.c: 63:     while(PORTBbits.RB0==0){}
+[; ;MAINSPARC.c: 63:     while(PORTBbits.RB1==0){}
 [e $U 380  ]
 [e :U 381 ]
 {
 }
 [e :U 380 ]
-[e $ == -> . . _PORTBbits 0 0 `i -> 0 `i 381  ]
+[e $ == -> . . _PORTBbits 0 1 `i -> 0 `i 381  ]
 [e :U 382 ]
 "64
 [; ;MAINSPARC.c: 64:     PORTDbits.RD3=1;

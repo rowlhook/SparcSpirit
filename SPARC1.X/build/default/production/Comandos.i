@@ -5910,8 +5910,8 @@ void coordinateRefreshX(int newX){
 
 void coordinateRefreshY(int newY){
     if(newY<y){
-    PORTDbits.RD0=1;
-       PORTDbits.RD1=0;
+    PORTDbits.RD0=0;
+       PORTDbits.RD1=1;
 
        for(int i=0; i < strlen(msdown); i++){
     USART_Tx(msdown[i]);
@@ -5919,8 +5919,8 @@ void coordinateRefreshY(int newY){
     pulseCounter(y-newY);
     }
     if(newY>y){
-        PORTDbits.RD0=0;
-        PORTDbits.RD1=1;
+        PORTDbits.RD0=1;
+        PORTDbits.RD1=0;
 
     for(int j=0; j < strlen(msup); j++){
     USART_Tx(msup[j]);
@@ -5988,11 +5988,11 @@ int commands (char comando[7]){
                             if (comando[6]=='M'){
                                 if (comando[7]=='E'){
                                     Executing();
-                                     PORTDbits.RD0=1;
-                                     PORTDbits.RD1=0;
+                                     PORTDbits.RD0=0;
+                                     PORTDbits.RD1=1;
                                      PORTDbits.RD3=0;
                                      PORTDbits.RD2=0;
-                                     while(PORTBbits.RB1==0){}
+                                     while(PORTBbits.RB0==0){}
                                      PORTDbits.RD3=1;
                                      PORTDbits.RD2=1;
                                      xLimit();
@@ -6000,7 +6000,7 @@ int commands (char comando[7]){
                                      PORTDbits.RD1=1;
                                      PORTDbits.RD3=0;
                                      PORTDbits.RD2=0;
-                                     while(PORTBbits.RB0==0){}
+                                     while(PORTBbits.RB1==0){}
                                      PORTDbits.RD3=1;
                                      PORTDbits.RD2=1;
                                      yLimit();

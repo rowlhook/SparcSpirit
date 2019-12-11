@@ -6011,7 +6011,7 @@ void main(void) {
     OSCCON=0x72;
 
     USART_Init(9600);
-    INTCON2bits.RBPU=1;
+
     gpioInit();
    pwm_init();
    interruptionsInit();
@@ -6023,11 +6023,11 @@ void main(void) {
     PORTDbits.RD4=1;
     PORTDbits.RD5=0;
     PORTDbits.RD6=0;
-    PORTDbits.RD0=1;
-    PORTDbits.RD1=0;
+    PORTDbits.RD0=0;
+    PORTDbits.RD1=1;
     PORTDbits.RD3=0;
     PORTDbits.RD2=0;
-    while(PORTBbits.RB1==0){}
+    while(PORTBbits.RB0==0){}
     PORTDbits.RD3=1;
     PORTDbits.RD2=1;
     xLimit();
@@ -6035,7 +6035,7 @@ void main(void) {
     PORTDbits.RD1=1;
     PORTDbits.RD3=0;
     PORTDbits.RD2=0;
-    while(PORTBbits.RB0==0){}
+    while(PORTBbits.RB1==0){}
     PORTDbits.RD3=1;
     PORTDbits.RD2=1;
     yLimit();

@@ -1157,11 +1157,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! < -> _newY `ui -> _y `ui 410  ]
 {
 "93
-[; ;Comandos.c: 93:     PORTDbits.RD0=1;
-[e = . . _PORTDbits 0 0 -> -> 1 `i `uc ]
+[; ;Comandos.c: 93:     PORTDbits.RD0=0;
+[e = . . _PORTDbits 0 0 -> -> 0 `i `uc ]
 "94
-[; ;Comandos.c: 94:        PORTDbits.RD1=0;
-[e = . . _PORTDbits 0 1 -> -> 0 `i `uc ]
+[; ;Comandos.c: 94:        PORTDbits.RD1=1;
+[e = . . _PORTDbits 0 1 -> -> 1 `i `uc ]
 "96
 [; ;Comandos.c: 96:        for(int i=0; i < strlen(msdown); i++){
 {
@@ -1193,11 +1193,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! > -> _newY `ui -> _y `ui 415  ]
 {
 "102
-[; ;Comandos.c: 102:         PORTDbits.RD0=0;
-[e = . . _PORTDbits 0 0 -> -> 0 `i `uc ]
+[; ;Comandos.c: 102:         PORTDbits.RD0=1;
+[e = . . _PORTDbits 0 0 -> -> 1 `i `uc ]
 "103
-[; ;Comandos.c: 103:         PORTDbits.RD1=1;
-[e = . . _PORTDbits 0 1 -> -> 1 `i `uc ]
+[; ;Comandos.c: 103:         PORTDbits.RD1=0;
+[e = . . _PORTDbits 0 1 -> -> 0 `i `uc ]
 "105
 [; ;Comandos.c: 105:     for(int j=0; j < strlen(msup); j++){
 {
@@ -1434,11 +1434,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;Comandos.c: 170:                                     Executing();
 [e ( _Executing ..  ]
 "171
-[; ;Comandos.c: 171:                                      PORTDbits.RD0=1;
-[e = . . _PORTDbits 0 0 -> -> 1 `i `uc ]
+[; ;Comandos.c: 171:                                      PORTDbits.RD0=0;
+[e = . . _PORTDbits 0 0 -> -> 0 `i `uc ]
 "172
-[; ;Comandos.c: 172:                                      PORTDbits.RD1=0;
-[e = . . _PORTDbits 0 1 -> -> 0 `i `uc ]
+[; ;Comandos.c: 172:                                      PORTDbits.RD1=1;
+[e = . . _PORTDbits 0 1 -> -> 1 `i `uc ]
 "173
 [; ;Comandos.c: 173:                                      PORTDbits.RD3=0;
 [e = . . _PORTDbits 0 3 -> -> 0 `i `uc ]
@@ -1446,13 +1446,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;Comandos.c: 174:                                      PORTDbits.RD2=0;
 [e = . . _PORTDbits 0 2 -> -> 0 `i `uc ]
 "175
-[; ;Comandos.c: 175:                                      while(PORTBbits.RB1==0){}
+[; ;Comandos.c: 175:                                      while(PORTBbits.RB0==0){}
 [e $U 445  ]
 [e :U 446 ]
 {
 }
 [e :U 445 ]
-[e $ == -> . . _PORTBbits 0 1 `i -> 0 `i 446  ]
+[e $ == -> . . _PORTBbits 0 0 `i -> 0 `i 446  ]
 [e :U 447 ]
 "176
 [; ;Comandos.c: 176:                                      PORTDbits.RD3=1;
@@ -1476,13 +1476,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;Comandos.c: 182:                                      PORTDbits.RD2=0;
 [e = . . _PORTDbits 0 2 -> -> 0 `i `uc ]
 "183
-[; ;Comandos.c: 183:                                      while(PORTBbits.RB0==0){}
+[; ;Comandos.c: 183:                                      while(PORTBbits.RB1==0){}
 [e $U 448  ]
 [e :U 449 ]
 {
 }
 [e :U 448 ]
-[e $ == -> . . _PORTBbits 0 0 `i -> 0 `i 449  ]
+[e $ == -> . . _PORTBbits 0 1 `i -> 0 `i 449  ]
 [e :U 450 ]
 "184
 [; ;Comandos.c: 184:                                      PORTDbits.RD3=1;
